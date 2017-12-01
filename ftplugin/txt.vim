@@ -1,0 +1,4 @@
+
+setlocal nolist
+setlocal wrap
+
