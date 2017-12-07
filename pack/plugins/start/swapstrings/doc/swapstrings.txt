@@ -1,0 +1,50 @@
+*swapstrings.txt*	The swapstringsment Tool			Jan 21, 2009
+
+Author:  Charles E. Campbell, Jr.  <NdrOchip@ScampbellPfamily.AbizM>
+	  (remove NOSPAM from Campbell's email first)
+Copyright: (c) 2004-2006 by Charles E. Campbell, Jr.	*swapstrings-copyright*
+           The VIM LICENSE applies to swapstrings.vim and swapstrings.txt
+           (see |copyright|) except use "swapstrings" instead of "Vim"
+	   No warranty, express or implied.  Use At-Your-Own-Risk.
+
+==============================================================================
+1. Contents				*swapstrings* *swapstrings-contents*
+
+	1. Contents.................................: |swapstrings-contents|
+	2. Swapstrings Manual.......................: |swapstrings-manual|
+	3. Swapstrings History......................: |swapstrings-history|
+
+==============================================================================
+2. Swapstrings Manual					*swapstrings-manual*
+
+>
+	:[range]SwapStrings[!] string1 string2
+<
+    Default range is % (ie. 1,$ == entire file)
+
+    If ! is not present, then both strings are protected with \<...\> before
+    swapping.  Otherwise, the strings will be swapped even if they appear as
+    part of other words.
+
+The SwapStrings command allows one to swap two strings in a range of lines.
+As an example: >
+
+	:SwapStrings! abc def
+<
+will change all "abc" strings to "def" strings and vice versa.  The program
+works by searching the range of lines for non-use of a control character,
+beginning with ctrl-a.  The first control character not found in the range
+of lines is used to facilitate the swap:
+
+	substitute string1                    -> selected control character
+	substitute string2                    -> string1
+	substitute selected control character -> string1
+
+
+==============================================================================
+3. Swapstrings History					*swapstrings-history*
+   v1  Dec 19, 2006  * initial release of swapstrings
+
+==============================================================================
+Modelines: {{{1
+vim:tw=78:ts=8:ft=help:fdm=marker:

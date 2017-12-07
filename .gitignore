@@ -3,5 +3,4 @@ backup/*
 spell/*
 neovim/
 tmp/*
-pack/plugins/*
 colors/*
