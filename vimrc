@@ -8,8 +8,19 @@
 " /usr/local/share/vim -> /usr/share/vim/
 " And re-link it to here:
 " /usr/local/share/vim -> /usr/local/Cellar/vim/8.0.0002/share/vim/vim80
+filetype on                 " Reenable filetype detection
+filetype plugin on          " Enable filetype dection for plugins
+filetype indent on          " Enable indention by filetype
+syntax enable               " Turn on syntax highlighting
+
+if has('nvim')
+  set rtp+=~/.config/bundle/pathogen/
+  call pathogen#infect()
+endif
 
 " GLOBAL OPTIONS ============ DESCRIPTIONS
+set laststatus=2            " Always show the statusline; must be on for airline
+set encoding=utf-8          " Necessary to show unicode glyphs
 set showcmd                 " Display incomplete commands in statusline
 set shortmess=at            " Shortens about every message to a minimum
 set clipboard=unnamed       " Share clipboard with system
