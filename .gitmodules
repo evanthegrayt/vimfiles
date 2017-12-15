@@ -52,3 +52,6 @@
 [submodule "pack/libs_and_utils/start/tlib"]
 	path = pack/libs_and_utils/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pack/plugins/opt/pathogen"]
+	path = pack/plugins/opt/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
