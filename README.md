@@ -7,7 +7,7 @@ the files/lines of code you want and copy them into your own `.vim` directory,
 but if you do want my exact settings, clone the repository.
 
 ```bash
-git clone https://github.com/evanthegrayt/vimfiles.git ~/.vim
+git clone --recursive https://github.com/evanthegrayt/vimfiles.git ~/.vim
 ```
 
 Be forewarned that I use `vim8` with packages, so if you're using anything less
