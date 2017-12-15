@@ -31,3 +31,24 @@
 [submodule "pack/plugins/start/visual-increment"]
 	path = pack/plugins/start/visual-increment
 	url = https://github.com/vim-scripts/visual-increment.git
+[submodule "pack/extra_syntax_files/start/syntax-extra"]
+	path = pack/extra_syntax_files/start/syntax-extra
+	url = https://github.com/justinmk/vim-syntax-extra.git
+[submodule "pack/extra_syntax_files/start/markdown"]
+	path = pack/extra_syntax_files/start/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "pack/extra_syntax_files/start/json"]
+	path = pack/extra_syntax_files/start/json
+	url = https://github.com/elzr/vim-json.git
+[submodule "pack/libs_and_utils/start/addon-mw-utils"]
+	path = pack/libs_and_utils/start/addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "pack/libs_and_utils/start/cecutil"]
+	path = pack/libs_and_utils/start/cecutil
+	url = https://github.com/vim-scripts/cecutil.git
+[submodule "pack/libs_and_utils/start/csapprox"]
+	path = pack/libs_and_utils/start/csapprox
+	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "pack/libs_and_utils/start/tlib"]
+	path = pack/libs_and_utils/start/tlib
+	url = https://github.com/tomtom/tlib_vim.git
