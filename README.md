@@ -39,23 +39,15 @@ let g:easteregg_use_italics = 1
 let g:easteregg_use_italics = 0
 ```
 
-### Why am getting an error when I try to save a file?
-I just haven't bothered to fix it yet, but you need to add some directories:
-
-```bash
-mkdir ~/.vim/backup
-mkdir ~/.vim/tmp
-```
-
 ### Where are some settings?
 Functions, autocommands, and gui settings are under `pack/settings/start` to
 make my `vimrc` cleaner, as I rarely edit these.
 
 ### Why do I have no plugins?
-You probably didn't clone with the `--recursive` option
+You probably didn't clone with the `--recursive` option, as stated above.
 
 ### Why isn't my vimrc being loaded?
 You're probably running an older version of `vim`, which doesn't know to check
-the `.vim` directory for a `vimrc` file. You need to link it to your home
-directory, as said above.
+the `.vim` directory for a `vimrc` file. As stated above, you need to link it to
+your home directory.
 
