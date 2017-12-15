@@ -23,7 +23,39 @@ repository to work with older versions, using
 [pathogen](https://github.com/tpope/vim-pathogen). Because of this, plugins will
 be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
 
+# FAQ
+At least, I assume these would be frequently asked...
+### Why do colors look weird?
+You probably don't have italics enabled in your terminal. Either research how to
+enable them, or turn off italics by changing this line in `vimrc`:
+
+```vim
+let g:easteregg_use_italics = 1
+```
+
+...to this:
+
+```vim
+let g:easteregg_use_italics = 0
+```
+
+### Why am getting an error when I try to save a file?
+I just haven't bothered to fix it yet, but you need to add some directories:
+
+```bash
+mkdir ~/.vim/backup
+mkdir ~/.vim/tmp
+```
+
 ### Where are some settings?
-Be aware that functions, autocommands, and gui settings are under
-`pack/settings/start` to make my `vimrc` cleaner, as I rarely edit these.
+Functions, autocommands, and gui settings are under `pack/settings/start` to
+make my `vimrc` cleaner, as I rarely edit these.
+
+### Why do I have no plugins?
+You probably didn't clone with the `--recursive` option
+
+### Why isn't my vimrc being loaded?
+You're probably running an older version of `vim`, which doesn't know to check
+the `.vim` directory for a `vimrc` file. You need to link it to your home
+directory, as said above.
 

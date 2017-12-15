@@ -105,7 +105,7 @@ elseif v:version <= 703
   let g:update_plugins_directory = '~/.vim/pack/*/start'
 endif
 
-" DEBUG RUBY: debug ruby
+" RUBOCOP: debug ruby
 let g:ruby_debugger_progname = 'mvim'
 
 " UPDATE PLUGINS: update plugins from vim
@@ -182,7 +182,7 @@ endif
 
 " EASTEREGG: my colorscheme
 let g:easteregg_use_italics = 1 " Use italics
-colorscheme easteregg       " Set my colorscheme
+colorscheme easteregg           " Set my colorscheme
 
-" FUNCTIONS, AND AUTOCOMMANDS UNDER pack/settings/start
+" FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
 
