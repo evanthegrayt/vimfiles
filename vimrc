@@ -62,7 +62,7 @@ set confirm                 " If unsaved changes, ask to save
 set noswapfile              " Don't use a swap file
 set backupdir=~/.vim/backup " Set directory where backups will be stored
 set lazyredraw              " don't update the display while executing macros
-"set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
+set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
 let ruby_minlines=5000      " Loand syntax highlighting for more lines
 
 " KEY REMAPPINGS & TOGGLES
@@ -155,7 +155,7 @@ nnoremap <silent> <Leader>gt :GundoToggle<CR>
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs  = 1
 
-" VBLOCKMV: move visual blocks around when in visual mode
+" DRAGVISUALS: move visual blocks around when in visual mode
 vnoremap <expr> <S-h> DVB_Drag('left')
 vnoremap <expr> <S-l> DVB_Drag('right')
 vnoremap <expr> <S-j> DVB_Drag('down')
@@ -168,14 +168,13 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:rooter_patterns = ['Rakefile', '.git/']
 let g:rooter_silent_chdir = 1
 
-" SEARCH PULSE: highlight cursor after search
-let g:vim_search_pulse_disable_auto_mappings = 1
-let g:vim_search_pulse_mode = 'cursor_line' " 'pattern'
-nnoremap <silent> <Leader>p :call search_pulse#Pulse()<CR>
+" BUFEXPLORER: Easily switch between open buffers
 let g:bufExplorerSplitHorzSize = 10
+
+" SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_align = 1
 
-" ACK: better searching
+" ACK: better searching (requires TheSilverSearcher for `ag`)
 if executable('ag')
   nnoremap <Leader>a :Ack!<Space>
   let g:ackprg = 'ag --nogroup --nocolor --column'
