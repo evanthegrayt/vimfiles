@@ -11,10 +11,13 @@
 filetype on                 " Reenable filetype detection
 filetype plugin on          " Enable filetype dection for plugins
 filetype indent on          " Enable indention by filetype
-syntax enable               " Turn on syntax highlighting
+syntax   enable             " Turn on syntax highlighting
 
 if has('nvim')
   set rtp+=~/.config/bundle/pathogen/
+  call pathogen#infect()
+elseif v:version < 800 && isdirectory($HOME . '/.vim/pack')
+  set rtp+=~/.vim/pack/plugins/opt/pathogen/
   call pathogen#infect()
 endif
 
@@ -58,6 +61,7 @@ set hidden                  " A buffer becomes hidden when abandoned
 set confirm                 " If unsaved changes, ask to save
 set noswapfile              " Don't use a swap file
 set backupdir=~/.vim/backup " Set directory where backups will be stored
+set lazyredraw              " don't update the display while executing macros
 "set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
 let ruby_minlines=5000      " Loand syntax highlighting for more lines
 

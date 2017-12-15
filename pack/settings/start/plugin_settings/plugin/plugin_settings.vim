@@ -83,6 +83,6 @@ if executable('ag')
 endif
 
 " EASTEREGG: my colorscheme
-let g:easteregg_use_italics = 1 " Use italics
+"let g:easteregg_use_italics = 1 " Use italics
 colorscheme easteregg       " Set my colorscheme
 
