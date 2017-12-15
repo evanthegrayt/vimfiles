@@ -1,18 +1,3 @@
-[submodule "applescript"]
-    path = pack/extra_syntax_files/start/applescript
-    url = https://github.com/vim-scripts/applescript.vim.git
-[submodule "csv"]
-    path = pack/extra_syntax_files/start/csv
-    url = https://github.com/chrisbra/csv.vim.git
-[submodule "easteregg"]
-    path = pack/extra_syntax_files/start/easteregg
-    url = https://github.com/evanthegrayt/vim-easteregg.git
-[submodule "elm"]
-    path = pack/extra_syntax_files/start/elm
-    url = https://github.com/ElmCast/elm-vim.git
-[submodule "fish"]
-    path = pack/extra_syntax_files/start/fish
-    url = https://github.com/dag/vim-fish.git
 [submodule "jellybeans"]
     path = pack/extra_syntax_files/start/jellybeans
     url = https://github.com/nanotech/jellybeans.vim.git
@@ -20,3 +5,27 @@
 [submodule "pack/plugins/start/airline"]
 	path = pack/plugins/start/airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/extra_syntax_files/start/airline-themes"]
+	path = pack/extra_syntax_files/start/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pack/plugins/start/gundo"]
+	path = pack/plugins/start/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "pack/extra_syntax_files/start/applescript"]
+	path = pack/extra_syntax_files/start/applescript
+	url = https://github.com/dearrrfish/vim-applescript.git
+[submodule "pack/extra_syntax_files/start/csv"]
+	path = pack/extra_syntax_files/start/csv
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "pack/extra_syntax_files/start/easteregg"]
+	path = pack/extra_syntax_files/start/easteregg
+	url = https://github.com/evanthegrayt/vim-easteregg.git
+[submodule "pack/extra_syntax_files/start/elm"]
+	path = pack/extra_syntax_files/start/elm
+	url = https://github.com/ElmCast/elm-vim.git
+[submodule "pack/extra_syntax_files/start/fish"]
+	path = pack/extra_syntax_files/start/fish
+	url = https://github.com/dag/vim-fish.git
+[submodule "pack/extra_syntax_files/start/jellybeans"]
+	path = pack/extra_syntax_files/start/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
