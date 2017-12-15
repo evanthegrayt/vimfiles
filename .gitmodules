@@ -55,3 +55,108 @@
 [submodule "pack/plugins/opt/pathogen"]
 	path = pack/plugins/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "pack/plugins/opt/rails"]
+	path = pack/plugins/opt/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "pack/plugins/start/ack"]
+	path = pack/plugins/start/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/plugins/start/bufexplorer"]
+	path = pack/plugins/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "pack/plugins/start/bufferline"]
+	path = pack/plugins/start/bufferline
+	url = https://github.com/bling/vim-bufferline.git
+[submodule "pack/plugins/start/buffersaurus"]
+	path = pack/plugins/start/buffersaurus
+	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
+[submodule "pack/plugins/start/bundler"]
+	path = pack/plugins/start/bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "pack/plugins/start/capslock"]
+	path = pack/plugins/start/capslock
+	url = https://github.com/tpope/vim-capslock.git
+[submodule "pack/plugins/start/commentary"]
+	path = pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/plugins/start/ctrlp"]
+	path = pack/plugins/start/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "pack/plugins/start/easymotion"]
+	path = pack/plugins/start/easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "pack/plugins/start/endwise"]
+	path = pack/plugins/start/endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "pack/plugins/start/fugitive"]
+	path = pack/plugins/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/plugins/start/gitgutter"]
+	path = pack/plugins/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/plugins/start/indentline"]
+	path = pack/plugins/start/indentline
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "pack/plugins/start/indexed-search"]
+	path = pack/plugins/start/indexed-search
+	url = https://github.com/henrik/vim-indexed-search.git
+[submodule "pack/extra_syntax_files/start/javascript"]
+	path = pack/extra_syntax_files/start/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "pack/plugins/start/multiple-cursors"]
+	path = pack/plugins/start/multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "pack/plugins/start/nerdcommenter"]
+	path = pack/plugins/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/plugins/start/repeat"]
+	path = pack/plugins/start/repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "pack/plugins/start/rooter"]
+	path = pack/plugins/start/rooter
+	url = https://github.com/airblade/vim-rooter.git
+[submodule "pack/plugins/start/rsi"]
+	path = pack/plugins/start/rsi
+	url = https://github.com/tpope/vim-rsi.git
+[submodule "pack/plugins/start/rubocop"]
+	path = pack/plugins/start/rubocop
+	url = https://github.com/ngmy/vim-rubocop.git
+[submodule "pack/plugins/start/ruby-matchit"]
+	path = pack/plugins/start/ruby-matchit
+	url = https://github.com/vim-scripts/ruby-matchit.git
+[submodule "pack/plugins/start/snipmate"]
+	path = pack/plugins/start/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "pack/plugins/start/snippets"]
+	path = pack/plugins/start/snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "pack/plugins/start/speeddating"]
+	path = pack/plugins/start/speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "pack/plugins/start/splitjoin"]
+	path = pack/plugins/start/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "pack/plugins/start/supertab"]
+	path = pack/plugins/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "pack/plugins/start/surround"]
+	path = pack/plugins/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/plugins/start/syntastic"]
+	path = pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/plugins/start/tabular"]
+	path = pack/plugins/start/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "pack/plugins/start/tagbar"]
+	path = pack/plugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "pack/plugins/start/update-plugins"]
+	path = pack/plugins/start/update-plugins
+	url = https://github.com/evanthegrayt/vim-update-plugins.git
+[submodule "pack/plugins/start/dragvisuals"]
+	path = pack/plugins/start/dragvisuals
+	url = https://github.com/atweiden/vim-dragvisuals.git
