@@ -9,7 +9,6 @@ function! NumberToggle()
     setlocal nornu
   endif
 endfunc
-nnoremap <silent> <Leader>n :call NumberToggle()<cr>
 
 " FUNCTION TO TOGGLE FOLDCOLUMN
 function! FoldColumnToggle()
@@ -19,7 +18,6 @@ function! FoldColumnToggle()
     setlocal foldcolumn=2
   endif
 endfunction
-nnoremap <silent> <leader>tf :call FoldColumnToggle()<cr>
 
 " TOGGLE THE MOUSE BETWEEN VIM AND TERMINAL MODE
 function! ToggleMouse()
@@ -35,7 +33,6 @@ function! ToggleMouse()
     echo "Mouse is for terminal."
   endif
 endfunction
-nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 
 " FUNCTION TO TOGGLE A WIDE COLORCOLUMN WITH \CC
 function! ToggleColorColumnWide()
@@ -46,7 +43,6 @@ function! ToggleColorColumnWide()
     setlocal nowrap
   endif
 endfunction
-nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
 
 " FUNCTION TO TOGGLE CONCEAL LEVEL
 function! ToggleConceal()
@@ -56,5 +52,4 @@ function! ToggleConceal()
     setlocal conceallevel=2
   endif
 endfunction
-nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
 

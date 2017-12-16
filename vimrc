@@ -94,6 +94,12 @@ vnoremap <silent> j gj
 nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Ctrl-L to redraw
 nnoremap <C-L> :redraw! <CR>
+" Mappins for functions
+nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
+nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
+nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
+nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
+nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
 
 " PLUGIN SETTINGS
 
@@ -103,8 +109,8 @@ if !(v:version >= 701 && !&diff)
 else
   if v:version <= 703
     " Trick plugins into thinking they're already loaded; they're not compatible
-    let g:bufexplorer_version = 1
-    let g:loaded_tagbar       = 1
+    let g:bufexplorer_version      = 1
+    let g:loaded_tagbar            = 1
     let g:update_plugins_directory = '~/.vim/pack/*/start'
   endif
 
@@ -112,8 +118,8 @@ else
   let g:ruby_debugger_progname = 'mvim'
 
   " UPDATE PLUGINS: update plugins from vim
-  let g:update_plugins_directory = '~/.vim/pack/*/start/'
-  let g:update_plugins_exclude = ['update-plugins']
+  let g:update_plugins_directory     = '~/.vim/pack/*/start/'
+  let g:update_plugins_exclude       = ['update-plugins']
   let g:update_plugins_print_results = 1
 
   " AIRLINE: advanced status line
@@ -126,17 +132,17 @@ else
   let g:airline#extensions#syntastic#enabled  = 1
   let g:airline#extensions#branch#enabled     = 1
   let g:airline_detect_paste                  = 1
-  let g:airline_theme="bubblegum"
+  let g:airline_theme                         = "bubblegum"
   let g:airline#extensions#whitespace#enabled = 1
 
   " INDENT LINE: draw lines every intention
   let g:indentLine_color_term = 239
-  let g:indentLine_enabled = 1
-  let g:indentLine_char = '┊'
+  let g:indentLine_enabled    = 1
+  let g:indentLine_char       = '┊'
 
   " BUFFERLINE: show open buffers in airline
-  let g:bufferline_show_bufnr = 0
-  let g:bufferline_echo = 0
+  let g:bufferline_show_bufnr       = 0
+  let g:bufferline_echo             = 0
   let g:bufferline_active_highlight = 'StatusLine'
 
   " GITGUTTER: show diff in gutter
@@ -168,7 +174,7 @@ else
   let g:ctrlp_working_path_mode = 'ra'
 
   " ROOTER: set root directory at begiining of project
-  let g:rooter_patterns = ['Rakefile', '.git/']
+  let g:rooter_patterns     = ['Rakefile', '.git/']
   let g:rooter_silent_chdir = 1
 
   " BUFEXPLORER: Easily switch between open buffers
