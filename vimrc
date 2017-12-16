@@ -94,7 +94,7 @@ vnoremap <silent> j gj
 nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Ctrl-L to redraw
 nnoremap <C-L> :redraw! <CR>
-" Mappins for functions
+" Mappings for functions
 nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
 nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
