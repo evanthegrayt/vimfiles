@@ -1,11 +1,12 @@
 # My Vimfiles
 All of my vim runtime files. Here be dragons.
 
-My local copy of vim is running `version 8`, but on our company's system, we're
-running `version 7.{1,3,4}`. I've spent time making sure this repository works
-without errors no matter what version I'm running; the only difference is, some
-plugins have to be disiabled, as they aren't compatible with lower versions of
-vim.
+My local copy of vim is running `version 8` on Mac, but on our company's system,
+we're running `version 7.{1,3,4}` on Linux. I've spent time making sure this
+repository works without errors no matter what `vim` version I'm running; the
+only difference is, some plugins have to be disiabled, as they aren't compatible
+with lower versions of vim. Full disclosure, I have not tested any of this on
+Windows. You've been warned.
 
 ### Installation
 I highly doubt you want to use my exact configuration, so I recommend finding
@@ -44,6 +45,8 @@ let g:easteregg_use_italics = 1
 ```vim
 let g:easteregg_use_italics = 0
 ```
+
+...or just delete the line entirely.
 
 ### Where are some settings?
 Functions, autocommands, and gui settings are under `pack/settings/start` to

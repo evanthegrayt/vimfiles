@@ -1,6 +1,6 @@
 " File: .vimrc
 " Author: erg
-" Description: My super awesome vim settings
+" Description: My general vim settings
 " Last Modified: Tue Mar 10 14:27:58 2015
 " vi: set ft=vim :
 
@@ -92,6 +92,8 @@ nnoremap <silent> j gj
 vnoremap <silent> j gj
 " Toggle Spell Check
 nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
+" Make Y behave like D and C
+nnoremap Y y$
 " Ctrl-L to redraw
 nnoremap <C-L> :redraw! <CR>
 " Mappings for functions
@@ -111,16 +113,14 @@ else
     " Trick plugins into thinking they're already loaded; they're not compatible
     let g:bufexplorer_version      = 1
     let g:loaded_tagbar            = 1
-    let g:update_plugins_directory = '~/.vim/pack/*/start'
+    let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
   endif
 
   " RUBOCOP: debug ruby
   let g:ruby_debugger_progname = 'mvim'
 
   " UPDATE PLUGINS: update plugins from vim
-  let g:update_plugins_directory     = '~/.vim/pack/*/start/'
-  let g:update_plugins_exclude       = ['update-plugins']
-  let g:update_plugins_print_results = 1
+  let g:update_plugins_exclude       = ['update-plugins', 'pathogen']
 
   " AIRLINE: advanced status line
   if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
@@ -192,6 +192,9 @@ else
   " EASTEREGG: my colorscheme
   let g:easteregg_use_italics = 1 " Use italics
   colorscheme easteregg           " Set my colorscheme
+
+  " MARKDOWN: markdown syntax plugin
+  let g:vim_markdown_new_list_item_indent = 2
 endif
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
