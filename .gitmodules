@@ -160,3 +160,6 @@
 [submodule "pack/plugins/start/dragvisuals"]
 	path = pack/plugins/start/dragvisuals
 	url = https://github.com/atweiden/vim-dragvisuals.git
+[submodule "pack/plugins/start/autoswap"]
+	path = pack/plugins/start/autoswap
+	url = https://github.com/gioele/vim-autoswap.git

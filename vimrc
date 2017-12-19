@@ -1,18 +1,24 @@
-" File: .vimrc
-" Author: erg
-" Description: My general vim settings
-" Last Modified: Tue Mar 10 14:27:58 2015
-" vi: set ft=vim :
+" FILE:         vimrc
+" AUTHOR:       Evan Gray
+" DESCRIPTION:  My general vim settings
+" vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
+" Type `zo` on a fold to open it, or `zn` to open all folds
 
+" VERSION_8: Notes for myself {{{1
 " To get vim8 working, delete the following link (on mac):
 " /usr/local/share/vim -> /usr/share/vim/
 " And re-link it to here:
 " /usr/local/share/vim -> /usr/local/Cellar/vim/8.0.0002/share/vim/vim80
-filetype on                 " Reenable filetype detection
+"}}}
+
+" FILETYPE AND SYNTAX:      " Enable plugins, filetype detection, etc. {{{1
+filetype on                 " Enable filetype detection
 filetype plugin on          " Enable filetype dection for plugins
 filetype indent on          " Enable indention by filetype
 syntax   enable             " Turn on syntax highlighting
+"}}}
 
+" RUNTIME PATH: Make sure plugins are in &rtp {{{1
 if has('nvim')
   set rtp+=~/.config/bundle/pathogen/
   call pathogen#infect()
@@ -20,8 +26,9 @@ elseif v:version < 800 && isdirectory($HOME . '/.vim/pack')
   set rtp+=~/.vim/pack/plugins/opt/pathogen/
   call pathogen#infect()
 endif
+"}}}
 
-" GLOBAL OPTIONS ============ DESCRIPTIONS
+" GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
 set laststatus=2            " Always show the statusline; must be on for airline
 set encoding=utf-8          " Necessary to show unicode glyphs
 set showcmd                 " Display incomplete commands in statusline
@@ -63,48 +70,47 @@ set lazyredraw              " don't update the display while executing macros
 set backupdir=~/.vim/backup " Set directory where backups will be stored
 set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
 let ruby_minlines=5000      " Loand syntax highlighting for more lines
+"}}}
 
-" KEY REMAPPINGS & TOGGLES
-" Remappings to make Ctrl + j/k move line or selection up/down
+" MAPPINGS: Custom key mappings {{{1
+" Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-" TOGGLE COMMON VIM SETTINGS
-nnoremap <silent> <Leader>h :set hlsearch!<CR>
-nnoremap <silent> <Leader>w :set wrap!<CR>
-nnoremap <silent> <Leader>i :set autoindent!<CR>
-nnoremap <silent> <Leader>l :set list!<CR>
-" HIT \fi TO FIX THE WHOLE FILE'S INDENTING
+" Toggles: Toggle common vim settings local to buffer
+nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
+nnoremap <silent> <Leader>w :setlocal wrap!<CR>
+nnoremap <silent> <Leader>i :setlocal autoindent!<CR>
+nnoremap <silent> <Leader>l :setlocal list!<CR>
+" Indenting: `\fi` to fix the whole file's indenting
 nnoremap <Leader>fi mzgg=G'z
-" HIT \r TO SAVE THE FILE USING SUDO
+" Saving: hit `\r` to save the file using sudo
 nnoremap <Leader>r :w !sudo tee % <CR>
-" HIT \TS to remove all trailing spaces
+" Trailing Spaces: hit `\TS` to remove all trailing whitespace
 nnoremap <Leader>TS :%s/\s\+$//<CR>
-" FIX WHOLE FILE - FIXES INDENTING, TRAILING SPACE, AND CONVERTS TABS TO SPACES
-nnoremap <Leader>fwf :retab<CR> mzgg=G'z<CR> :%s/\s\+$//<CR>
-" j and k not skip lines if line wrap is on
+" Cursor Movement: j and k not skip wrapped lines
 nnoremap <silent> k gk
 vnoremap <silent> k gk
 nnoremap <silent> j gj
 vnoremap <silent> j gj
-" Toggle Spell Check
+" Spell Check: Toggle spellchecker
 nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
-" Make Y behave like D and C
+" Yanking: Make Y behave like D and C
 nnoremap Y y$
-" Ctrl-L to redraw
+" Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
-" Mappings for functions
+" Functions: Mappings for functions in pack/settings/start/functions
 nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
 nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
 nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
+"}}}
 
-" PLUGIN SETTINGS
-
+" PLUGIN SETTINGS {{{1
 " Only use plugins if version is > 7.1
 if !(v:version >= 701 && !&diff)
   echo "Vim version less than 7.01; disabling plugins."
@@ -196,6 +202,7 @@ else
   " MARKDOWN: markdown syntax plugin
   let g:vim_markdown_new_list_item_indent = 2
 endif
+"}}}
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
 
