@@ -11,7 +11,7 @@ set mouse=a
 set vb t_vb=
 
 if has("gui_gtk2")
-  set guifont=Hack\ 10, Monospace\ 10
+  set guifont=Monospace\ 9
 elseif has("gui_macvim")
   set guifont=Hack:h11,Monaco:h11
 elseif has("gui_win32") || has("gui_win64")
