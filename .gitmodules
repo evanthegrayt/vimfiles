@@ -163,3 +163,6 @@
 [submodule "pack/plugins/start/autoswap"]
 	path = pack/plugins/start/autoswap
 	url = https://github.com/gioele/vim-autoswap.git
+[submodule "pack/plugins/start/git"]
+	path = pack/plugins/start/git
+	url = https://github.com/tpope/vim-git.git
