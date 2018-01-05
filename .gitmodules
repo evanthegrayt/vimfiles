@@ -166,3 +166,6 @@
 [submodule "pack/plugins/start/git"]
 	path = pack/plugins/start/git
 	url = https://github.com/tpope/vim-git.git
+[submodule "pack/plugins/start/man"]
+	path = pack/plugins/start/man
+	url = https://github.com/vim-utils/vim-man.git
