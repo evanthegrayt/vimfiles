@@ -169,3 +169,6 @@
 [submodule "pack/plugins/start/man"]
 	path = pack/plugins/start/man
 	url = https://github.com/vim-utils/vim-man.git
+[submodule "pack/plugins/start/nerdtree-git-plugin"]
+	path = pack/plugins/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
