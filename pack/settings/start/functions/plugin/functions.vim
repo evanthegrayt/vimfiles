@@ -8,7 +8,7 @@ function! NumberToggle()
   else
     setlocal nornu
   endif
-endfunc
+endfunction
 
 " FUNCTION TO TOGGLE FOLDCOLUMN
 function! FoldColumnToggle()

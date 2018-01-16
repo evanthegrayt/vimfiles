@@ -6,7 +6,7 @@ endif
 
 augroup vimrc
   " SET BACKUP EXTENSION - will save one backup per file per hour, per day
-  autocmd BufWritePre * let &bex = '.' . strftime("%Y%m%d%H")
+  autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
   " TURN OFF AUTO-COMMENTS ON RETURN
   autocmd FileType * setlocal fo-=c fo-=r fo-=o
   " RETURN TO LAST EDIT POSITION WHEN RE-OPENING FILES (THIS IS GREAT TO HAVE!)
