@@ -68,6 +68,7 @@ set hidden                  " A buffer becomes hidden when abandoned
 set confirm                 " If unsaved changes, ask to save
 set lazyredraw              " don't update the display while executing macros
 set backupdir=~/.vim/backup " Set directory where backups will be stored
+set viminfo+=n~/.vim/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
 let ruby_minlines=5000      " Loand syntax highlighting for more lines
 "}}}
@@ -102,106 +103,113 @@ nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
 nnoremap Y y$
 " Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
-" Functions: Mappings for functions in pack/settings/start/functions
-nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
-nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
+" Function Toggles: Mappings for functions in pack/settings/start/functions
+if v:version > 701
+  nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
+  nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
+  nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
+endif
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
-nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
-" Only use plugins if version is > 7.1
-if !(v:version >= 701 && !&diff)
-  echo "Vim version less than 7.01; disabling plugins."
-else
-  if v:version <= 703
-    " Trick plugins into thinking they're already loaded; they're not compatible
-    let g:bufexplorer_version      = 1
-    let g:loaded_tagbar            = 1
-    let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
-  endif
-
-  " RUBOCOP: debug ruby
-  let g:ruby_debugger_progname = 'mvim'
-
-  " UPDATE PLUGINS: update plugins from vim
-  let g:update_plugins_exclude       = ['update-plugins', 'pathogen']
-
-  " AIRLINE: advanced status line
-  if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
-  let g:airline_symbols.readonly              = '±'
-  let g:airline_symbols.linenr                = '¶'
-  let g:airline_symbols.paste                 = 'Þ'
-  let g:airline_symbols.whitespace            = '!'
-  let g:airline#extensions#bufferline#enabled = 1
-  let g:airline#extensions#syntastic#enabled  = 1
-  let g:airline#extensions#branch#enabled     = 1
-  let g:airline_detect_paste                  = 1
-  let g:airline_theme                         = "bubblegum"
-  let g:airline#extensions#whitespace#enabled = 1
-
-  " INDENT LINE: draw lines every intention
-  let g:indentLine_color_term = 239
-  let g:indentLine_enabled    = 1
-  let g:indentLine_char       = '┊'
-
-  " BUFFERLINE: show open buffers in airline
-  let g:bufferline_show_bufnr       = 0
-  let g:bufferline_echo             = 0
-  let g:bufferline_active_highlight = 'StatusLine'
-
-  " GITGUTTER: show diff in gutter
-  nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
-
-  " INDENTLINES: show think lines at each indention level
-  nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
-
-  " TAGBAR: show classes/methods/functions in side window
-  nnoremap <silent> <Leader>TT :Tagbar<CR>
-
-  " NERDTREE: a better file browser for vim
-  nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
-
-  " GUNDO: a visualization of vim's unto tree
-  nnoremap <silent> <Leader>gt :GundoToggle<CR>
-
-  " SYNTASTIC: checks the syntax of files and reports errors
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_enable_signs  = 1
-
-  " DRAGVISUALS: move visual blocks around when in visual mode
-  vnoremap <expr> <S-h> DVB_Drag('left')
-  vnoremap <expr> <S-l> DVB_Drag('right')
-  vnoremap <expr> <S-j> DVB_Drag('down')
-  vnoremap <expr> <S-k> DVB_Drag('up')
-
-  " CTRLP: project file search
-  let g:ctrlp_working_path_mode = 'ra'
-
-  " ROOTER: set root directory at begiining of project
-  let g:rooter_patterns     = ['Rakefile', '.git/']
-  let g:rooter_silent_chdir = 1
-
-  " BUFEXPLORER: Easily switch between open buffers
-  let g:bufExplorerSplitHorzSize = 10
-
-  " SPLITJOIN: Split/Join lines of code syntastically
-  let g:splitjoin_align = 1
-
-  " ACK: better searching (requires TheSilverSearcher for `ag`)
-  if executable('ag')
-    nnoremap <Leader>a :Ack!<Space>
-    let g:ackprg = 'ag --nogroup --nocolor --column'
-  endif
-
-  " EASTEREGG: my colorscheme
-  let g:easteregg_use_italics = 1 " Use italics
-  colorscheme easteregg           " Set my colorscheme
-
-  " MARKDOWN: markdown syntax plugin
-  let g:vim_markdown_new_list_item_indent = 2
+if v:version <= 701
+  let g:loaded_syntastic_plugin  = 1
+  let g:loaded_indexed_search    = 1
+  let loaded_nerd_tree           = 1
 endif
+if v:version < 703
+  let g:loaded_tagbar            = 1
+  let g:CSApprox_loaded          = 1
+endif
+if v:version < 704
+  let g:bufexplorer_version      = 1
+endif
+if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
+  let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
+endif
+
+" RUBOCOP: debug ruby
+let g:ruby_debugger_progname = 'mvim'
+
+" UPDATE PLUGINS: update plugins from vim
+let g:update_plugins_exclude       = ['update-plugins', 'pathogen']
+
+" AIRLINE: advanced status line
+if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
+let g:airline_symbols.readonly              = '±'
+let g:airline_symbols.linenr                = '¶'
+let g:airline_symbols.paste                 = 'Þ'
+let g:airline_symbols.whitespace            = '!'
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#syntastic#enabled  = 1
+let g:airline#extensions#tagbar#enabled  = 0
+let g:airline#extensions#branch#enabled     = 1
+let g:airline_detect_paste                  = 1
+let g:airline_theme                         = "bubblegum"
+let g:airline#extensions#whitespace#enabled = 1
+
+" INDENT LINE: draw lines every intention
+let g:indentLine_color_term = 239
+let g:indentLine_enabled    = 1
+let g:indentLine_char       = '┊'
+
+" BUFFERLINE: show open buffers in airline
+let g:bufferline_show_bufnr       = 0
+let g:bufferline_echo             = 0
+let g:bufferline_active_highlight = 'StatusLine'
+
+" GITGUTTER: show diff in gutter
+nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
+
+" INDENTLINES: show think lines at each indention level
+nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
+
+" TAGBAR: show classes/methods/functions in side window
+nnoremap <silent> <Leader>TT :Tagbar<CR>
+
+" NERDTREE: a better file browser for vim
+nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
+
+" GUNDO: a visualization of vim's unto tree
+nnoremap <silent> <Leader>gt :GundoToggle<CR>
+
+" SYNTASTIC: checks the syntax of files and reports errors
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs  = 1
+
+" DRAGVISUALS: move visual blocks around when in visual mode
+vnoremap <expr> <S-h> DVB_Drag('left')
+vnoremap <expr> <S-l> DVB_Drag('right')
+vnoremap <expr> <S-j> DVB_Drag('down')
+vnoremap <expr> <S-k> DVB_Drag('up')
+
+" CTRLP: project file search
+let g:ctrlp_working_path_mode = 'ra'
+
+" ROOTER: set root directory at begiining of project
+let g:rooter_patterns     = ['Rakefile', '.git/']
+let g:rooter_silent_chdir = 1
+
+" BUFEXPLORER: Easily switch between open buffers
+let g:bufExplorerSplitHorzSize = 10
+
+" SPLITJOIN: Split/Join lines of code syntastically
+let g:splitjoin_align = 1
+
+" ACK: better searching (requires TheSilverSearcher for `ag`)
+if executable('ag')
+  nnoremap <Leader>a :Ack!<Space>
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+" EASTEREGG: my colorscheme
+let g:easteregg_use_italics = 1 " Use italics
+colorscheme easteregg           " Set my colorscheme
+
+" MARKDOWN: markdown syntax plugin
+let g:vim_markdown_new_list_item_indent = 0
 "}}}
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
