@@ -114,6 +114,7 @@ nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
+" Disable Plugins Based On Version: Some plugins echo output. I don't want that.
 if v:version <= 701
   let g:loaded_syntastic_plugin  = 1
   let g:loaded_indexed_search    = 1
@@ -124,7 +125,8 @@ if v:version < 703
   let g:CSApprox_loaded          = 1
 endif
 if v:version < 704
-  let g:bufexplorer_version      = 1
+  let g:airline#extensions#tagbar#enabled = 0
+  let g:bufexplorer_version               = 1
 endif
 if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
   let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
@@ -144,7 +146,6 @@ let g:airline_symbols.paste                 = 'Þ'
 let g:airline_symbols.whitespace            = '!'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#syntastic#enabled  = 1
-let g:airline#extensions#tagbar#enabled  = 0
 let g:airline#extensions#branch#enabled     = 1
 let g:airline_detect_paste                  = 1
 let g:airline_theme                         = "bubblegum"
