@@ -131,6 +131,11 @@ endif
 if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
   let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
 endif
+if !executable('git')
+  let g:loaded_gitgutter = 1
+  let g:loaded_nerdtree_git_status = 1
+  let g:loaded_fugitive = 1
+endif
 
 " RUBOCOP: debug ruby
 let g:ruby_debugger_progname = 'mvim'
