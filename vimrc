@@ -160,6 +160,7 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
 let g:indentLine_char       = '┊'
+nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 
 " BUFFERLINE: show open buffers in airline
 let g:bufferline_show_bufnr       = 0
@@ -168,9 +169,6 @@ let g:bufferline_active_highlight = 'StatusLine'
 
 " GITGUTTER: show diff in gutter
 nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
-
-" INDENTLINES: show think lines at each indention level
-nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
@@ -186,10 +184,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs  = 1
 
 " DRAGVISUALS: move visual blocks around when in visual mode
-vnoremap <expr> <S-h> DVB_Drag('left')
-vnoremap <expr> <S-l> DVB_Drag('right')
-vnoremap <expr> <S-j> DVB_Drag('down')
-vnoremap <expr> <S-k> DVB_Drag('up')
+vmap <expr> <S-h> DVB_Drag('left')
+vmap <expr> <S-l> DVB_Drag('right')
+vmap <expr> <S-j> DVB_Drag('down')
+vmap <expr> <S-k> DVB_Drag('up')
 
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
