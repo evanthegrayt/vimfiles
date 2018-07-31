@@ -75,12 +75,12 @@ let ruby_minlines=5000      " Loand syntax highlighting for more lines
 
 " MAPPINGS: Custom key mappings {{{1
 " Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <silent> <C-j> :m .+1<CR>==
+nnoremap <silent> <C-k> :m .-2<CR>==
+inoremap <silent> <C-j> <Esc>:m .+1<CR>==gi
+inoremap <silent> <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
+vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 " Toggles: Toggle common vim settings local to buffer
 nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
 nnoremap <silent> <Leader>w :setlocal wrap!<CR>
@@ -214,6 +214,7 @@ colorscheme easteregg           " Set my colorscheme
 
 " MARKDOWN: markdown syntax plugin
 let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_folding_disabled     = 1
 "}}}
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start

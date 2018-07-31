@@ -172,3 +172,6 @@
 [submodule "pack/plugins/start/nerdtree-git-plugin"]
 	path = pack/plugins/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/plugins/start/vader"]
+	path = pack/plugins/start/vader
+	url = https://github.com/junegunn/vader.vim.git
