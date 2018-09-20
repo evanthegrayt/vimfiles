@@ -175,7 +175,7 @@ nnoremap <silent> <Leader>TT :Tagbar<CR>
 
 " NERDTREE: a better file browser for vim
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>no :NERDTreeFind<CR>
+nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 
 " GUNDO: a visualization of vim's unto tree
 nnoremap <silent> <Leader>gt :GundoToggle<CR>
