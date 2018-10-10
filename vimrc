@@ -194,7 +194,7 @@ vmap <expr> <S-k> DVB_Drag('up')
 let g:ctrlp_working_path_mode = 'ra'
 
 " ROOTER: set root directory at begiining of project
-let g:rooter_patterns     = ['Rakefile', '.git/']
+let g:rooter_patterns     = ['Rakefile', '.git', '.git/']
 let g:rooter_silent_chdir = 1
 
 " BUFEXPLORER: Easily switch between open buffers
@@ -217,6 +217,9 @@ colorscheme easteregg           " Set my colorscheme
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_folding_disabled     = 1
 "}}}
+
+" PREVIM: live preview markdown, etc.
+let g:previm_open_cmd = 'open -a Firefox'
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
 

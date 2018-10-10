@@ -175,3 +175,6 @@
 [submodule "pack/plugins/start/vader"]
 	path = pack/plugins/start/vader
 	url = https://github.com/junegunn/vader.vim.git
+[submodule "pack/extra_syntax_files/start/previm"]
+	path = pack/extra_syntax_files/start/previm
+	url = https://github.com/previm/previm.git
