@@ -70,7 +70,6 @@ set lazyredraw              " don't update the display while executing macros
 set backupdir=~/.vim/backup " Set directory where backups will be stored
 set viminfo+=n~/.vim/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
-let ruby_minlines=5000      " Loand syntax highlighting for more lines
 "}}}
 
 " MAPPINGS: Custom key mappings {{{1
@@ -216,10 +215,11 @@ colorscheme easteregg           " Set my colorscheme
 " MARKDOWN: markdown syntax plugin
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_folding_disabled     = 1
-"}}}
 
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
+
+"}}}
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
 
