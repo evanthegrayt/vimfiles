@@ -178,3 +178,6 @@
 [submodule "pack/plugins/start/rails"]
 	path = pack/plugins/start/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "pack/plugins/start/dispatch"]
+	path = pack/plugins/start/dispatch
+	url = https://github.com/tpope/vim-dispatch
