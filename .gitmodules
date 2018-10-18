@@ -55,9 +55,6 @@
 [submodule "pack/plugins/opt/pathogen"]
 	path = pack/plugins/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "pack/plugins/opt/rails"]
-	path = pack/plugins/opt/rails
-	url = https://github.com/tpope/vim-rails.git
 [submodule "pack/plugins/start/ack"]
 	path = pack/plugins/start/ack
 	url = https://github.com/mileszs/ack.vim.git
@@ -178,3 +175,6 @@
 [submodule "pack/extra_syntax_files/start/previm"]
 	path = pack/extra_syntax_files/start/previm
 	url = https://github.com/previm/previm.git
+[submodule "pack/plugins/start/rails"]
+	path = pack/plugins/start/rails
+	url = https://github.com/tpope/vim-rails.git
