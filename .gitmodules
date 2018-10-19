@@ -181,3 +181,9 @@
 [submodule "pack/plugins/start/dispatch"]
 	path = pack/plugins/start/dispatch
 	url = https://github.com/tpope/vim-dispatch
+[submodule "pack/plugins/start/eunuch"]
+	path = pack/plugins/start/eunuch
+	url = https://github.com/tpope/vim-eunuch
+[submodule "pack/plugins/start/jdaddy"]
+	path = pack/plugins/start/jdaddy
+	url = https://github.com/tpope/vim-jdaddy
