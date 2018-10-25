@@ -219,9 +219,6 @@ let g:vim_markdown_folding_disabled     = 1
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
 
-" AUTOSWAP: Automatically handle swap files
-let g:autoswap_detect_tmux = 1
-
 "}}}
 
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
