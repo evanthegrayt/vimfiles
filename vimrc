@@ -46,7 +46,7 @@ set wildmenu                " Command line completion
 set expandtab               " convert tabs to spaces
 set autoindent              " Keep indention of prev line when creating new line
 set smartindent             " Will auto-indent when needed
-set title                   " Display vim info in terminal title bar
+set title titlestring=      " Display vim info in terminal title bar
 set history=1000            " Set the size of history
 set backup                  " Turn on backups
 set wrapscan                " Wrap search to top of document when bottom is hit
@@ -218,6 +218,9 @@ let g:vim_markdown_folding_disabled     = 1
 
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
+
+" AUTOSWAP: Automatically handle swap files
+let g:autoswap_detect_tmux = 1
 
 "}}}
 

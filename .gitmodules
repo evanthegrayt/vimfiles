@@ -157,9 +157,6 @@
 [submodule "pack/plugins/start/dragvisuals"]
 	path = pack/plugins/start/dragvisuals
 	url = https://github.com/atweiden/vim-dragvisuals.git
-[submodule "pack/plugins/start/autoswap"]
-	path = pack/plugins/start/autoswap
-	url = https://github.com/gioele/vim-autoswap.git
 [submodule "pack/plugins/start/git"]
 	path = pack/plugins/start/git
 	url = https://github.com/tpope/vim-git.git
@@ -187,3 +184,6 @@
 [submodule "pack/plugins/start/jdaddy"]
 	path = pack/plugins/start/jdaddy
 	url = https://github.com/tpope/vim-jdaddy
+[submodule "pack/plugins/start/dadbod"]
+	path = pack/plugins/start/dadbod
+	url = https://github.com/tpope/vim-dadbod
