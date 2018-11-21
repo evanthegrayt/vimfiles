@@ -140,7 +140,7 @@ endif
 let g:ruby_debugger_progname = 'mvim'
 
 " UPDATE PLUGINS: update plugins from vim
-let g:update_plugins_exclude       = ['update-plugins', 'pathogen']
+let g:update_plugins_exclude = ['update-plugins']
 
 " AIRLINE: advanced status line
 if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
@@ -193,7 +193,8 @@ vmap <expr> <S-k> DVB_Drag('up')
 let g:ctrlp_working_path_mode = 'ra'
 
 " ROOTER: set root directory at begiining of project
-let g:rooter_patterns     = ['Rakefile', '.git', '.git/']
+let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
+      \                  '.hg/', '.bzr/', '.svn/']
 let g:rooter_silent_chdir = 1
 
 " BUFEXPLORER: Easily switch between open buffers
