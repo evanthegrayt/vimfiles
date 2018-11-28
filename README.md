@@ -8,6 +8,12 @@ only difference is, some plugins have to be disiabled, as they aren't compatible
 with lower versions of vim. Full disclosure, I have not tested any of this on
 Windows. You've been warned.
 
+Here's what my `vim` setup looks like. In this screenshot, you can see Tagbar,
+NERDTree, Easteregg Colorscheme, and Airline with a bunch of integrated plugins.
+I'm using iTerm2 on MacOS with the Hack font.
+
+![](resource/vim_screenshot.jpg)
+
 ### Installation
 I highly doubt you want to use my exact configuration, so I recommend finding
 the files/lines of code you want and copy them into your own `.vim` directory,
