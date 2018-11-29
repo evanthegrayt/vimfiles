@@ -8,9 +8,14 @@ only difference is, some plugins have to be disiabled, as they aren't compatible
 with lower versions of vim. Full disclosure, I have not tested any of this on
 Windows. You've been warned.
 
-Here's what my `vim` setup looks like. In this screenshot, you can see Tagbar,
-NERDTree, Easteregg Colorscheme, and Airline with a bunch of integrated plugins.
-I'm using iTerm2 on MacOS with the Hack font.
+Here's what my `vim` setup looks like. In this screenshot, you can see
+[Tagbar](https://github.com/majutsushi/tagbar.git),
+[NERDTree](https://github.com/scrooloose/nerdtree.git),
+[Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
+[Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
+I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
+[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/bin/install#L109),
+and with the [Hack font](https://sourcefoundry.org/hack/).
 
 ![](resource/vim_screenshot.jpg)
 
