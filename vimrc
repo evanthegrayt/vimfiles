@@ -85,21 +85,17 @@ nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
 nnoremap <silent> <Leader>w :setlocal wrap!<CR>
 nnoremap <silent> <Leader>i :setlocal autoindent!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
+nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <Leader>fi mzgg=G'z
 " Saving: hit `\r` to save the file using sudo
 nnoremap <Leader>r :w !sudo tee % <CR>
 " Trailing Spaces: hit `\TS` to remove all trailing whitespace
 nnoremap <Leader>TS :%s/\s\+$//<CR>
-" Cursor Movement: j and k not skip wrapped lines
-nnoremap <silent> k gk
-vnoremap <silent> k gk
-nnoremap <silent> j gj
-vnoremap <silent> j gj
-" Spell Check: Toggle spellchecker
-nnoremap <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
+" Yank File Path: Copy the expanded file-path of current file to clipboard
+nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
 " Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
 " Function Toggles: Mappings for functions in pack/settings/start/functions
