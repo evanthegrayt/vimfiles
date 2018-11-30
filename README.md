@@ -44,8 +44,9 @@ be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
 # FAQ
 At least, I assume these would be frequently asked...
 ### Why do colors look weird?
-You probably don't have italics enabled in your terminal. Either research how to
-enable them, or turn off italics by changing this line in `vimrc`:
+You probably don't have italics enabled in your terminal. Either
+[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
+or turn off italics by changing this line in `vimrc`:
 
 ```vim
 let g:easteregg_use_italics = 1
