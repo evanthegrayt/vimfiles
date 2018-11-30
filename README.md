@@ -14,7 +14,7 @@ Here's what my `vim` setup looks like. In this screenshot, you can see
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
 [Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
 I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
-[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/bin/install#L109),
+[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
 ![](resource/vim_screenshot.jpg)
