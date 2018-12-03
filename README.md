@@ -72,3 +72,8 @@ You're probably running an older version of `vim`, which doesn't know to check
 the `.vim` directory for a `vimrc` file. As stated above, you need to link it to
 your home directory.
 
+## Reporting Bugs
+These are just my config files, so there shouldn't be (m)any bugs, but if you
+find any, please [submit an
+issue](https://github.com/evanthegrayt/vimfiles/issues/new).
+
