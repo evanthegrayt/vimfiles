@@ -9,6 +9,7 @@ tmp/*
 !tmp/.gitkeep
 colors/*
 !colors/.gitkeep
-viminfo
 .netrwhist
+cache/*
+!cache/.gitkeep
 

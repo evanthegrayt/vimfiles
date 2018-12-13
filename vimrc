@@ -67,9 +67,9 @@ set whichwrap+=<,>          " Arrow keys will wrap, don't like h+l to do this
 set hidden                  " A buffer becomes hidden when abandoned
 set confirm                 " If unsaved changes, ask to save
 set lazyredraw              " don't update the display while executing macros
-set backupdir=~/.vim/backup " Set directory where backups will be stored
-set viminfo+=n~/.vim/viminfo " Keep viminfo in .vim dir
-set directory=~/.vim/tmp    " keep .swp files in [dir], not the cwd.
+set backupdir=~/.vim/backup        " Set directory where backups will be stored
+set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
+set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
 "}}}
 
 " MAPPINGS: Custom key mappings {{{1
@@ -186,6 +186,7 @@ endif
 " NERDTREE: a better file browser for vim
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
+let g:NERDTreeBookmarksFile = expand($HOME) . ".vim/cache/NERDTreeBookmarks"
 
 " GUNDO: a visualization of vim's unto tree
 nnoremap <silent> <Leader>gt :GundoToggle<CR>
