@@ -209,9 +209,6 @@ let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
       \                  '.hg/', '.bzr/', '.svn/']
 let g:rooter_silent_chdir = 1
 
-" BUFEXPLORER: Easily switch between open buffers
-let g:bufExplorerSplitHorzSize = 10
-
 " SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_align = 1
 
