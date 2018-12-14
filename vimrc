@@ -234,5 +234,11 @@ let g:previm_open_cmd = 'open -a Firefox'
 
 "}}}
 
+" LOCAL: source local vimrc if it exists {{{
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+"}}}
+
 " NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
 
