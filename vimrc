@@ -72,7 +72,7 @@ set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
 "}}}
 
-" MAPPINGS: Custom key mappings {{{1
+" MAPPINGS: Custom key mappings {{{
 " Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
@@ -167,29 +167,31 @@ nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
-if executable('ripper-tags')
-  let g:tagbar_type_ruby = {
-      \ 'kinds'      : ['m:modules',
-                      \ 'c:classes',
-                      \ 'C:constants',
-                      \ 'F:singleton methods',
-                      \ 'f:methods',
-                      \ 'a:aliases'],
-      \ 'kind2scope' : { 'c' : 'class',
-                       \ 'm' : 'class' },
-      \ 'scope2kind' : { 'class' : 'c' },
-      \ 'ctagsbin'   : 'ripper-tags',
-      \ 'ctagsargs'  : ['-f', '-']
-      \ }
-endif
+let g:tagbar_type_ruby = {
+  \ 'kinds' : [
+    \ 'm:modules',
+    \ 'c:classes',
+    \ 'Z:context',
+    \ 'o:buttons',
+    \ 'd:describes',
+    \ 'f:methods',
+    \ 'F:singleton methods',
+    \ 'r:rules',
+    \ 'y:factories',
+    \ 'z:traits'
+  \ ]
+\ }
 
 " NERDTREE: a better file browser for vim
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 let g:NERDTreeBookmarksFile = expand($HOME) . ".vim/cache/NERDTreeBookmarks"
+let NERDTreeQuitOnOpen = 1
 
 " GUNDO: a visualization of vim's unto tree
 nnoremap <silent> <Leader>gt :GundoToggle<CR>
+let g:gundo_prefer_python3  = 1
+let g:gundo_close_on_revert = 1
 
 " SYNTASTIC: checks the syntax of files and reports errors
 let g:syntastic_check_on_open = 1
