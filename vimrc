@@ -87,11 +87,11 @@ nnoremap <silent> <Leader>i :setlocal autoindent!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Indenting: `\fi` to fix the whole file's indenting
-nnoremap <Leader>fi mzgg=G'z
+nnoremap <silent> <Leader>fi mzgg=G'z
 " Saving: hit `\r` to save the file using sudo
 nnoremap <Leader>r :w !sudo tee % <CR>
 " Trailing Spaces: hit `\TS` to remove all trailing whitespace
-nnoremap <Leader>TS :%s/\s\+$//<CR>
+nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
 " Yank File Path: Copy the expanded file-path of current file to clipboard
@@ -106,6 +106,7 @@ if v:version > 701
 endif
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
+nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
@@ -171,14 +172,18 @@ let g:tagbar_type_ruby = {
   \ 'kinds' : [
     \ 'm:modules',
     \ 'c:classes',
-    \ 'Z:context',
-    \ 'o:buttons',
-    \ 'd:describes',
-    \ 'f:methods',
-    \ 'F:singleton methods',
     \ 'r:rules',
+    \ 'o:buttons',
+    \ 'Y:contexts',
+    \ 'Z:examples',
+    \ 'z:traits',
+    \ 'f:methods',
+    \ 'S:singleton methods',
     \ 'y:factories',
-    \ 'z:traits'
+    \ 's:test',
+    \ 'T:todos',
+    \ 'n:notes',
+    \ 't:tasks'
   \ ]
 \ }
 
