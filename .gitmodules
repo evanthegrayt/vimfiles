@@ -193,6 +193,6 @@
 [submodule "pack/plugins/start/ruby-matchit"]
 	path = pack/plugins/start/ruby-matchit
 	url = https://github.com/evanthegrayt/ruby-matchit.git
-[submodule "pack/extra_syntax_files/indent-object"]
+[submodule "pack/extra_syntax_files/start/indent-object"]
 	path = pack/extra_syntax_files/start/indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
