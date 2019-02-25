@@ -183,6 +183,7 @@ let g:tagbar_type_ruby = {
     \ 's:test',
     \ 'T:todos',
     \ 'n:notes',
+    \ 'Q:describes',
     \ 't:tasks'
   \ ]
 \ }

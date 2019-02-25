@@ -121,9 +121,6 @@
 [submodule "pack/plugins/start/rubocop"]
 	path = pack/plugins/start/rubocop
 	url = https://github.com/ngmy/vim-rubocop.git
-[submodule "pack/plugins/start/ruby-matchit"]
-	path = pack/plugins/start/ruby-matchit
-	url = https://github.com/vim-scripts/ruby-matchit.git
 [submodule "pack/plugins/start/snipmate"]
 	path = pack/plugins/start/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
