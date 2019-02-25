@@ -188,6 +188,19 @@ let g:tagbar_type_ruby = {
   \ ]
 \ }
 
+" MATCHIT: better support for ruby
+" Matchit support:
+runtime macros/matchit.vim
+if exists("loaded_matchit")
+  if !exists("b:match_words")
+    let b:match_ignorecase = 0
+    let b:match_words =
+          \ '\%(\%(\%(^\|[;=]\)\s*\)\@<=\%(class\|module\|while\|begin\|' .
+          \ 'until\|for\|if\|unless\|def\|case\)\|\<do\)\>:' .
+          \ '\<\%(else\|elsif\|ensure\|rescue\|when\)\>:\%(^\|[^.]\)\@<=\<end\>'
+  endif
+endif
+
 " NERDTREE: a better file browser for vim
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
