@@ -134,6 +134,13 @@ if !executable('git')
   let g:loaded_fugitive = 1
 endif
 
+" SUPERTAB: tab auto-completion when in insert-mode
+let g:SuperTabDefaultCompletionType = 'context'
+autocmd FileType *
+      \ if &omnifunc != '' |
+      \   call SuperTabChain(&omnifunc, "<c-p>") |
+      \ endif
+
 " RUBOCOP: debug ruby
 let g:ruby_debugger_progname = 'mvim'
 
