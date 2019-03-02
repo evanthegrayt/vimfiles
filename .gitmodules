@@ -193,3 +193,6 @@
 [submodule "pack/extra_syntax_files/start/tagbar-markdown"]
 	path = pack/extra_syntax_files/start/tagbar-markdown
 	url = https://github.com/lvht/tagbar-markdown.git
+[submodule "pack/extra_syntax_files/start/textobj-user"]
+	path = pack/extra_syntax_files/start/textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
