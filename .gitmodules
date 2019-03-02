@@ -193,3 +193,6 @@
 [submodule "pack/extra_syntax_files/start/indent-object"]
 	path = pack/extra_syntax_files/start/indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "pack/extra_syntax_files/start/tagbar-markdown"]
+	path = pack/extra_syntax_files/start/tagbar-markdown
+	url = https://github.com/lvht/tagbar-markdown.git
