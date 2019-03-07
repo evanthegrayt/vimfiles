@@ -196,6 +196,13 @@ let g:tagbar_type_ruby = {
   \ ]
 \ }
 
+" RSPEC: Easily run RSpec tests from vim
+let g:rspec_command = "Dispatch rspec {spec}"
+map <Leader>rsf :call RunCurrentSpecFile()<CR>
+map <Leader>rsn :call RunNearestSpec()<CR>
+map <Leader>rsl :call RunLastSpec()<CR>
+map <Leader>rsa :call RunAllSpecs()<CR>
+
 " NERDTREE: a better file browser for vim
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
