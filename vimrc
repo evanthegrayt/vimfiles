@@ -178,20 +178,23 @@ nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
 nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
   \ 'kinds' : [
+    \ 'R:required files',
+    \ 'T:todos',
+    \ 'n:notes',
     \ 'm:modules',
     \ 'c:classes',
+    \ 'f:methods',
+    \ 'P:private methods',
+    \ 'p:protected methods',
+    \ 'S:singleton methods',
     \ 'r:rules',
     \ 'o:buttons',
+    \ 'Q:describes',
     \ 'Y:contexts',
     \ 'Z:examples',
     \ 'z:traits',
-    \ 'f:methods',
-    \ 'S:singleton methods',
     \ 'y:factories',
     \ 's:test',
-    \ 'T:todos',
-    \ 'n:notes',
-    \ 'Q:describes',
     \ 't:tasks'
   \ ]
 \ }
