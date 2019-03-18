@@ -192,8 +192,8 @@ let g:tagbar_type_ruby = {
     \ 'Q:describes',
     \ 'Y:contexts',
     \ 'Z:examples',
-    \ 'z:traits',
     \ 'y:factories',
+    \ 'z:traits',
     \ 's:test',
     \ 't:tasks'
   \ ]
