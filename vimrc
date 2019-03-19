@@ -178,8 +178,8 @@ nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
 nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
   \ 'kinds' : [
-    \ 'R:required files',
     \ 'T:todos',
+    \ 'R:required files',
     \ 'n:notes',
     \ 'm:modules',
     \ 'c:classes',
