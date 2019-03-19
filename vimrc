@@ -1,8 +1,10 @@
 " FILE:         vimrc
 " AUTHOR:       Evan Gray
 " DESCRIPTION:  My general vim settings
+
 " vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
-" Type `zo` on a fold to open it, or `zn` to open all folds
+
+" NOTE: Type `zo` on a fold to open it, or `zn` to open all folds
 
 " VERSION_8: Notes for myself {{{1
 " To get vim8 working, delete the following link (on mac):
