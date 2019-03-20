@@ -12,4 +12,5 @@ colors/*
 .netrwhist
 cache/*
 !cache/.gitkeep
+tags*
 

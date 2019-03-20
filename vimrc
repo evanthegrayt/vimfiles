@@ -181,8 +181,8 @@ nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
   \ 'kinds' : [
     \ 'T:todos',
-    \ 'R:required files',
     \ 'n:notes',
+    \ 'R:required files',
     \ 'm:modules',
     \ 'c:classes',
     \ 'f:methods',
@@ -199,6 +199,16 @@ let g:tagbar_type_ruby = {
     \ 's:test',
     \ 't:tasks'
   \ ]
+\ }
+let g:tagbar_type_sh = {
+  \ 'kinds' : [
+    \ 'T:todos',
+    \ 'n:notes',
+    \ 'S:sourced files',
+    \ 'f:functions',
+    \ 'a:aliases:0:0',
+    \ 's:script files:0:0',
+  \ ],
 \ }
 
 " RSPEC: Easily run RSpec tests from vim
