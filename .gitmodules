@@ -199,3 +199,9 @@
 [submodule "pack/plugins/start/rspec"]
 	path = pack/plugins/start/rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
+[submodule "pack/plugins/start/rake"]
+	path = pack/plugins/start/rake
+	url = https://github.com/tpope/vim-rake
+[submodule "pack/plugins/start/projectionist"]
+	path = pack/plugins/start/projectionist
+	url = https://github.com/tpope/vim-projectionist
