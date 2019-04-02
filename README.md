@@ -14,10 +14,10 @@ Here's what my `vim` setup looks like. In this screenshot, you can see
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
 [Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
 I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
-[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
+[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/images/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
-![](resource/vim_screenshot.jpg)
+![](images/vim_screenshot.jpg)
 
 ### Installation
 I highly doubt you want to use my exact configuration, so I recommend finding
@@ -45,7 +45,7 @@ be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
 At least, I assume these would be frequently asked...
 ### Why do colors look weird?
 You probably don't have italics enabled in your terminal. Either
-[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
+[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/images/xterm-256color.terminfo#L3),
 or turn off italics by changing this line in `vimrc`:
 
 ```vim
