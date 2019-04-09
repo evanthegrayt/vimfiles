@@ -186,6 +186,7 @@ let g:tagbar_type_ruby = {
     \ 'm:modules',
     \ 'c:classes',
     \ 'f:methods',
+    \ 'a:aliases',
     \ 'P:private methods',
     \ 'p:protected methods',
     \ 'S:singleton methods',
