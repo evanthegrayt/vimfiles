@@ -86,9 +86,12 @@ tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L181), you
 need to get the tags from my [ctags
 directroy](https://github.com/evanthegrayt/dotfiles/tree/master/resource/ctags.d)
 and put them in a directory called `~/.ctags.d`.  I'm also using
-[Unversal Ctags](https://github.com/universal-ctags/ctags); if you're using [Exuberant
-Ctags](http://ctags.sourceforge.net/), you need all of the tags in one file
-named `~/.ctags`. If you need more info, please read about those programs.
+[Unversal Ctags](https://github.com/universal-ctags/ctags) (recommended); if
+you're using [Exuberant Ctags](http://ctags.sourceforge.net/), you need all of
+the tags in one file named `~/.ctags`. If you choose to use Exuberant (which is
+basically unmaintained at this point), some tags may not work properly, as the
+two `ctags` programs have some differences in the way the process `regex`. If
+you need more info, please read about those programs.
 
 ## Reporting Bugs
 These are just my config files, so there shouldn't be (m)any bugs, but if you
