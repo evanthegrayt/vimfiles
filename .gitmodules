@@ -205,3 +205,6 @@
 [submodule "pack/plugins/start/projectionist"]
 	path = pack/plugins/start/projectionist
 	url = https://github.com/tpope/vim-projectionist
+[submodule "pack/plugins/start/latex-live-preview"]
+	path = pack/plugins/start/latex-live-preview
+	url = https://github.com/xuhdev/vim-latex-live-preview.git
