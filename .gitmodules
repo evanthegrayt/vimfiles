@@ -208,3 +208,6 @@
 [submodule "pack/plugins/start/latex-live-preview"]
 	path = pack/plugins/start/latex-live-preview
 	url = https://github.com/xuhdev/vim-latex-live-preview.git
+[submodule "pack/extra_syntax_files/start/haskell"]
+	path = pack/extra_syntax_files/start/haskell
+	url = https://github.com/neovimhaskell/haskell-vim
