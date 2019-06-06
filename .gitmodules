@@ -211,3 +211,6 @@
 [submodule "pack/extra_syntax_files/start/haskell"]
 	path = pack/extra_syntax_files/start/haskell
 	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/extra_syntax_files/start/coffee-script"]
+	path = pack/extra_syntax_files/start/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
