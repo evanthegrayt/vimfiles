@@ -9,7 +9,6 @@ tmp/*
 !tmp/.gitkeep
 colors/*
 !colors/.gitkeep
-.netrwhist
 cache/*
 !cache/.gitkeep
 tags*

@@ -136,6 +136,9 @@ if !executable('git')
   let g:loaded_fugitive = 1
 endif
 
+" NETRW: file browser
+let g:netrw_home = $HOME . "/.vim/cache"
+
 " SUPERTAB: tab auto-completion when in insert-mode
 let g:SuperTabDefaultCompletionType = 'context'
 autocmd FileType *

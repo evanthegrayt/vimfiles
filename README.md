@@ -4,7 +4,7 @@ All of my vim runtime files. Here be dragons.
 My local copy of vim is running `version 8` on Mac, but on our company's system,
 we're running `version 7.{1,3,4}` on Linux. I've spent time making sure this
 repository works without errors no matter what `vim` version I'm running; the
-only difference is, some plugins have to be disiabled, as they aren't compatible
+only difference is, some plugins have to be disabled, as they aren't compatible
 with lower versions of vim. Full disclosure, I have not tested any of this on
 Windows. You've been warned.
 
@@ -61,7 +61,7 @@ let g:easteregg_use_italics = 0
 ...or just delete the line entirely.
 
 ### Not all configurations are in your vimrc; where are they?
-Functions, autocommands, and gui settings are under `pack/settings/start` to
+Functions, autocommands, and GUI settings are under `pack/settings/start` to
 make my `vimrc` cleaner, as I rarely edit these.
 
 Also, a lot of people put file-type related settings -- such as indentation,
@@ -84,9 +84,9 @@ your home directory.
 To use the [custom tags I've added to
 tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L181), you
 need to get the tags from my [ctags
-directroy](https://github.com/evanthegrayt/dotfiles/tree/master/resource/ctags.d)
+directory](https://github.com/evanthegrayt/dotfiles/tree/master/resource/ctags.d)
 and put them in a directory called `~/.ctags.d`.  I'm also using
-[Unversal Ctags](https://github.com/universal-ctags/ctags) (recommended); if
+[Universal Ctags](https://github.com/universal-ctags/ctags) (recommended); if
 you're using [Exuberant Ctags](http://ctags.sourceforge.net/), you need all of
 the tags in one file named `~/.ctags`. If you choose to use Exuberant (which is
 basically unmaintained at this point), some tags may not work properly, as the
