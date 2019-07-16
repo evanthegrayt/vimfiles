@@ -168,7 +168,7 @@ let g:airline#extensions#whitespace#enabled = 1
 " INDENT LINE: draw lines every intention
 let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
-let g:indentLine_char       = '┊'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 
 " BUFFERLINE: show open buffers in airline
@@ -177,7 +177,7 @@ let g:bufferline_echo             = 0
 let g:bufferline_active_highlight = 'StatusLine'
 
 " GITGUTTER: show diff in gutter
-nnoremap <silent> <Leader>gg :GitGutterToggle<CR>
+nnoremap <silent> <Leader>gg :GitGutterBufferToggle<CR>
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
@@ -269,7 +269,7 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_folding_disabled     = 1
 
 " PREVIM: live preview markdown, etc.
-let g:previm_open_cmd = 'open -a Vivaldi'
+let g:previm_open_cmd = 'open -a Firefox'
 
 "}}}
 
