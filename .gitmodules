@@ -220,3 +220,6 @@
 [submodule "pack/plugins/start/laravel"]
 	path = pack/plugins/start/laravel
 	url = git@github.com:noahfrederick/vim-laravel.git
+[submodule "pack/plugins/start/composer"]
+	path = pack/plugins/start/composer
+	url = git@github.com:noahfrederick/vim-composer.git
