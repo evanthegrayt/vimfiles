@@ -177,7 +177,8 @@ let g:bufferline_echo             = 0
 let g:bufferline_active_highlight = 'StatusLine'
 
 " GITGUTTER: show diff in gutter
-nnoremap <silent> <Leader>gg :GitGutterBufferToggle<CR>
+nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
+nnoremap <silent> <Leader>ggu :GitGutterUndoHunk<CR>
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
