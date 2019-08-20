@@ -22,12 +22,6 @@
 [submodule "pack/extra_syntax_files/start/fish"]
 	path = pack/extra_syntax_files/start/fish
 	url = https://github.com/dag/vim-fish.git
-[submodule "pack/extra_syntax_files/start/jellybeans"]
-	path = pack/extra_syntax_files/start/jellybeans
-	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "pack/plugins/start/quickrun"]
-	path = pack/plugins/start/quickrun
-	url = https://github.com/thinca/vim-quickrun.git
 [submodule "pack/plugins/start/visual-increment"]
 	path = pack/plugins/start/visual-increment
 	url = https://github.com/vim-scripts/visual-increment.git
@@ -58,12 +52,6 @@
 [submodule "pack/plugins/start/ack"]
 	path = pack/plugins/start/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "pack/plugins/start/bufexplorer"]
-	path = pack/plugins/start/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer.git
-[submodule "pack/plugins/start/bufferline"]
-	path = pack/plugins/start/bufferline
-	url = https://github.com/bling/vim-bufferline.git
 [submodule "pack/plugins/start/buffersaurus"]
 	path = pack/plugins/start/buffersaurus
 	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
@@ -97,9 +85,6 @@
 [submodule "pack/extra_syntax_files/start/javascript"]
 	path = pack/extra_syntax_files/start/javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/plugins/start/multiple-cursors"]
-	path = pack/plugins/start/multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "pack/plugins/start/nerdcommenter"]
 	path = pack/plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -124,9 +109,6 @@
 [submodule "pack/plugins/start/snippets"]
 	path = pack/plugins/start/snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "pack/plugins/start/speeddating"]
-	path = pack/plugins/start/speeddating
-	url = https://github.com/tpope/vim-speeddating.git
 [submodule "pack/plugins/start/splitjoin"]
 	path = pack/plugins/start/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
@@ -148,9 +130,6 @@
 [submodule "pack/plugins/start/update-plugins"]
 	path = pack/plugins/start/update-plugins
 	url = https://github.com/evanthegrayt/vim-update-plugins.git
-[submodule "pack/plugins/start/dragvisuals"]
-	path = pack/plugins/start/dragvisuals
-	url = https://github.com/atweiden/vim-dragvisuals.git
 [submodule "pack/plugins/start/git"]
 	path = pack/plugins/start/git
 	url = https://github.com/tpope/vim-git.git
@@ -202,9 +181,6 @@
 [submodule "pack/plugins/start/projectionist"]
 	path = pack/plugins/start/projectionist
 	url = https://github.com/tpope/vim-projectionist
-[submodule "pack/plugins/start/latex-live-preview"]
-	path = pack/plugins/start/latex-live-preview
-	url = https://github.com/xuhdev/vim-latex-live-preview.git
 [submodule "pack/extra_syntax_files/start/haskell"]
 	path = pack/extra_syntax_files/start/haskell
 	url = https://github.com/neovimhaskell/haskell-vim
@@ -226,3 +202,6 @@
 [submodule "pack/extra_syntax_files/start/blade"]
 	path = pack/extra_syntax_files/start/blade
 	url = git@github.com:jwalton512/vim-blade.git
+[submodule "pack/extra_syntax_files/start/rainbow"]
+	path = pack/extra_syntax_files/start/rainbow
+	url = git@github.com:luochen1990/rainbow.git

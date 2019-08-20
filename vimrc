@@ -125,7 +125,6 @@ if v:version < 703
 endif
 if v:version < 704
   let g:airline#extensions#tagbar#enabled = 0
-  let g:bufexplorer_version               = 1
 endif
 if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
   let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
@@ -138,6 +137,10 @@ endif
 
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
+
+" RAINBOW: Different color parens
+let g:rainbow_active = 0
+nnoremap <silent> <Leader>rt :RainbowToggle<CR>
 
 " SUPERTAB: tab auto-completion when in insert-mode
 let g:SuperTabDefaultCompletionType = 'context'
@@ -158,7 +161,6 @@ let g:airline_symbols.readonly              = '±'
 let g:airline_symbols.linenr                = '¶'
 let g:airline_symbols.paste                 = 'Þ'
 let g:airline_symbols.whitespace            = '!'
-let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#syntastic#enabled  = 1
 let g:airline#extensions#branch#enabled     = 1
 let g:airline_detect_paste                  = 1
@@ -170,11 +172,6 @@ let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
-
-" BUFFERLINE: show open buffers in airline
-let g:bufferline_show_bufnr       = 0
-let g:bufferline_echo             = 0
-let g:bufferline_active_highlight = 'StatusLine'
 
 " GITGUTTER: show diff in gutter
 nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
@@ -238,14 +235,9 @@ let g:gundo_close_on_revert = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs  = 1
 
-" DRAGVISUALS: move visual blocks around when in visual mode
-vmap <expr> <S-h> DVB_Drag('left')
-vmap <expr> <S-l> DVB_Drag('right')
-vmap <expr> <S-j> DVB_Drag('down')
-vmap <expr> <S-k> DVB_Drag('up')
-
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
+nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
 
 " ROOTER: set root directory at begiining of project
 let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
