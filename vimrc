@@ -177,6 +177,18 @@ nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>ggu :GitGutterUndoHunk<CR>
 
+" BLADE: syntax highlighting for Laravel's Blade syntax
+let g:blade_custom_directives = [
+      \   'servers',
+      \   'datetime',
+      \   'javascript',
+      \ ]
+let g:blade_custom_directives_pairs = {
+      \   'setup': 'endsetup',
+      \   'task':  'endtask',
+      \   'story': 'endstory',
+      \ }
+
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
@@ -238,6 +250,7 @@ let g:syntastic_enable_signs  = 1
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
 nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
 
 " ROOTER: set root directory at begiining of project
 let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
