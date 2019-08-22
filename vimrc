@@ -73,6 +73,10 @@ set lazyredraw              " don't update the display while executing macros
 set backupdir=~/.vim/backup        " Set directory where backups will be stored
 set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
 "}}}
 
 " MAPPINGS: Custom key mappings {{{
@@ -249,6 +253,7 @@ let g:syntastic_enable_signs  = 1
 
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor'
 nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
 
