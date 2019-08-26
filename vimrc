@@ -242,6 +242,9 @@ nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 let g:NERDTreeBookmarksFile = expand($HOME) . ".vim/cache/NERDTreeBookmarks"
 let NERDTreeQuitOnOpen = 1
 
+" NERDCOMMENTER: a better file browser for vim
+let g:NERDSpaceDelims = 1
+
 " GUNDO: a visualization of vim's unto tree
 nnoremap <silent> <Leader>gt :GundoToggle<CR>
 let g:gundo_prefer_python3  = 1

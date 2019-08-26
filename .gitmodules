@@ -205,3 +205,6 @@
 [submodule "pack/extra_syntax_files/start/rainbow"]
 	path = pack/extra_syntax_files/start/rainbow
 	url = git@github.com:luochen1990/rainbow.git
+[submodule "pack/extra_syntax_files/start/javascript-es6"]
+	path = pack/extra_syntax_files/start/javascript-es6
+	url = git@github.com:isRuslan/vim-es6.git
