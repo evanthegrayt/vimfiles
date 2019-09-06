@@ -202,3 +202,6 @@
 [submodule "pack/extra_syntax_files/start/javascript-es6"]
 	path = pack/extra_syntax_files/start/javascript-es6
 	url = git@github.com:isRuslan/vim-es6.git
+[submodule "pack/plugins/start/bufexplorer"]
+	path = pack/plugins/start/bufexplorer
+	url = git@github.com:jlanzarotta/bufexplorer.git

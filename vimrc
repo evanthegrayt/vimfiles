@@ -257,10 +257,9 @@ let g:syntastic_enable_signs  = 1
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor'
-nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
 
-" ROOTER: set root directory at begiining of project
+" ROOTER: set root directory at beginning of project
 let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
       \                  '.hg/', '.bzr/', '.svn/']
 let g:rooter_silent_chdir = 1
