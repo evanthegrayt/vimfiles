@@ -38,7 +38,7 @@ set showcmd                 " Display incomplete commands in statusline
 set shortmess=at            " Shortens about every message to a minimum
 set clipboard=unnamed       " Share clipboard with system
 set list                    " Mark tabs, EOL, trailing whitespace, etc
-exec "set listchars=tab:}-,trail:\uB7,nbsp:~,eol:¬,extends:→,precedes:←"
+exec "set listchars=tab:¦\uB7,trail:\uB7,nbsp:~,eol:¬,extends:→,precedes:←"
 set number                  " Show line numbers (can toggle with \n)
 set ruler                   " Show cursor position in status bar.
 set noerrorbells            " Turn off visual and audible error notifications
@@ -90,7 +90,6 @@ vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 " Toggles: Toggle common vim settings local to buffer
 nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
 nnoremap <silent> <Leader>w :setlocal wrap!<CR>
-nnoremap <silent> <Leader>i :setlocal autoindent!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 " Indenting: `\fi` to fix the whole file's indenting
