@@ -4,7 +4,7 @@
 
 " vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
 
-" NOTE: Type `zo` on a fold to open it, or `zn` to open all folds
+" NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close.
 
 " VERSION_8: Notes for myself {{{1
 " To get vim8 working, delete the following link (on mac):
@@ -286,8 +286,8 @@ let g:previm_open_cmd = 'open -a Firefox'
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable($HOME . "/.vimrc.local")
+  source $HOME/.vimrc.local
 endif
 "}}}
 
