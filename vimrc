@@ -118,7 +118,6 @@ nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 " PLUGIN SETTINGS {{{1
 " Disable Plugins Based On Version: Some plugins echo output. I don't want that.
 if v:version <= 701
-  let g:loaded_syntastic_plugin  = 1
   let g:loaded_indexed_search    = 1
   let loaded_nerd_tree           = 1
 endif
@@ -164,7 +163,7 @@ let g:airline_symbols.readonly              = '±'
 let g:airline_symbols.linenr                = '¶'
 let g:airline_symbols.paste                 = 'Þ'
 let g:airline_symbols.whitespace            = '!'
-let g:airline#extensions#syntastic#enabled  = 1
+let g:airline#extensions#ale#enabled        = 1
 let g:airline#extensions#branch#enabled     = 1
 let g:airline_detect_paste                  = 1
 let g:airline_theme                         = "bubblegum"
@@ -248,10 +247,6 @@ let g:NERDSpaceDelims = 1
 nnoremap <silent> <Leader>gt :GundoToggle<CR>
 let g:gundo_prefer_python3  = 1
 let g:gundo_close_on_revert = 1
-
-" SYNTASTIC: checks the syntax of files and reports errors
-let g:syntastic_check_on_open = 1
-let g:syntastic_enable_signs  = 1
 
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
