@@ -205,3 +205,6 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "pack/plugins/start/dotenv"]
+	path = pack/plugins/start/dotenv
+	url = git@github.com:tpope/vim-dotenv.git
