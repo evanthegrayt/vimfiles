@@ -278,6 +278,9 @@ let g:vim_markdown_folding_disabled     = 1
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
 
+"CAPSLOCK: Virtual capslock since I bind caps lock to control
+imap <C-L> <Plug>CapsLockToggle
+
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
