@@ -100,8 +100,9 @@ nnoremap <Leader>r :w !sudo tee % <CR>
 nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
-" Yank File Path: Copy the expanded file-path of current file to clipboard
+" File Path: Yank/Echo the expanded file-path of current file
 nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
+nnoremap <silent> <Leader>efp :echo expand("%:p") <CR>
 " Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
 " Function Toggles: Mappings for functions in pack/settings/start/functions
