@@ -53,3 +53,8 @@ function! ToggleConceal()
   endif
 endfunction
 
+function! SetCursorColumn()
+  let &colorcolumn=join(range(81,100),",") .
+        \ ',' . join(range(102,120),",") .
+        \ ',' . join(range(122,272),",")
+endfunction

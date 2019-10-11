@@ -170,7 +170,7 @@ let g:airline_detect_paste                  = 1
 let g:airline_theme                         = "bubblegum"
 let g:airline#extensions#whitespace#enabled = 1
 
-" INDENT LINE: draw lines every intention
+" INDENT LINE: draw lines every indention level
 let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']

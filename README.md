@@ -1,9 +1,9 @@
 # My Vimfiles
 All of my vim runtime files. Here be dragons.
 
-My local copy of vim is running `version 8` on Mac, but on our company's system,
-we're running `version 7.{1,3,4}` on Linux. I've spent time making sure this
-repository works without errors no matter what `vim` version I'm running; the
+My local copy of vim is running `version 8` on MacOS, and up until recently, I
+sometimes had to use  `version 7.{1,3,4}` on Linux. For the most part, this
+repository works without errors no matter which `vim` version I'm running; the
 only difference is, some plugins have to be disabled, as they aren't compatible
 with lower versions of vim. Full disclosure, I have not tested any of this on
 Windows. You've been warned.
