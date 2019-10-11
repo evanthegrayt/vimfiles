@@ -180,7 +180,7 @@
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "pack/plugins/start/phpcomplete"]
 	path = pack/plugins/start/phpcomplete
-	url = git://github.com/shawncplus/phpcomplete.vim.git
+	url = git@github.com:shawncplus/phpcomplete.vim.git
 [submodule "pack/extra_syntax_files/start/php"]
 	path = pack/extra_syntax_files/start/php
 	url = https://github.com/stanangeloff/php.vim
