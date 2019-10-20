@@ -83,28 +83,30 @@ endif
 " Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
-inoremap <silent> <C-j> <Esc>:m .+1<CR>==gi
-inoremap <silent> <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
+
 " Toggles: Toggle common vim settings local to buffer
 nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
 nnoremap <silent> <Leader>w :setlocal wrap!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
+
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi mzgg=G'z
-" Saving: hit `\r` to save the file using sudo
-nnoremap <Leader>r :w !sudo tee % <CR>
+
 " Trailing Spaces: hit `\TS` to remove all trailing whitespace
 nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
+
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
-" File Path: Yank/Echo the expanded file-path of current file
+
+" File Path: Yank the expanded file-path of current file
 nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
-nnoremap <silent> <Leader>efp :echo expand("%:p") <CR>
+
 " Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
+
 " Function Toggles: Mappings for functions in pack/settings/start/functions
 if v:version > 701
   nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
@@ -279,9 +281,10 @@ let g:vim_markdown_folding_disabled     = 1
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
 
-"CAPSLOCK: Virtual capslock since I bind caps lock to control
-imap <C-L> <Plug>CapsLockToggle
-
+" ULTISNIPS: Snippets for vim
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{

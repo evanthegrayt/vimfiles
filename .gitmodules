@@ -208,3 +208,9 @@
 [submodule "pack/plugins/start/dotenv"]
 	path = pack/plugins/start/dotenv
 	url = git@github.com:tpope/vim-dotenv.git
+[submodule "pack/plugins/start/ultisnips"]
+	path = pack/plugins/start/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "pack/plugins/start/snippets"]
+	path = pack/plugins/start/snippets
+	url = git@github.com:honza/vim-snippets.git

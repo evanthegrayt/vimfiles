@@ -1,6 +1,7 @@
-if system('uname') =~ 'Darwin'
+let s:host = system('uname -s')
+if s:host =~ 'Darwin'
   nnoremap <silent> <leader>P :!open % <CR>
-else
+elseif s:host =~ 'Linux'
   nnoremap <silent> <leader>P :!firefox % <CR>
 endif
 
