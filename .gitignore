@@ -11,5 +11,5 @@ colors/*
 !colors/.gitkeep
 cache/*
 !cache/.gitkeep
-tags*
+tags
 

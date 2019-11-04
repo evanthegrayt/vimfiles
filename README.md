@@ -14,7 +14,7 @@ Here's what my `vim` setup looks like. In this screenshot, you can see
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
 [Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
 I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
-[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
+[italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
 ![](images/vim_screenshot.jpg)
@@ -45,7 +45,7 @@ be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
 At least, I assume these would be frequently asked...
 ### Why do colors look weird?
 You probably don't have italics enabled in your terminal. Either
-[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3),
+[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 or turn off italics by changing this line in `vimrc`:
 
 ```vim
@@ -84,7 +84,7 @@ your home directory.
 To use the [custom tags I've added to
 tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L204), you
 need to get the tags from my [ctags
-directory](https://github.com/evanthegrayt/dotfiles/tree/master/resource/ctags.d)
+directory](https://github.com/evanthegrayt/dotfiles/tree/master/dotfiles/ctags.d)
 and put them in a directory called `~/.ctags.d`.  I'm also using
 [Universal Ctags](https://github.com/universal-ctags/ctags) (recommended); if
 you're using [Exuberant Ctags](http://ctags.sourceforge.net/), you need all of

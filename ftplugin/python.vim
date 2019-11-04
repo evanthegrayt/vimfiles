@@ -1,5 +1,5 @@
 
 if v:version > 701
-  call SetCursorColumn()
+  call ToggleColorColumnWide()
 endif
 

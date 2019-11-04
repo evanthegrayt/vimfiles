@@ -34,17 +34,19 @@ function! ToggleMouse()
   endif
 endfunction
 
-" FUNCTION TO TOGGLE A WIDE COLORCOLUMN WITH \CC
+" Toggle a wide colorcolumn with \TC
 function! ToggleColorColumnWide()
   if &colorcolumn != ""
     setlocal colorcolumn&
   else
-    let &colorcolumn=join(range(81,272),",")
+    let &colorcolumn=join(range(81,100),",") .
+          \ ',' . join(range(102,120),",") .
+          \ ',' . join(range(122,272),",")
     setlocal nowrap
   endif
 endfunction
 
-" FUNCTION TO TOGGLE CONCEAL LEVEL
+" Toggle conceal level
 function! ToggleConceal()
   if &conceallevel == 2
     setlocal conceallevel=0
@@ -53,8 +55,11 @@ function! ToggleConceal()
   endif
 endfunction
 
-function! SetCursorColumn()
-  let &colorcolumn=join(range(81,100),",") .
-        \ ',' . join(range(102,120),",") .
-        \ ',' . join(range(122,272),",")
+" Append modeline after last line in buffer.
+function! AppendModeline()
+  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
+        \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
+  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+  call append(line("$"), l:modeline)
 endfunction
+
