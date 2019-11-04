@@ -70,6 +70,8 @@ set whichwrap+=<,>          " Arrow keys will wrap, don't like h+l to do this
 set hidden                  " A buffer becomes hidden when abandoned
 set confirm                 " If unsaved changes, ask to save
 set lazyredraw              " don't update the display while executing macros
+set exrc                    " Source .vimrc if it exists in current directory
+set secure                  " Don't execute commands from local .vimrc files
 set backupdir=~/.vim/backup        " Set directory where backups will be stored
 set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
@@ -187,11 +189,13 @@ let g:blade_custom_directives = [
       \   'servers',
       \   'datetime',
       \   'javascript',
+      \   'csrf',
       \ ]
 let g:blade_custom_directives_pairs = {
       \   'setup': 'endsetup',
       \   'task':  'endtask',
       \   'story': 'endstory',
+      \   'error': 'enderror',
       \ }
 
 " TAGBAR: show classes/methods/functions in side window
@@ -247,7 +251,7 @@ let NERDTreeQuitOnOpen = 1
 let g:NERDSpaceDelims = 1
 
 " GUNDO: a visualization of vim's unto tree
-nnoremap <silent> <Leader>gt :GundoToggle<CR>
+nnoremap <silent> <Leader>GT :GundoToggle<CR>
 let g:gundo_prefer_python3  = 1
 let g:gundo_close_on_revert = 1
 
@@ -255,6 +259,7 @@ let g:gundo_close_on_revert = 1
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor'
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
+nnoremap <leader>gt :CtrlPTag<cr><C-\>w
 
 " ROOTER: set root directory at beginning of project
 let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
@@ -283,8 +288,16 @@ let g:previm_open_cmd = 'open -a Firefox'
 
 " ULTISNIPS: Snippets for vim
 let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-t>"
+let g:UltiSnipsJumpBackwardTrigger="<c-d>"
+let g:UltiSnipsSnippetsDir=$HOME . '/workflow/snips'
+let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
+
+" GUTENTAGS: Tags manager
+let g:gutentags_ctags_exclude = [
+      \ 'node_modules', 'vendor', 'public', '*.md', '*.css',
+      \ '*.html', '*.svg', '*.json', '*.xml'
+      \ ]
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{

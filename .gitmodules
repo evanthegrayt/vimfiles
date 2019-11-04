@@ -214,3 +214,6 @@
 [submodule "pack/plugins/start/snippets"]
 	path = pack/plugins/start/snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "pack/plugins/start/gutentags"]
+	path = pack/plugins/start/gutentags
+	url = git@github.com:ludovicchabant/vim-gutentags.git
