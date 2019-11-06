@@ -183,6 +183,7 @@ nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 " GITGUTTER: show diff in gutter
 nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>ggu :GitGutterUndoHunk<CR>
+let g:gitgutter_preview_win_floating = 1
 
 " BLADE: syntax highlighting for Laravel's Blade syntax
 let g:blade_custom_directives = [
@@ -294,6 +295,7 @@ let g:UltiSnipsSnippetsDir=$HOME . '/workflow/snips'
 let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
 
 " GUTENTAGS: Tags manager
+let g:gutentags_enabled = 0
 let g:gutentags_ctags_exclude = [
       \ 'node_modules', 'vendor', 'public', '*.md', '*.css',
       \ '*.html', '*.svg', '*.json', '*.xml'
