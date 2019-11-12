@@ -64,7 +64,6 @@ set hlsearch                " Turn on higlight searching, toggle with \h
 set backspace=2             " Allow backspacing past starting point
 set tabstop=4               " Set tabs to 4 by default.
 set shiftwidth=4            " Number of spaces used for (auto)indenting
-set textwidth=0             " Auto-return after n columns
 set cmdheight=1             " Please, no high command bar
 set whichwrap+=<,>          " Arrow keys will wrap, don't like h+l to do this
 set hidden                  " A buffer becomes hidden when abandoned
@@ -118,6 +117,7 @@ endif
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
+nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
@@ -263,9 +263,9 @@ nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
 nnoremap <leader>gt :CtrlPTag<cr><C-\>w
 
 " ROOTER: set root directory at beginning of project
-let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
-      \                  '.hg/', '.bzr/', '.svn/']
 let g:rooter_silent_chdir = 1
+let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
+      \ '.hg/', '.bzr/', '.svn/']
 
 " SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_align = 1
@@ -296,10 +296,8 @@ let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 0
-let g:gutentags_ctags_exclude = [
-      \ 'node_modules', 'vendor', 'public', '*.md', '*.css',
-      \ '*.html', '*.svg', '*.json', '*.xml'
-      \ ]
+let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
+      \ '*.css', '*.html', '*.svg', '*.json', '*.xml']
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
