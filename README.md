@@ -82,7 +82,7 @@ your home directory.
 
 ### Why do your additions to ctags not show up in tagbar?
 To use the [custom tags I've added to
-tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L181), you
+tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L204), you
 need to get the tags from my [ctags
 directory](https://github.com/evanthegrayt/dotfiles/tree/master/resource/ctags.d)
 and put them in a directory called `~/.ctags.d`.  I'm also using
