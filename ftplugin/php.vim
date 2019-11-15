@@ -1,5 +1,5 @@
 
 if v:version > 701
-  call ToggleColorColumnWide()
+  call ToggleColorColumnWide(1)
 endif
 

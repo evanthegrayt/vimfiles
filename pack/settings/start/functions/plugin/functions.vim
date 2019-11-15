@@ -35,14 +35,14 @@ function! ToggleMouse()
 endfunction
 
 " Toggle a wide colorcolumn with \TC
-function! ToggleColorColumnWide()
-  if &colorcolumn != ""
-    setlocal colorcolumn&
-  else
+function! ToggleColorColumnWide(...)
+  if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
     let &colorcolumn=join(range(81,100),",") .
           \ ',' . join(range(102,120),",") .
           \ ',' . join(range(122,272),",")
     setlocal nowrap
+  else
+    setlocal colorcolumn&
   endif
 endfunction
 

@@ -1,5 +1,5 @@
 
 if v:version > 701
-  let &colorcolumn=''
+  call ToggleColorColumnWide(0)
 endif
 
