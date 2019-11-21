@@ -17,7 +17,7 @@ I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
 [italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
-![](images/vim_screenshot.jpg)
+![](https://user-images.githubusercontent.com/12698076/69293954-0f899780-0bd0-11ea-8725-da81e51665a9.jpg)
 
 ### Installation
 I highly doubt you want to use my exact configuration, so I recommend finding
