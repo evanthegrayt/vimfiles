@@ -118,6 +118,7 @@ nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+nnoremap <silent> <Leader>ss :call SynStack()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1

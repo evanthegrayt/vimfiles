@@ -73,3 +73,12 @@ function! AppendModeline()
   call append(line("$"), l:modeline)
 endfunction
 
+" Show the syntax stack of keyword under the cursor.
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
