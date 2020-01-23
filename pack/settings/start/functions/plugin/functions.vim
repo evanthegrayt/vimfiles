@@ -49,7 +49,7 @@ endfunction
 " Toggle normal colorcolumns
 function! ToggleColorColumn(...)
   if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
-    let &colorcolumn=81,101,121
+    set colorcolumn=81,101,121
     setlocal nowrap
   else
     setlocal colorcolumn&
