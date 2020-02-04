@@ -12,5 +12,5 @@ colors/*
 cache/*
 !cache/.gitkeep
 tags
-pack/plugins/start/vim-switch-db
+pack/public-strategies
 
