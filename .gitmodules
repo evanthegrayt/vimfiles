@@ -180,40 +180,40 @@
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "pack/plugins/start/phpcomplete"]
 	path = pack/plugins/start/phpcomplete
-	url = git@github.com:shawncplus/phpcomplete.vim.git
+	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "pack/extra_syntax_files/start/php"]
 	path = pack/extra_syntax_files/start/php
 	url = https://github.com/stanangeloff/php.vim
 [submodule "pack/plugins/start/laravel"]
 	path = pack/plugins/start/laravel
-	url = git@github.com:noahfrederick/vim-laravel.git
+	url = https://github.com/noahfrederick/vim-laravel.git
 [submodule "pack/plugins/start/composer"]
 	path = pack/plugins/start/composer
-	url = git@github.com:noahfrederick/vim-composer.git
+	url = https://github.com/noahfrederick/vim-composer.git
 [submodule "pack/extra_syntax_files/start/blade"]
 	path = pack/extra_syntax_files/start/blade
-	url = git@github.com:jwalton512/vim-blade.git
+	url = https://github.com/jwalton512/vim-blade.git
 [submodule "pack/extra_syntax_files/start/rainbow"]
 	path = pack/extra_syntax_files/start/rainbow
-	url = git@github.com:luochen1990/rainbow.git
+	url = https://github.com/luochen1990/rainbow.git
 [submodule "pack/extra_syntax_files/start/javascript-es6"]
 	path = pack/extra_syntax_files/start/javascript-es6
-	url = git@github.com:isRuslan/vim-es6.git
+	url = https://github.com/isRuslan/vim-es6.git
 [submodule "pack/plugins/start/bufexplorer"]
 	path = pack/plugins/start/bufexplorer
-	url = git@github.com:jlanzarotta/bufexplorer.git
+	url = https://github.com/jlanzarotta/bufexplorer.git
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
 [submodule "pack/plugins/start/dotenv"]
 	path = pack/plugins/start/dotenv
-	url = git@github.com:tpope/vim-dotenv.git
+	url = https://github.com/tpope/vim-dotenv.git
 [submodule "pack/plugins/start/ultisnips"]
 	path = pack/plugins/start/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
 [submodule "pack/plugins/start/snippets"]
 	path = pack/plugins/start/snippets
-	url = git@github.com:honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule "pack/plugins/start/gutentags"]
 	path = pack/plugins/start/gutentags
-	url = git@github.com:ludovicchabant/vim-gutentags.git
+	url = https://github.com/ludovicchabant/vim-gutentags.git
