@@ -1,6 +1,6 @@
 
 if v:version > 701
-  call ToggleColorColumnWide(1)
+  call ToggleColorColumn()
 endif
 
 setlocal tabstop=2 shiftwidth=2 softtabstop=2

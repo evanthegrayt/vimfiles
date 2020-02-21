@@ -1,6 +1,6 @@
 
 if v:version > 701
-  call ToggleColorColumnWide(1)
+  call ToggleColorColumn()
 endif
 
 " DadBod stuff

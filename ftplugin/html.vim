@@ -4,5 +4,3 @@ if s:host =~ 'Darwin'
 elseif s:host =~ 'Linux'
   nnoremap <silent> <leader>P :!firefox % <CR>
 endif
-
-setlocal tabstop=2 shiftwidth=2 softtabstop=2
