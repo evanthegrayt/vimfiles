@@ -111,7 +111,7 @@ nnoremap <C-L> :redraw! <CR>
 " Function Toggles: Mappings for functions in pack/settings/start/functions
 if v:version > 701
   nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
-  nnoremap <silent> <Leader>TC :call ToggleColorColumnWide()<CR>
+  nnoremap <silent> <Leader>TC :call ToggleColorColumn()<CR>
   nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
 endif
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
