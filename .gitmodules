@@ -219,4 +219,4 @@
 	url = https://github.com/ludovicchabant/vim-gutentags.git
 [submodule "pack/extra_syntax_files/start/bats"]
 	path = pack/extra_syntax_files/start/bats
-	url = git@github.com:vim-scripts/bats.vim.git
+	url = https://github.com/vim-scripts/bats.vim.git
