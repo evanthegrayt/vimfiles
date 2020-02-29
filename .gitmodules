@@ -220,3 +220,6 @@
 [submodule "pack/extra_syntax_files/start/bats"]
 	path = pack/extra_syntax_files/start/bats
 	url = https://github.com/vim-scripts/bats.vim.git
+[submodule "pack/plugins/start/abolish"]
+	path = pack/plugins/start/abolish
+	url = git@github.com:tpope/vim-abolish.git
