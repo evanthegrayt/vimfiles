@@ -223,3 +223,6 @@
 [submodule "pack/plugins/start/abolish"]
 	path = pack/plugins/start/abolish
 	url = git@github.com:tpope/vim-abolish.git
+[submodule "pack/plugins/start/noteworthy"]
+	path = pack/plugins/start/noteworthy
+	url = https://github.com/evanthegrayt/vim-noteworthy.git
