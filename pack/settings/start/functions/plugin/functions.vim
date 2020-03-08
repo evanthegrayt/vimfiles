@@ -1,5 +1,5 @@
 " FUNCTION TO TOGGLE LINE NUMBERING
-function! NumberToggle()
+function! NumberToggle() abort
   if(&rnu == 0 && &nu == 0)
     setlocal nu
   elseif(&nu == 1)
@@ -11,7 +11,7 @@ function! NumberToggle()
 endfunction
 
 " FUNCTION TO TOGGLE FOLDCOLUMN
-function! FoldColumnToggle()
+function! FoldColumnToggle() abort
   if &foldcolumn
     setlocal foldcolumn=0
   else
@@ -20,7 +20,7 @@ function! FoldColumnToggle()
 endfunction
 
 " TOGGLE THE MOUSE BETWEEN VIM AND TERMINAL MODE
-function! ToggleMouse()
+function! ToggleMouse() abort
   if !exists("l:old_mouse")
     let l:old_mouse = "a"
   endif
@@ -35,7 +35,7 @@ function! ToggleMouse()
 endfunction
 
 " Toggle a wide colorcolumn with \TC
-function! ToggleColorColumnWide(...)
+function! ToggleColorColumnWide(...) abort
   if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
     let &colorcolumn=join(range(81,100),",") .
           \ ',' . join(range(102,120),",") .
@@ -47,7 +47,7 @@ function! ToggleColorColumnWide(...)
 endfunction
 
 " Toggle normal colorcolumns
-function! ToggleColorColumn(...)
+function! ToggleColorColumn(...) abort
   if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
     set colorcolumn=81,101,121
     setlocal nowrap
@@ -57,7 +57,7 @@ function! ToggleColorColumn(...)
 endfunction
 
 " Toggle conceal level
-function! ToggleConceal()
+function! ToggleConceal() abort
   if &conceallevel == 2
     setlocal conceallevel=0
   else
@@ -66,7 +66,7 @@ function! ToggleConceal()
 endfunction
 
 " Append modeline after last line in buffer.
-function! AppendModeline()
+function! AppendModeline() abort
   let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
         \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
   let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
@@ -74,7 +74,7 @@ function! AppendModeline()
 endfunction
 
 " Show the syntax stack of keyword under the cursor.
-function! SynStack()
+function! SynStack() abort
   if !exists("*synstack")
     return
   endif
