@@ -291,8 +291,10 @@ let g:previm_open_cmd = 'open -a Firefox'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-t>"
 let g:UltiSnipsJumpBackwardTrigger="<c-d>"
-let g:UltiSnipsSnippetsDir=$HOME . '/workflow/snips'
-let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
+if isdirectory($HOME . '/workflow/snips')
+  let g:UltiSnipsSnippetsDir=$HOME . '/workflow/snips'
+  let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
+endif
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 0
