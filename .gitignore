@@ -2,8 +2,6 @@ view/*
 !view/.gitkeep
 backup/*
 !backup/.gitkeep
-spell/*
-!spell/.gitkeep
 neovim/
 tmp/*
 !tmp/.gitkeep
