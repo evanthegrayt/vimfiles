@@ -302,9 +302,9 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
       \ '*.css', '*.html', '*.svg', '*.json', '*.xml']
 
 " NOTEWORTHY: Notes
-let g:noteworthy_libraries = {
-      \   'work' : $HOME . '/workflow/notes/public_strategies',
-      \   'personal' : $HOME . '/workflow/notes/personal',
+let g:noteworthy_libraries = #{
+      \   work: $HOME . '/workflow/notes/public_strategies',
+      \   personal:  $HOME . '/workflow/notes/personal',
       \ }
 let g:noteworthy_default_library = 'work'
 let noteworthy_use_default_header = 1
