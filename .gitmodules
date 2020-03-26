@@ -226,3 +226,6 @@
 [submodule "pack/plugins/start/noteworthy"]
 	path = pack/plugins/start/noteworthy
 	url = https://github.com/evanthegrayt/vim-noteworthy.git
+[submodule "pack/extra_syntax_files/start/dbml"]
+	path = pack/extra_syntax_files/start/dbml
+	url = https://github.com/jidn/vim-dbml.git
