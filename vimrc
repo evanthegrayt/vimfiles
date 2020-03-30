@@ -308,7 +308,7 @@ let g:noteworthy_libraries = #{
       \ }
 let g:noteworthy_default_library = 'work'
 let noteworthy_use_default_header = 1
-let g:noteworthy_file_type = 'md'
+let g:noteworthy_file_ext = 'md'
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
