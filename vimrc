@@ -258,9 +258,8 @@ let g:gundo_close_on_revert = 1
 
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public'
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
-nnoremap <leader>gt :CtrlPTag<cr><C-\>w
 
 " ROOTER: set root directory at beginning of project
 let g:rooter_silent_chdir = 1
@@ -303,12 +302,14 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
 
 " NOTEWORTHY: Notes
 let g:noteworthy_libraries = #{
-      \   work: $HOME . '/workflow/notes/public_strategies',
-      \   personal:  $HOME . '/workflow/notes/personal',
+      \   work:      $HOME . '/workflow/notes/public_strategies',
+      \   adfitech:  $HOME . '/workflow/notes/adfitech',
+      \   training:  $HOME . '/workflow/training',
+      \   personal:  $HOME . '/Documents/notes',
       \ }
-let g:noteworthy_default_library = 'work'
-let noteworthy_use_default_header = 1
-let g:noteworthy_file_ext = 'md'
+let g:noteworthy_default_library    = 'work'
+let g:noteworthy_file_ext           = 'md'
+let g:noteworthy_use_default_header = 1
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
