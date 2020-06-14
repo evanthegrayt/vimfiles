@@ -226,3 +226,9 @@
 [submodule "pack/plugins/start/vinegar"]
 	path = pack/plugins/start/vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "pack/plugins/start/rbenv"]
+	path = pack/plugins/start/rbenv
+	url = https://github.com/tpope/vim-rbenv.git
+[submodule "pack/plugins/start/rhubarb"]
+	path = pack/plugins/start/rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
