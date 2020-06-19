@@ -125,7 +125,6 @@ nnoremap <silent> <Leader>ss :call SynStack()<CR>
 " Disable Plugins Based On Version: Some plugins echo output. I don't want that.
 if v:version <= 701
   let g:loaded_indexed_search    = 1
-  let loaded_nerd_tree           = 1
 endif
 if v:version < 703
   let g:loaded_tagbar            = 1
@@ -139,12 +138,13 @@ if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
 endif
 if !executable('git')
   let g:loaded_gitgutter = 1
-  let g:loaded_nerdtree_git_status = 1
   let g:loaded_fugitive = 1
 endif
 
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
+nnoremap <silent> <leader>nf :Explore<CR>
+nnoremap <silent> <leader>nt :Ntree<CR>
 
 " RAINBOW: Different color parens
 let g:rainbow_active = 0
@@ -242,15 +242,6 @@ map <Leader>rsf :call RunCurrentSpecFile()<CR>
 map <Leader>rsn :call RunNearestSpec()<CR>
 map <Leader>rsl :call RunLastSpec()<CR>
 map <Leader>rsa :call RunAllSpecs()<CR>
-
-" NERDTREE: a better file browser for vim
-nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
-let g:NERDTreeBookmarksFile = expand($HOME) . ".vim/cache/NERDTreeBookmarks"
-let NERDTreeQuitOnOpen = 1
-
-" NERDCOMMENTER: a better file browser for vim
-let g:NERDSpaceDelims = 1
 
 " GUNDO: a visualization of vim's unto tree
 nnoremap <silent> <Leader>GT :GundoToggle<CR>
