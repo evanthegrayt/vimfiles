@@ -145,6 +145,8 @@ endif
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nf :Explore<CR>
 nnoremap <silent> <leader>nt :Ntree<CR>
+" Workaround for broken 'gx'
+nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " RAINBOW: Different color parens
 let g:rainbow_active = 0
@@ -300,7 +302,6 @@ let g:noteworthy_libraries = #{
       \ }
 let g:noteworthy_default_library    = 'work'
 let g:noteworthy_file_ext           = 'md'
-let g:noteworthy_use_default_header = 1
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
