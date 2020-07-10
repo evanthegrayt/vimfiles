@@ -214,9 +214,6 @@
 [submodule "pack/plugins/start/abolish"]
 	path = pack/plugins/start/abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule "pack/plugins/start/noteworthy"]
-	path = pack/plugins/start/noteworthy
-	url = https://github.com/evanthegrayt/vim-noteworthy.git
 [submodule "pack/extra_syntax_files/start/dbml"]
 	path = pack/extra_syntax_files/start/dbml
 	url = https://github.com/jidn/vim-dbml.git
@@ -235,3 +232,6 @@
 [submodule "pack/evanthegrayt/start/lovehandle"]
 	path = pack/evanthegrayt/start/lovehandle
 	url = https://github.com/evanthegrayt/vim-lovehandle.git
+[submodule "pack/evanthegrayt/start/nonoteworthy"]
+	path = pack/evanthegrayt/start/nonoteworthy
+	url = https://github.com/evanthegrayt/vim-noteworthy.git
