@@ -232,3 +232,6 @@
 [submodule "pack/plugins/start/rhubarb"]
 	path = pack/plugins/start/rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "pack/evanthegrayt/start/lovehandle"]
+	path = pack/evanthegrayt/start/lovehandle
+	url = https://github.com/evanthegrayt/vim-lovehandle.git
