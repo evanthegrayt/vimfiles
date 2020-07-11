@@ -143,7 +143,6 @@ endif
 
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
-nnoremap <silent> <leader>nf :Explore<CR>
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
 nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
