@@ -49,9 +49,6 @@
 [submodule "pack/plugins/opt/pathogen"]
 	path = pack/plugins/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "pack/plugins/start/ack"]
-	path = pack/plugins/start/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "pack/plugins/start/buffersaurus"]
 	path = pack/plugins/start/buffersaurus
 	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
@@ -235,3 +232,6 @@
 [submodule "pack/evanthegrayt/start/nonoteworthy"]
 	path = pack/evanthegrayt/start/nonoteworthy
 	url = https://github.com/evanthegrayt/vim-noteworthy.git
+[submodule "pack/plugins/start/ferret"]
+	path = pack/plugins/start/ferret
+	url = https://github.com/wincent/ferret.git
