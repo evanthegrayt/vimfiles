@@ -204,49 +204,44 @@ let g:blade_custom_directives_pairs = {
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
-  \ 'kinds' : [
-    \ 'T:todos',
-    \ 'n:notes',
-    \ 'R:required files',
-    \ 'm:modules',
-    \ 'c:classes',
-    \ 'f:methods',
-    \ 'a:aliases',
-    \ 'P:private methods',
-    \ 'p:protected methods',
-    \ 'S:singleton methods',
-    \ 'r:rules',
-    \ 'o:buttons',
-    \ 'Q:describes',
-    \ 'Y:contexts',
-    \ 'Z:examples',
-    \ 'y:factories',
-    \ 'z:traits',
-    \ 's:test',
-    \ 't:tasks'
-  \ ]
-\ }
+      \   'kinds' : [
+      \     'T:todos',
+      \     'n:notes',
+      \     'R:required files',
+      \     'm:modules',
+      \     'c:classes',
+      \     'f:methods',
+      \     'a:aliases',
+      \     'P:private methods',
+      \     'p:protected methods',
+      \     'S:singleton methods',
+      \     'r:rules',
+      \     'o:buttons',
+      \     'Q:describes',
+      \     'Y:contexts',
+      \     'Z:examples',
+      \     'y:factories',
+      \     'z:traits',
+      \     's:test',
+      \     't:tasks'
+      \   ]
+      \ }
 let g:tagbar_type_sh = {
-  \ 'kinds' : [
-    \ 'T:todos',
-    \ 'n:notes',
-    \ 'S:sourced files',
-    \ 'f:functions',
-    \ 'a:aliases:0:0',
-    \ 's:script files:0:0',
-  \ ],
-\ }
+      \   'kinds' : [
+      \     'T:todos',
+      \     'n:notes',
+      \     'S:sourced files',
+      \     'f:functions',
+      \     'a:aliases:0:0',
+      \     's:script files:0:0',
+      \   ],
+      \ }
 
-" RSPEC: Easily run RSpec tests from vim
-let g:rspec_command = "Dispatch rspec {spec}"
-map <Leader>rsf :call RunCurrentSpecFile()<CR>
-map <Leader>rsn :call RunNearestSpec()<CR>
-map <Leader>rsl :call RunLastSpec()<CR>
-map <Leader>rsa :call RunAllSpecs()<CR>
-
-" GUNDO: a visualization of vim's unto tree
-nnoremap <silent> <Leader>GT :GundoToggle<CR>
-let g:gundo_close_on_revert = 1
+" UNDOTREE: Visualize the undo tree
+if has("persistent_undo")
+  set undodir=$HOME."/.vim/cache"
+  set undofile
+endif
 
 " CTRLP: project file search
 let g:ctrlp_working_path_mode = 'ra'
