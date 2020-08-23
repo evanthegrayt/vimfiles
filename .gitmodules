@@ -223,12 +223,12 @@
 [submodule "pack/evanthegrayt/start/lovehandle"]
 	path = pack/evanthegrayt/start/lovehandle
 	url = https://github.com/evanthegrayt/vim-lovehandle.git
-[submodule "pack/evanthegrayt/start/nonoteworthy"]
-	path = pack/evanthegrayt/start/nonoteworthy
-	url = https://github.com/evanthegrayt/vim-noteworthy.git
 [submodule "pack/plugins/start/ferret"]
 	path = pack/plugins/start/ferret
 	url = https://github.com/wincent/ferret.git
 [submodule "pack/plugins/start/undotree"]
 	path = pack/plugins/start/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "pack/evanthegrayt/start/noteworthy"]
+	path = pack/evanthegrayt/start/noteworthy
+	url = https://github.com/evanthegrayt/vim-noteworthy.git

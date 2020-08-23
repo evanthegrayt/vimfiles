@@ -1,29 +1,26 @@
 # My Vimfiles
 All of my vim runtime files. Here be dragons.
 
-My local copy of vim is running `version 8` on MacOS, and up until recently, I
-sometimes had to use  `version 7.{1,3,4}` on Linux. For the most part, this
-repository works without errors no matter which `vim` version I'm running; the
-only difference is, some plugins have to be disabled, as they aren't compatible
-with lower versions of vim. Full disclosure, I have not tested any of this on
-Windows. You've been warned.
+All of the plugins that I use are kept as git submodules. You can view all
+plugins in the [pack
+directory](https://github.com/evanthegrayt/vimfiles/tree/master/pack). See the
+[installation instructions](#installation) to see how to recursively clone this
+repository and all of the plugins.
 
 Here's what my `vim` setup looks like. In this screenshot, you can see
+[Ctrlp](https://github.com/kien/ctrlp.vim),
 [Tagbar](https://github.com/majutsushi/tagbar.git),
-[NERDTree](https://github.com/scrooloose/nerdtree.git),
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
 [Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
 I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
 [italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
-![](https://user-images.githubusercontent.com/12698076/77363878-7efbc900-6d21-11ea-9663-1bc5a3970814.png)
+![](https://user-images.githubusercontent.com/12698076/90970781-973d6300-e4ce-11ea-8be2-654dd8a3a81f.png)
 
 ### Installation
-I highly doubt you want to use my exact configuration, so I recommend finding
-the files/lines of code you want and copy them into your own `.vim` directory,
-but if you do want my exact settings, clone the repository. Make sure to use
-`--recursive` if you want to clone the plugins I use as well.
+Clone the repository. Make sure to use `--recursive` if you want to clone the
+plugins I use as well.
 
 ```bash
 git clone --recursive https://github.com/evanthegrayt/vimfiles.git ~/.vim
