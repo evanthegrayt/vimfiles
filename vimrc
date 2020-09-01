@@ -244,9 +244,15 @@ if has("persistent_undo")
 endif
 
 " CTRLP: project file search
+let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public\|tmp'
+nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
+nnoremap <silent> <Leader>bt :CtrlPTag<CR>
+nnoremap <silent> <Leader>bb :CtrlPBufTag<CR>
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
 " ROOTER: set root directory at beginning of project
 let g:rooter_silent_chdir = 1
