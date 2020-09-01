@@ -283,7 +283,7 @@ if isdirectory($HOME . '/workflow/snips')
 endif
 
 " GUTENTAGS: Tags manager
-let g:gutentags_enabled = 0
+let g:gutentags_enabled = 1
 let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
       \ '*.css', '*.html', '*.svg', '*.json', '*.xml']
 

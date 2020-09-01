@@ -55,9 +55,6 @@
 [submodule "pack/plugins/start/capslock"]
 	path = pack/plugins/start/capslock
 	url = https://github.com/tpope/vim-capslock.git
-[submodule "pack/plugins/start/ctrlp"]
-	path = pack/plugins/start/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "pack/plugins/start/easymotion"]
 	path = pack/plugins/start/easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
