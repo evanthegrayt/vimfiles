@@ -262,12 +262,6 @@ let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
 " SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_align = 1
 
-" ACK: better searching (requires TheSilverSearcher for `ag`)
-if executable('ag')
-  nnoremap <Leader>a :Ack!<Space>
-  let g:ackprg = 'ag --nogroup --nocolor --column'
-endif
-
 " EASTEREGG: my colorscheme
 let g:easteregg_use_italics = 1 " Use italics
 colorscheme easteregg           " Set my colorscheme
@@ -304,7 +298,6 @@ let g:noteworthy_default_library    = 'work'
 let g:noteworthy_file_ext           = 'md'
 
 let g:db_switch_confirm_production = 0
-let g:db_switch_silently = 1
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
