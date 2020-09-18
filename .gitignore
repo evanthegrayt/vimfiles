@@ -10,5 +10,4 @@ colors/*
 cache/*
 !cache/.gitkeep
 tags
-pack/evanthegrayt/start/vim-psi-config
-
+pack/public-strategies/
