@@ -1,6 +1,8 @@
-" FILE:         vimrc
-" AUTHOR:       Evan Gray
-" DESCRIPTION:  My general vim settings
+"======================================="
+" FILE:         vimrc                   "
+" AUTHOR:       Evan Gray               "
+" DESCRIPTION:  My general vim settings "
+"======================================="
 
 " vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
 
@@ -88,7 +90,7 @@ vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
 " Toggles: Toggle common vim settings local to buffer
-nnoremap <silent> <Leader>h :setlocal hlsearch!<CR>
+nnoremap <silent> <Leader>h :nohlsearch<CR>
 nnoremap <silent> <Leader>w :setlocal wrap!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
@@ -124,11 +126,11 @@ nnoremap <silent> <Leader>ss :call SynStack()<CR>
 " PLUGIN SETTINGS {{{1
 " Disable Plugins Based On Version: Some plugins echo output. I don't want that.
 if v:version <= 701
-  let g:loaded_indexed_search    = 1
+  let g:loaded_indexed_search = 1
 endif
 if v:version < 703
-  let g:loaded_tagbar            = 1
-  let g:CSApprox_loaded          = 1
+  let g:loaded_tagbar = 1
+  let g:CSApprox_loaded = 1
 endif
 if v:version < 704
   let g:airline#extensions#tagbar#enabled = 0
