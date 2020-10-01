@@ -7,7 +7,6 @@ set guioptions-=L
 set guioptions-=l
 set guioptions-=R
 set guioptions-=r
-set mouse=a
 set vb t_vb=
 
 if has("gui_gtk2")
@@ -17,4 +16,3 @@ elseif has("gui_macvim")
 elseif has("gui_win32") || has("gui_win64")
   set guifont=Consolas:h11:cANSI
 endif
-

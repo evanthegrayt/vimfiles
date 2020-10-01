@@ -79,7 +79,6 @@ set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
-
 "}}}
 
 " MAPPINGS: Custom key mappings {{{
