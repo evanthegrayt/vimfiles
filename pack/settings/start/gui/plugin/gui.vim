@@ -8,6 +8,7 @@ set guioptions-=l
 set guioptions-=R
 set guioptions-=r
 set vb t_vb=
+set mouse=
 
 if has("gui_gtk2")
   set guifont=Monospace\ 9
