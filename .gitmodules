@@ -22,12 +22,6 @@
 [submodule "pack/extra_syntax_files/start/haskell"]
 	path = pack/extra_syntax_files/start/haskell
 	url = https://github.com/neovimhaskell/haskell-vim
-[submodule "pack/extra_syntax_files/start/coffee-script"]
-	path = pack/extra_syntax_files/start/coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "pack/extra_syntax_files/start/php"]
-	path = pack/extra_syntax_files/start/php
-	url = https://github.com/stanangeloff/php.vim
 [submodule "pack/extra_syntax_files/start/blade"]
 	path = pack/extra_syntax_files/start/blade
 	url = https://github.com/jwalton512/vim-blade.git
@@ -43,18 +37,9 @@
 [submodule "pack/extra_syntax_files/start/airline-themes"]
 	path = pack/extra_syntax_files/start/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "pack/extra_syntax_files/start/applescript"]
-	path = pack/extra_syntax_files/start/applescript
-	url = https://github.com/dearrrfish/vim-applescript.git
 [submodule "pack/extra_syntax_files/start/csv"]
 	path = pack/extra_syntax_files/start/csv
 	url = https://github.com/chrisbra/csv.vim.git
-[submodule "pack/extra_syntax_files/start/elm"]
-	path = pack/extra_syntax_files/start/elm
-	url = https://github.com/ElmCast/elm-vim.git
-[submodule "pack/extra_syntax_files/start/fish"]
-	path = pack/extra_syntax_files/start/fish
-	url = https://github.com/dag/vim-fish.git
 [submodule "pack/extra_syntax_files/start/syntax-extra"]
 	path = pack/extra_syntax_files/start/syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra.git

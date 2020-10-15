@@ -112,9 +112,6 @@ nnoremap Y y$
 " File Path: Yank the expanded file-path of current file
 nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
 
-" Redraw: <ctrl-l> to redraw
-nnoremap <C-L> :redraw! <CR>
-
 " Function Toggles: Mappings for functions in
 " pack/settings/start/functions/plugin/functions.vim
 if v:version > 701
@@ -156,7 +153,7 @@ nnoremap <silent> <leader>nt :Ntree<CR>
 nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " RAINBOW: Different color parens
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 nnoremap <silent> <Leader>rt :RainbowToggle<CR>
 
 " SUPERTAB: tab auto-completion when in insert-mode
