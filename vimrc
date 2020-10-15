@@ -27,7 +27,7 @@ if has('nvim')
   set rtp+=~/.config/bundle/pathogen/
   call pathogen#infect()
 elseif v:version < 800 && isdirectory($HOME . '/.vim/pack')
-  set rtp+=~/.vim/pack/plugins/opt/pathogen/
+  set rtp+=~/.vim/pack/tpope/opt/pathogen/
   call pathogen#infect()
 endif
 runtime macros/matchit.vim

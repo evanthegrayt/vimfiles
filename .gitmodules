@@ -43,24 +43,9 @@
 [submodule "pack/libs_and_utils/start/tlib"]
 	path = pack/libs_and_utils/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "pack/tpope/opt/pathogen"]
-	path = pack/tpope/opt/pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule "pack/tpope/start/bundler"]
-	path = pack/tpope/start/bundler
-	url = https://github.com/tpope/vim-bundler.git
-[submodule "pack/tpope/start/capslock"]
-	path = pack/tpope/start/capslock
-	url = https://github.com/tpope/vim-capslock.git
 [submodule "pack/plugins/start/easymotion"]
 	path = pack/plugins/start/easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
-[submodule "pack/tpope/start/endwise"]
-	path = pack/tpope/start/endwise
-	url = https://github.com/tpope/vim-endwise.git
-[submodule "pack/tpope/start/fugitive"]
-	path = pack/tpope/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule "pack/plugins/start/gitgutter"]
 	path = pack/plugins/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -73,15 +58,9 @@
 [submodule "pack/extra_syntax_files/start/javascript"]
 	path = pack/extra_syntax_files/start/javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/tpope/start/repeat"]
-	path = pack/tpope/start/repeat
-	url = https://github.com/tpope/vim-repeat.git
 [submodule "pack/plugins/start/rooter"]
 	path = pack/plugins/start/rooter
 	url = https://github.com/airblade/vim-rooter.git
-[submodule "pack/tpope/start/rsi"]
-	path = pack/tpope/start/rsi
-	url = https://github.com/tpope/vim-rsi.git
 [submodule "pack/plugins/start/rubocop"]
 	path = pack/plugins/start/rubocop
 	url = https://github.com/ngmy/vim-rubocop.git
@@ -91,9 +70,6 @@
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "pack/tpope/start/surround"]
-	path = pack/tpope/start/surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "pack/plugins/start/tabular"]
 	path = pack/plugins/start/tabular
 	url = https://github.com/godlygeek/tabular.git
@@ -103,9 +79,6 @@
 [submodule "pack/plugins/start/update-plugins"]
 	path = pack/plugins/start/update-plugins
 	url = https://github.com/evanthegrayt/vim-update-plugins.git
-[submodule "pack/tpope/start/git"]
-	path = pack/tpope/start/git
-	url = https://github.com/tpope/vim-git.git
 [submodule "pack/plugins/start/man"]
 	path = pack/plugins/start/man
 	url = https://github.com/vim-utils/vim-man.git
@@ -115,21 +88,6 @@
 [submodule "pack/extra_syntax_files/start/previm"]
 	path = pack/extra_syntax_files/start/previm
 	url = https://github.com/previm/previm.git
-[submodule "pack/tpope/start/rails"]
-	path = pack/tpope/start/rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "pack/tpope/start/dispatch"]
-	path = pack/tpope/start/dispatch
-	url = https://github.com/tpope/vim-dispatch
-[submodule "pack/tpope/start/eunuch"]
-	path = pack/tpope/start/eunuch
-	url = https://github.com/tpope/vim-eunuch
-[submodule "pack/tpope/start/jdaddy"]
-	path = pack/tpope/start/jdaddy
-	url = https://github.com/tpope/vim-jdaddy
-[submodule "pack/tpope/start/dadbod"]
-	path = pack/tpope/start/dadbod
-	url = https://github.com/tpope/vim-dadbod
 [submodule "pack/extra_syntax_files/start/textobj-rubyblock"]
 	path = pack/extra_syntax_files/start/textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
@@ -142,12 +100,6 @@
 [submodule "pack/extra_syntax_files/start/textobj-user"]
 	path = pack/extra_syntax_files/start/textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
-[submodule "pack/tpope/start/rake"]
-	path = pack/tpope/start/rake
-	url = https://github.com/tpope/vim-rake
-[submodule "pack/tpope/start/projectionist"]
-	path = pack/tpope/start/projectionist
-	url = https://github.com/tpope/vim-projectionist
 [submodule "pack/extra_syntax_files/start/haskell"]
 	path = pack/extra_syntax_files/start/haskell
 	url = https://github.com/neovimhaskell/haskell-vim
@@ -178,9 +130,6 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
-[submodule "pack/tpope/start/dotenv"]
-	path = pack/tpope/start/dotenv
-	url = https://github.com/tpope/vim-dotenv.git
 [submodule "pack/plugins/start/snippets"]
 	path = pack/plugins/start/snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -190,24 +139,9 @@
 [submodule "pack/extra_syntax_files/start/bats"]
 	path = pack/extra_syntax_files/start/bats
 	url = https://github.com/vim-scripts/bats.vim.git
-[submodule "pack/tpope/start/abolish"]
-	path = pack/tpope/start/abolish
-	url = https://github.com/tpope/vim-abolish.git
 [submodule "pack/extra_syntax_files/start/dbml"]
 	path = pack/extra_syntax_files/start/dbml
 	url = https://github.com/jidn/vim-dbml.git
-[submodule "pack/tpope/start/commentary"]
-	path = pack/tpope/start/commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "pack/tpope/start/vinegar"]
-	path = pack/tpope/start/vinegar
-	url = https://github.com/tpope/vim-vinegar.git
-[submodule "pack/tpope/start/rbenv"]
-	path = pack/tpope/start/rbenv
-	url = https://github.com/tpope/vim-rbenv.git
-[submodule "pack/tpope/start/rhubarb"]
-	path = pack/tpope/start/rhubarb
-	url = https://github.com/tpope/vim-rhubarb.git
 [submodule "pack/evanthegrayt/start/lovehandle"]
 	path = pack/evanthegrayt/start/lovehandle
 	url = https://github.com/evanthegrayt/vim-lovehandle.git
@@ -226,3 +160,69 @@
 [submodule "pack/plugins/start/ctrlp-tjump"]
 	path = pack/plugins/start/ctrlp-tjump
 	url = https://github.com/ivalkeen/vim-ctrlp-tjump.git
+[submodule "pack/tpope/start/bundler"]
+	path = pack/tpope/start/bundler
+	url = https://github.com/tpope/vim-bundler
+[submodule "pack/tpope/start/capslock"]
+	path = pack/tpope/start/capslock
+	url = https://github.com/tpope/vim-capslock
+[submodule "pack/tpope/start/endwise"]
+	path = pack/tpope/start/endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule "pack/tpope/start/fugitive"]
+	path = pack/tpope/start/fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/tpope/start/repeat"]
+	path = pack/tpope/start/repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "pack/tpope/start/rsi"]
+	path = pack/tpope/start/rsi
+	url = https://github.com/tpope/vim-rsi
+[submodule "pack/tpope/start/surround"]
+	path = pack/tpope/start/surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/tpope/start/git"]
+	path = pack/tpope/start/git
+	url = https://github.com/tpope/vim-git
+[submodule "pack/tpope/start/rails"]
+	path = pack/tpope/start/rails
+	url = https://github.com/tpope/vim-rails
+[submodule "pack/tpope/start/dispatch"]
+	path = pack/tpope/start/dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "pack/tpope/start/eunuch"]
+	path = pack/tpope/start/eunuch
+	url = https://github.com/tpope/vim-eunuch
+[submodule "pack/tpope/start/jdaddy"]
+	path = pack/tpope/start/jdaddy
+	url = https://github.com/tpope/vim-jdaddy
+[submodule "pack/tpope/start/dadbod"]
+	path = pack/tpope/start/dadbod
+	url = https://github.com/tpope/vim-dadbod
+[submodule "pack/tpope/start/rake"]
+	path = pack/tpope/start/rake
+	url = https://github.com/tpope/vim-rake
+[submodule "pack/tpope/start/projectionist"]
+	path = pack/tpope/start/projectionist
+	url = https://github.com/tpope/vim-projectionist
+[submodule "pack/tpope/start/dotenv"]
+	path = pack/tpope/start/dotenv
+	url = https://github.com/tpope/vim-dotenv
+[submodule "pack/tpope/start/abolish"]
+	path = pack/tpope/start/abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "pack/tpope/start/commentary"]
+	path = pack/tpope/start/commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "pack/tpope/start/vinegar"]
+	path = pack/tpope/start/vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule "pack/tpope/start/rbenv"]
+	path = pack/tpope/start/rbenv
+	url = https://github.com/tpope/vim-rbenv
+[submodule "pack/tpope/start/rhubarb"]
+	path = pack/tpope/start/rhubarb
+	url = https://github.com/tpope/vim-rhubarb
+[submodule "pack/tpope/opt/pathogen"]
+	path = pack/tpope/opt/pathogen
+	url = https://github.com/tpope/vim-pathogen
