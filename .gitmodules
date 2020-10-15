@@ -1,3 +1,27 @@
+[submodule "pack/plugins/start/laravel"]
+	path = pack/plugins/start/laravel
+	url = https://github.com/noahfrederick/vim-laravel.git
+[submodule "pack/plugins/start/composer"]
+	path = pack/plugins/start/composer
+	url = https://github.com/noahfrederick/vim-composer.git
+[submodule "pack/plugins/start/visual-increment"]
+	path = pack/plugins/start/visual-increment
+	url = https://github.com/vim-scripts/visual-increment.git
+[submodule "pack/libs_and_utils/start/cecutil"]
+	path = pack/libs_and_utils/start/cecutil
+	url = https://github.com/vim-scripts/cecutil.git
+[submodule "pack/libs_and_utils/start/csapprox"]
+	path = pack/libs_and_utils/start/csapprox
+	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "pack/extra_syntax_files/start/bats"]
+	path = pack/extra_syntax_files/start/bats
+	url = https://github.com/vim-scripts/bats.vim.git
+[submodule "pack/plugins/start/gitgutter"]
+	path = pack/plugins/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/plugins/start/rooter"]
+	path = pack/plugins/start/rooter
+	url = https://github.com/airblade/vim-rooter.git
 [submodule "pack/plugins/start/airline"]
 	path = pack/plugins/start/airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -10,18 +34,12 @@
 [submodule "pack/extra_syntax_files/start/csv"]
 	path = pack/extra_syntax_files/start/csv
 	url = https://github.com/chrisbra/csv.vim.git
-[submodule "pack/extra_syntax_files/start/easteregg"]
-	path = pack/extra_syntax_files/start/easteregg
-	url = https://github.com/evanthegrayt/vim-easteregg.git
 [submodule "pack/extra_syntax_files/start/elm"]
 	path = pack/extra_syntax_files/start/elm
 	url = https://github.com/ElmCast/elm-vim.git
 [submodule "pack/extra_syntax_files/start/fish"]
 	path = pack/extra_syntax_files/start/fish
 	url = https://github.com/dag/vim-fish.git
-[submodule "pack/plugins/start/visual-increment"]
-	path = pack/plugins/start/visual-increment
-	url = https://github.com/vim-scripts/visual-increment.git
 [submodule "pack/extra_syntax_files/start/syntax-extra"]
 	path = pack/extra_syntax_files/start/syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra.git
@@ -34,21 +52,12 @@
 [submodule "pack/libs_and_utils/start/addon-mw-utils"]
 	path = pack/libs_and_utils/start/addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "pack/libs_and_utils/start/cecutil"]
-	path = pack/libs_and_utils/start/cecutil
-	url = https://github.com/vim-scripts/cecutil.git
-[submodule "pack/libs_and_utils/start/csapprox"]
-	path = pack/libs_and_utils/start/csapprox
-	url = https://github.com/vim-scripts/CSApprox.git
 [submodule "pack/libs_and_utils/start/tlib"]
 	path = pack/libs_and_utils/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "pack/plugins/start/easymotion"]
 	path = pack/plugins/start/easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
-[submodule "pack/plugins/start/gitgutter"]
-	path = pack/plugins/start/gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "pack/plugins/start/indentline"]
 	path = pack/plugins/start/indentline
 	url = https://github.com/Yggdroot/indentLine.git
@@ -58,9 +67,6 @@
 [submodule "pack/extra_syntax_files/start/javascript"]
 	path = pack/extra_syntax_files/start/javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/plugins/start/rooter"]
-	path = pack/plugins/start/rooter
-	url = https://github.com/airblade/vim-rooter.git
 [submodule "pack/plugins/start/rubocop"]
 	path = pack/plugins/start/rubocop
 	url = https://github.com/ngmy/vim-rubocop.git
@@ -76,9 +82,6 @@
 [submodule "pack/plugins/start/tagbar"]
 	path = pack/plugins/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "pack/plugins/start/update-plugins"]
-	path = pack/plugins/start/update-plugins
-	url = https://github.com/evanthegrayt/vim-update-plugins.git
 [submodule "pack/plugins/start/man"]
 	path = pack/plugins/start/man
 	url = https://github.com/vim-utils/vim-man.git
@@ -112,12 +115,6 @@
 [submodule "pack/extra_syntax_files/start/php"]
 	path = pack/extra_syntax_files/start/php
 	url = https://github.com/stanangeloff/php.vim
-[submodule "pack/plugins/start/laravel"]
-	path = pack/plugins/start/laravel
-	url = https://github.com/noahfrederick/vim-laravel.git
-[submodule "pack/plugins/start/composer"]
-	path = pack/plugins/start/composer
-	url = https://github.com/noahfrederick/vim-composer.git
 [submodule "pack/extra_syntax_files/start/blade"]
 	path = pack/extra_syntax_files/start/blade
 	url = https://github.com/jwalton512/vim-blade.git
@@ -136,24 +133,15 @@
 [submodule "pack/plugins/start/gutentags"]
 	path = pack/plugins/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "pack/extra_syntax_files/start/bats"]
-	path = pack/extra_syntax_files/start/bats
-	url = https://github.com/vim-scripts/bats.vim.git
 [submodule "pack/extra_syntax_files/start/dbml"]
 	path = pack/extra_syntax_files/start/dbml
 	url = https://github.com/jidn/vim-dbml.git
-[submodule "pack/evanthegrayt/start/lovehandle"]
-	path = pack/evanthegrayt/start/lovehandle
-	url = https://github.com/evanthegrayt/vim-lovehandle.git
 [submodule "pack/plugins/start/ferret"]
 	path = pack/plugins/start/ferret
 	url = https://github.com/wincent/ferret.git
 [submodule "pack/plugins/start/undotree"]
 	path = pack/plugins/start/undotree
 	url = https://github.com/mbbill/undotree.git
-[submodule "pack/evanthegrayt/start/noteworthy"]
-	path = pack/evanthegrayt/start/noteworthy
-	url = https://github.com/evanthegrayt/vim-noteworthy.git
 [submodule "pack/plugins/start/ctrlp"]
 	path = pack/plugins/start/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
@@ -226,3 +214,15 @@
 [submodule "pack/tpope/opt/pathogen"]
 	path = pack/tpope/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "pack/evanthegrayt/start/easteregg"]
+	path = pack/evanthegrayt/start/easteregg
+	url = https://github.com/evanthegrayt/vim-easteregg
+[submodule "pack/evanthegrayt/start/update-plugins"]
+	path = pack/evanthegrayt/start/update-plugins
+	url = https://github.com/evanthegrayt/vim-update-plugins
+[submodule "pack/evanthegrayt/start/lovehandle"]
+	path = pack/evanthegrayt/start/lovehandle
+	url = https://github.com/evanthegrayt/vim-lovehandle.git
+[submodule "pack/evanthegrayt/start/noteworthy"]
+	path = pack/evanthegrayt/start/noteworthy
+	url = https://github.com/evanthegrayt/vim-noteworthy.git
