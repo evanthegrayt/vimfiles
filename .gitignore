@@ -5,8 +5,6 @@ backup/*
 neovim/
 tmp/*
 !tmp/.gitkeep
-colors/*
-!colors/.gitkeep
 cache/*
 !cache/.gitkeep
 tags

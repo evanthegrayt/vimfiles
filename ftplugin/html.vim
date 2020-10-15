@@ -1,8 +1,4 @@
-""
-" TODO WHY is this getting executed for php files?!
-if &ft ==# 'php'
-  finish
-endif
+if &ft ==# 'php' | finish | endif
 
 let s:host = system('uname -s')
 if s:host =~ 'Darwin'
