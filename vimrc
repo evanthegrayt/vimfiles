@@ -5,21 +5,13 @@
 " DESCRIPTION:  My general vim settings                                        "
 "                                                                              "
 " To clean up this vimrc, some settings are kept in their own files:           "
-" Autocommands: pack/settings/start/autocommands//plugin/autocommands.vim      "
-" Commands:     pack/settings/start/commands/plugin/commands.vim               "
-" Functions:    pack/settings/start/functions/plugin/functions.vim             "
-" GUI Settings: pack/settings/start/gui/plugin/gui.vim                         "
+" Autocommands: plugin/autocommands.vim                                        "
+" Commands:     plugin/commands.vim                                            "
+" Functions:    plugin/functions.vim                                           "
+" GUI Settings: plugin/gui.vim                                                 "
+"                                                                              "
+" NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
-
-
-" NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close.
-
-" VERSION_8: Notes for myself {{{1
-" To get vim8 working, delete the following link (on mac):
-" /usr/local/share/vim -> /usr/share/vim/
-" And re-link it to here:
-" /usr/local/share/vim -> /usr/local/Cellar/vim/8.0.0002/share/vim/vim80
-"}}}
 
 " FILETYPE AND SYNTAX:      " Enable plugins, filetype detection, etc. {{{1
 filetype on                 " Enable filetype detection
@@ -113,7 +105,7 @@ nnoremap Y y$
 nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
 
 " Function Toggles: Mappings for functions in
-" pack/settings/start/functions/plugin/functions.vim
+" plugin/functions.vim
 if v:version > 701
   nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
   nnoremap <silent> <Leader>TC :call ToggleColorColumn()<CR>
