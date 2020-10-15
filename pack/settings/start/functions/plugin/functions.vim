@@ -1,4 +1,4 @@
-" FUNCTION TO TOGGLE LINE NUMBERING
+" Toggle line numbering
 function! NumberToggle() abort
   if(&rnu == 0 && &nu == 0)
     setlocal nu
@@ -10,7 +10,7 @@ function! NumberToggle() abort
   endif
 endfunction
 
-" FUNCTION TO TOGGLE FOLDCOLUMN
+" Toggle foldcolumn
 function! FoldColumnToggle() abort
   if &foldcolumn
     setlocal foldcolumn=0
@@ -19,7 +19,7 @@ function! FoldColumnToggle() abort
   endif
 endfunction
 
-" TOGGLE THE MOUSE BETWEEN VIM AND TERMINAL MODE
+" Toggle the mouse between vim and terminal mode
 function! ToggleMouse() abort
   if !exists("l:old_mouse")
     let l:old_mouse = "a"
@@ -75,10 +75,7 @@ endfunction
 
 " Show the syntax stack of keyword under the cursor.
 function! SynStack() abort
-  if !exists("*synstack")
-    return
-  endif
+  if !exists("*synstack") | return | endif
 
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-

@@ -1,10 +1,16 @@
-"======================================="
-" FILE:         vimrc                   "
-" AUTHOR:       Evan Gray               "
-" DESCRIPTION:  My general vim settings "
-"======================================="
-
 " vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
+"=============================================================================="
+" FILE:         vimrc                                                          "
+" AUTHOR:       Evan Gray                                                      "
+" DESCRIPTION:  My general vim settings                                        "
+"                                                                              "
+" To clean up this vimrc, some settings are kept in their own files:           "
+" Autocommands: pack/settings/start/autocommands//plugin/autocommands.vim      "
+" Commands:     pack/settings/start/commands/plugin/commands.vim               "
+" Functions:    pack/settings/start/functions/plugin/functions.vim             "
+" GUI Settings: pack/settings/start/gui/plugin/gui.vim                         "
+"=============================================================================="
+
 
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close.
 
@@ -109,7 +115,8 @@ nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
 " Redraw: <ctrl-l> to redraw
 nnoremap <C-L> :redraw! <CR>
 
-" Function Toggles: Mappings for functions in pack/settings/start/functions
+" Function Toggles: Mappings for functions in
+" pack/settings/start/functions/plugin/functions.vim
 if v:version > 701
   nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
   nnoremap <silent> <Leader>TC :call ToggleColorColumn()<CR>
@@ -302,6 +309,3 @@ if filereadable($HOME . "/.vimrc.local")
   source $HOME/.vimrc.local
 endif
 "}}}
-
-" NOTE: FUNCTIONS, GUI SETTINGS, AND AUTOCOMMANDS UNDER pack/settings/start
-

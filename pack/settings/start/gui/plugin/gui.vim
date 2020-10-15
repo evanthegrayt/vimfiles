@@ -1,4 +1,3 @@
-
 if !has('gui_running') " No need for .gvimrc
   finish
 endif

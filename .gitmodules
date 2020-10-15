@@ -1,30 +1,45 @@
-[submodule "pack/plugins/start/laravel"]
-	path = pack/plugins/start/laravel
-	url = https://github.com/noahfrederick/vim-laravel.git
-[submodule "pack/plugins/start/composer"]
-	path = pack/plugins/start/composer
-	url = https://github.com/noahfrederick/vim-composer.git
-[submodule "pack/plugins/start/visual-increment"]
-	path = pack/plugins/start/visual-increment
-	url = https://github.com/vim-scripts/visual-increment.git
-[submodule "pack/libs_and_utils/start/cecutil"]
-	path = pack/libs_and_utils/start/cecutil
-	url = https://github.com/vim-scripts/cecutil.git
-[submodule "pack/libs_and_utils/start/csapprox"]
-	path = pack/libs_and_utils/start/csapprox
-	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "pack/extra_syntax_files/start/dbml"]
+	path = pack/extra_syntax_files/start/dbml
+	url = https://github.com/jidn/vim-dbml.git
+[submodule "pack/extra_syntax_files/start/javascript"]
+	path = pack/extra_syntax_files/start/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "pack/extra_syntax_files/start/previm"]
+	path = pack/extra_syntax_files/start/previm
+	url = https://github.com/previm/previm.git
+[submodule "pack/extra_syntax_files/start/textobj-rubyblock"]
+	path = pack/extra_syntax_files/start/textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "pack/extra_syntax_files/start/indent-object"]
+	path = pack/extra_syntax_files/start/indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "pack/extra_syntax_files/start/tagbar-markdown"]
+	path = pack/extra_syntax_files/start/tagbar-markdown
+	url = https://github.com/lvht/tagbar-markdown.git
+[submodule "pack/extra_syntax_files/start/textobj-user"]
+	path = pack/extra_syntax_files/start/textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "pack/extra_syntax_files/start/haskell"]
+	path = pack/extra_syntax_files/start/haskell
+	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/extra_syntax_files/start/coffee-script"]
+	path = pack/extra_syntax_files/start/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "pack/extra_syntax_files/start/php"]
+	path = pack/extra_syntax_files/start/php
+	url = https://github.com/stanangeloff/php.vim
+[submodule "pack/extra_syntax_files/start/blade"]
+	path = pack/extra_syntax_files/start/blade
+	url = https://github.com/jwalton512/vim-blade.git
+[submodule "pack/extra_syntax_files/start/rainbow"]
+	path = pack/extra_syntax_files/start/rainbow
+	url = https://github.com/luochen1990/rainbow.git
+[submodule "pack/extra_syntax_files/start/javascript-es6"]
+	path = pack/extra_syntax_files/start/javascript-es6
+	url = https://github.com/isRuslan/vim-es6.git
 [submodule "pack/extra_syntax_files/start/bats"]
 	path = pack/extra_syntax_files/start/bats
 	url = https://github.com/vim-scripts/bats.vim.git
-[submodule "pack/plugins/start/gitgutter"]
-	path = pack/plugins/start/gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "pack/plugins/start/rooter"]
-	path = pack/plugins/start/rooter
-	url = https://github.com/airblade/vim-rooter.git
-[submodule "pack/plugins/start/airline"]
-	path = pack/plugins/start/airline
-	url = https://github.com/vim-airline/vim-airline.git
 [submodule "pack/extra_syntax_files/start/airline-themes"]
 	path = pack/extra_syntax_files/start/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
@@ -49,12 +64,24 @@
 [submodule "pack/extra_syntax_files/start/json"]
 	path = pack/extra_syntax_files/start/json
 	url = https://github.com/elzr/vim-json.git
-[submodule "pack/libs_and_utils/start/addon-mw-utils"]
-	path = pack/libs_and_utils/start/addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "pack/libs_and_utils/start/tlib"]
-	path = pack/libs_and_utils/start/tlib
-	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pack/plugins/start/laravel"]
+	path = pack/plugins/start/laravel
+	url = https://github.com/noahfrederick/vim-laravel.git
+[submodule "pack/plugins/start/composer"]
+	path = pack/plugins/start/composer
+	url = https://github.com/noahfrederick/vim-composer.git
+[submodule "pack/plugins/start/visual-increment"]
+	path = pack/plugins/start/visual-increment
+	url = https://github.com/vim-scripts/visual-increment.git
+[submodule "pack/plugins/start/gitgutter"]
+	path = pack/plugins/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/plugins/start/rooter"]
+	path = pack/plugins/start/rooter
+	url = https://github.com/airblade/vim-rooter.git
+[submodule "pack/plugins/start/airline"]
+	path = pack/plugins/start/airline
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "pack/plugins/start/easymotion"]
 	path = pack/plugins/start/easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
@@ -64,9 +91,6 @@
 [submodule "pack/plugins/start/indexed-search"]
 	path = pack/plugins/start/indexed-search
 	url = https://github.com/henrik/vim-indexed-search.git
-[submodule "pack/extra_syntax_files/start/javascript"]
-	path = pack/extra_syntax_files/start/javascript
-	url = https://github.com/pangloss/vim-javascript.git
 [submodule "pack/plugins/start/rubocop"]
 	path = pack/plugins/start/rubocop
 	url = https://github.com/ngmy/vim-rubocop.git
@@ -88,42 +112,9 @@
 [submodule "pack/plugins/start/vader"]
 	path = pack/plugins/start/vader
 	url = https://github.com/junegunn/vader.vim.git
-[submodule "pack/extra_syntax_files/start/previm"]
-	path = pack/extra_syntax_files/start/previm
-	url = https://github.com/previm/previm.git
-[submodule "pack/extra_syntax_files/start/textobj-rubyblock"]
-	path = pack/extra_syntax_files/start/textobj-rubyblock
-	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "pack/extra_syntax_files/start/indent-object"]
-	path = pack/extra_syntax_files/start/indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object.git
-[submodule "pack/extra_syntax_files/start/tagbar-markdown"]
-	path = pack/extra_syntax_files/start/tagbar-markdown
-	url = https://github.com/lvht/tagbar-markdown.git
-[submodule "pack/extra_syntax_files/start/textobj-user"]
-	path = pack/extra_syntax_files/start/textobj-user
-	url = https://github.com/kana/vim-textobj-user.git
-[submodule "pack/extra_syntax_files/start/haskell"]
-	path = pack/extra_syntax_files/start/haskell
-	url = https://github.com/neovimhaskell/haskell-vim
-[submodule "pack/extra_syntax_files/start/coffee-script"]
-	path = pack/extra_syntax_files/start/coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "pack/plugins/start/phpcomplete"]
 	path = pack/plugins/start/phpcomplete
 	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule "pack/extra_syntax_files/start/php"]
-	path = pack/extra_syntax_files/start/php
-	url = https://github.com/stanangeloff/php.vim
-[submodule "pack/extra_syntax_files/start/blade"]
-	path = pack/extra_syntax_files/start/blade
-	url = https://github.com/jwalton512/vim-blade.git
-[submodule "pack/extra_syntax_files/start/rainbow"]
-	path = pack/extra_syntax_files/start/rainbow
-	url = https://github.com/luochen1990/rainbow.git
-[submodule "pack/extra_syntax_files/start/javascript-es6"]
-	path = pack/extra_syntax_files/start/javascript-es6
-	url = https://github.com/isRuslan/vim-es6.git
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
@@ -133,9 +124,6 @@
 [submodule "pack/plugins/start/gutentags"]
 	path = pack/plugins/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "pack/extra_syntax_files/start/dbml"]
-	path = pack/extra_syntax_files/start/dbml
-	url = https://github.com/jidn/vim-dbml.git
 [submodule "pack/plugins/start/ferret"]
 	path = pack/plugins/start/ferret
 	url = https://github.com/wincent/ferret.git
@@ -226,3 +214,15 @@
 [submodule "pack/evanthegrayt/start/noteworthy"]
 	path = pack/evanthegrayt/start/noteworthy
 	url = https://github.com/evanthegrayt/vim-noteworthy.git
+[submodule "pack/plugins/start/cecutil"]
+	path = pack/plugins/start/cecutil
+	url = https://github.com/vim-scripts/cecutil.git
+[submodule "pack/plugins/start/csapprox"]
+	path = pack/plugins/start/csapprox
+	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "pack/plugins/start/addon-mw-utils"]
+	path = pack/plugins/start/addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "pack/plugins/start/tlib"]
+	path = pack/plugins/start/tlib
+	url = https://github.com/tomtom/tlib_vim.git

@@ -1,5 +1,3 @@
-" IF VIM CAN RUN AUTOCMDS
-
 if !has("autocmd")
   finish
 endif
@@ -32,6 +30,4 @@ augroup vimrc
   autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
         \ containedin=.*Comment,vimCommentTitle
   hi def link MyTodo Todo
-
 augroup end
-
