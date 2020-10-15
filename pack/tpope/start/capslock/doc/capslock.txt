@@ -1,0 +1,35 @@
+*capslock.txt*  Software caps lock
+
+Author:  Tim Pope <http://tpo.pe/>
+License: Same terms as Vim itself (see |license|)
+
+This plugin is only available if 'compatible' is not set.
+
+SUMMARY                                         *capslock*
+
+This plugin enables a software caps lock.  This is advantageous over a regular
+caps lock in that normal mode commands, other buffers, and other applications
+are unaffected.
+
+                                        *capslock-i_CTRL-G_c* *capslock-gC*
+The default insert mode mapping is <C-G>c, and the default normal mode map is
+gC.  Additionally, <C-L> is mapped in insert mode if it is otherwise unused.
+<Plug>CapsLockToggle, <Plug>CapsLockEnable, and <Plug>CapsLockDisable are
+provided in normal, insert, and command line mode if you would prefer to
+define your own maps.
+
+By default, caps lock is automatically disabled after leaving insert mode for
+the insert mode mappings, but must be explicitly disabled for the normal mode
+mappings.  If you always want to use the latter method, make your insert mode
+mapping call the normal mode one.
+>
+        imap <C-L> <C-O><Plug>CapsLockToggle
+<
+CapsLockStatusline() is provided to use inside %{} in 'statusline'.  This
+returns "[Caps]" (or the optional first argument) if software caps lock is
+enabled.  Here's an example usage that won't cause problems if capslock.vim is
+missing:
+>
+        set statusline^=%{exists('*CapsLockStatusline')?CapsLockStatusline():''}
+<
+ vim:tw=78:et:ft=help:norl:

@@ -177,6 +177,11 @@ let g:airline_detect_paste                  = 1
 let g:airline_theme                         = "bubblegum"
 let g:airline#extensions#whitespace#enabled = 1
 
+" ALE: Asynchronous Linting Engine
+let g:ale_set_highlights = 0
+let g:ale_fixers = { 'ruby': 'rubocop' }
+let g:ale_completion_enabled = 1
+
 " INDENT LINE: draw lines every indention level
 let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
@@ -273,15 +278,6 @@ let g:vim_markdown_folding_disabled     = 1
 
 " PREVIM: live preview markdown, etc.
 let g:previm_open_cmd = 'open -a Firefox'
-
-" ULTISNIPS: Snippets for vim
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-t>"
-let g:UltiSnipsJumpBackwardTrigger="<c-d>"
-if isdirectory($HOME . '/workflow/snips')
-  let g:UltiSnipsSnippetsDir=$HOME . '/workflow/snips'
-  let g:UltiSnipsSnippetDirectories=[$HOME . '/workflow/snips', 'UltiSnips']
-endif
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 1
