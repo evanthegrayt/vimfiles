@@ -208,18 +208,6 @@
 [submodule "pack/plugins/start/indent-object"]
 	path = pack/plugins/start/indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
-[submodule "pack/deoplete/start/hug-neovim-rpc"]
-	path = pack/deoplete/start/hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc.git
-[submodule "pack/deoplete/start/pynvim"]
-	path = pack/deoplete/start/pynvim
-	url = https://github.com/neovim/pynvim.git
-[submodule "pack/deoplete/start/yarp"]
-	path = pack/deoplete/start/yarp
-	url = https://github.com/roxma/nvim-yarp.git
-[submodule "pack/deoplete/start/deoplete"]
-	path = pack/deoplete/start/deoplete
-	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git

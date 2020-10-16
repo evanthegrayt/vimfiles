@@ -173,7 +173,7 @@ let g:airline#extensions#whitespace#enabled = 1
 " ALE: Asynchronous Linting Engine
 let g:ale_set_highlights = 0
 let g:ale_fixers = { 'ruby': 'rubocop' }
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 
 " INDENT LINE: draw lines every indention level
 let g:indentLine_color_term = 239
@@ -288,11 +288,6 @@ let g:noteworthy_default_library    = 'work'
 let g:noteworthy_file_ext           = 'md'
 
 let g:db_switch_confirm_production = 0
-
-" DEOPLETE: Code completion `pip3 install --user --upgrade pynvim`
-if has('python3') && executable('python3') && v:version >= 801
-  let g:deoplete#enable_at_startup = 1
-endif
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
