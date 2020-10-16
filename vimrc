@@ -288,6 +288,11 @@ let g:noteworthy_default_library    = 'work'
 let g:noteworthy_file_ext           = 'md'
 
 let g:db_switch_confirm_production = 0
+
+" DEOPLETE: Code completion `pip3 install --user --upgrade pynvim`
+if has('python3') && executable('python3') && v:version >= 801
+  let g:deoplete#enable_at_startup = 1
+endif
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{
