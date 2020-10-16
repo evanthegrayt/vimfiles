@@ -1,54 +1,3 @@
-[submodule "pack/extra_syntax_files/start/dbml"]
-	path = pack/extra_syntax_files/start/dbml
-	url = https://github.com/jidn/vim-dbml.git
-[submodule "pack/extra_syntax_files/start/javascript"]
-	path = pack/extra_syntax_files/start/javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/extra_syntax_files/start/previm"]
-	path = pack/extra_syntax_files/start/previm
-	url = https://github.com/previm/previm.git
-[submodule "pack/extra_syntax_files/start/textobj-rubyblock"]
-	path = pack/extra_syntax_files/start/textobj-rubyblock
-	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "pack/extra_syntax_files/start/indent-object"]
-	path = pack/extra_syntax_files/start/indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object.git
-[submodule "pack/extra_syntax_files/start/tagbar-markdown"]
-	path = pack/extra_syntax_files/start/tagbar-markdown
-	url = https://github.com/lvht/tagbar-markdown.git
-[submodule "pack/extra_syntax_files/start/textobj-user"]
-	path = pack/extra_syntax_files/start/textobj-user
-	url = https://github.com/kana/vim-textobj-user.git
-[submodule "pack/extra_syntax_files/start/haskell"]
-	path = pack/extra_syntax_files/start/haskell
-	url = https://github.com/neovimhaskell/haskell-vim
-[submodule "pack/extra_syntax_files/start/blade"]
-	path = pack/extra_syntax_files/start/blade
-	url = https://github.com/jwalton512/vim-blade.git
-[submodule "pack/extra_syntax_files/start/rainbow"]
-	path = pack/extra_syntax_files/start/rainbow
-	url = https://github.com/luochen1990/rainbow.git
-[submodule "pack/extra_syntax_files/start/javascript-es6"]
-	path = pack/extra_syntax_files/start/javascript-es6
-	url = https://github.com/isRuslan/vim-es6.git
-[submodule "pack/extra_syntax_files/start/bats"]
-	path = pack/extra_syntax_files/start/bats
-	url = https://github.com/vim-scripts/bats.vim.git
-[submodule "pack/extra_syntax_files/start/airline-themes"]
-	path = pack/extra_syntax_files/start/airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "pack/extra_syntax_files/start/csv"]
-	path = pack/extra_syntax_files/start/csv
-	url = https://github.com/chrisbra/csv.vim.git
-[submodule "pack/extra_syntax_files/start/syntax-extra"]
-	path = pack/extra_syntax_files/start/syntax-extra
-	url = https://github.com/justinmk/vim-syntax-extra.git
-[submodule "pack/extra_syntax_files/start/markdown"]
-	path = pack/extra_syntax_files/start/markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "pack/extra_syntax_files/start/json"]
-	path = pack/extra_syntax_files/start/json
-	url = https://github.com/elzr/vim-json.git
 [submodule "pack/plugins/start/laravel"]
 	path = pack/plugins/start/laravel
 	url = https://github.com/noahfrederick/vim-laravel.git
@@ -211,3 +160,54 @@
 [submodule "pack/plugins/start/tlib"]
 	path = pack/plugins/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pack/plugins/start/airline-themes"]
+	path = pack/plugins/start/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pack/plugins/start/bats"]
+	path = pack/plugins/start/bats
+	url = https://github.com/vim-scripts/bats.vim.git
+[submodule "pack/plugins/start/blade"]
+	path = pack/plugins/start/blade
+	url = https://github.com/jwalton512/vim-blade.git
+[submodule "pack/plugins/start/csv"]
+	path = pack/plugins/start/csv
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "pack/plugins/start/dbml"]
+	path = pack/plugins/start/dbml
+	url = https://github.com/jidn/vim-dbml.git
+[submodule "pack/plugins/start/haskell"]
+	path = pack/plugins/start/haskell
+	url = https://github.com/neovimhaskell/haskell-vim.git
+[submodule "pack/plugins/start/javascript"]
+	path = pack/plugins/start/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "pack/plugins/start/javascript-es6"]
+	path = pack/plugins/start/javascript-es6
+	url = https://github.com/isRuslan/vim-es6.git
+[submodule "pack/plugins/start/json"]
+	path = pack/plugins/start/json
+	url = https://github.com/elzr/vim-json.git
+[submodule "pack/plugins/start/markdown"]
+	path = pack/plugins/start/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "pack/plugins/start/previm"]
+	path = pack/plugins/start/previm
+	url = https://github.com/previm/previm.git
+[submodule "pack/plugins/start/rainbow"]
+	path = pack/plugins/start/rainbow
+	url = https://github.com/luochen1990/rainbow.git
+[submodule "pack/plugins/start/syntax-extra"]
+	path = pack/plugins/start/syntax-extra
+	url = https://github.com/justinmk/vim-syntax-extra.git
+[submodule "pack/plugins/start/tagbar-markdown"]
+	path = pack/plugins/start/tagbar-markdown
+	url = https://github.com/lvht/tagbar-markdown.git
+[submodule "pack/plugins/start/textobj-rubyblock"]
+	path = pack/plugins/start/textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "pack/plugins/start/textobj-user"]
+	path = pack/plugins/start/textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "pack/plugins/start/indent-object"]
+	path = pack/plugins/start/indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
