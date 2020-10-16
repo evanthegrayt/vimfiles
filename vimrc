@@ -87,8 +87,6 @@ vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
 " Toggles: Toggle common vim settings local to buffer
-nnoremap <silent> <Leader>h :nohlsearch<CR>
-nnoremap <silent> <Leader>w :setlocal wrap!<CR>
 nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 
@@ -109,7 +107,6 @@ nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
 if v:version > 701
   nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
   nnoremap <silent> <Leader>TC :call ToggleColorColumn()<CR>
-  nnoremap <silent> <Leader>n  :call NumberToggle()<CR>
 endif
 nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>

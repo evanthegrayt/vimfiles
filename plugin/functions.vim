@@ -1,15 +1,3 @@
-" Toggle line numbering
-function! NumberToggle() abort
-  if(&rnu == 0 && &nu == 0)
-    setlocal nu
-  elseif(&nu == 1)
-    setlocal nonu
-    setlocal rnu
-  else
-    setlocal nornu
-  endif
-endfunction
-
 " Toggle foldcolumn
 function! FoldColumnToggle() abort
   if &foldcolumn
