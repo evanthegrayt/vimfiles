@@ -145,9 +145,6 @@
 [submodule "pack/plugins/start/csapprox"]
 	path = pack/plugins/start/csapprox
 	url = https://github.com/vim-scripts/CSApprox.git
-[submodule "pack/plugins/start/airline-themes"]
-	path = pack/plugins/start/airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "pack/plugins/start/bats"]
 	path = pack/plugins/start/bats
 	url = https://github.com/vim-scripts/bats.vim.git
@@ -199,3 +196,6 @@
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "pack/evanthegrayt/start/easteregg-airline"]
+	path = pack/evanthegrayt/start/easteregg-airline
+	url = https://github.com/evanthegrayt/vim-easteregg-airline.git

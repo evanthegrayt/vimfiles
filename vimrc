@@ -167,7 +167,7 @@ let g:airline_symbols.whitespace            = '!'
 let g:airline#extensions#ale#enabled        = 1
 let g:airline#extensions#branch#enabled     = 1
 let g:airline_detect_paste                  = 1
-let g:airline_theme                         = "bubblegum"
+let g:airline_theme                         = 'easteregg'
 let g:airline#extensions#whitespace#enabled = 1
 
 " ALE: Asynchronous Linting Engine
