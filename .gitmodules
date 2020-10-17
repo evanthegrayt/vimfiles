@@ -40,9 +40,6 @@
 [submodule "pack/plugins/start/man"]
 	path = pack/plugins/start/man
 	url = https://github.com/vim-utils/vim-man.git
-[submodule "pack/plugins/start/vader"]
-	path = pack/plugins/start/vader
-	url = https://github.com/junegunn/vader.vim.git
 [submodule "pack/plugins/start/phpcomplete"]
 	path = pack/plugins/start/phpcomplete
 	url = https://github.com/shawncplus/phpcomplete.vim.git
@@ -145,18 +142,9 @@
 [submodule "pack/evanthegrayt/start/noteworthy"]
 	path = pack/evanthegrayt/start/noteworthy
 	url = https://github.com/evanthegrayt/vim-noteworthy.git
-[submodule "pack/plugins/start/cecutil"]
-	path = pack/plugins/start/cecutil
-	url = https://github.com/vim-scripts/cecutil.git
 [submodule "pack/plugins/start/csapprox"]
 	path = pack/plugins/start/csapprox
 	url = https://github.com/vim-scripts/CSApprox.git
-[submodule "pack/plugins/start/addon-mw-utils"]
-	path = pack/plugins/start/addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "pack/plugins/start/tlib"]
-	path = pack/plugins/start/tlib
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule "pack/plugins/start/airline-themes"]
 	path = pack/plugins/start/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git

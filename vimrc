@@ -142,7 +142,7 @@ nnoremap <silent> <leader>nt :Ntree<CR>
 nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " RAINBOW: Different color parens
-let g:rainbow_active = 1
+let g:rainbow_active = 0
 nnoremap <silent> <Leader>rt :RainbowToggle<CR>
 
 " SUPERTAB: tab auto-completion when in insert-mode
