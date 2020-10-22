@@ -163,9 +163,6 @@
 [submodule "pack/plugins/start/javascript"]
 	path = pack/plugins/start/javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/plugins/start/javascript-es6"]
-	path = pack/plugins/start/javascript-es6
-	url = https://github.com/isRuslan/vim-es6.git
 [submodule "pack/plugins/start/json"]
 	path = pack/plugins/start/json
 	url = https://github.com/elzr/vim-json.git
@@ -199,3 +196,6 @@
 [submodule "pack/evanthegrayt/start/easteregg-airline"]
 	path = pack/evanthegrayt/start/easteregg-airline
 	url = https://github.com/evanthegrayt/vim-easteregg-airline.git
+[submodule "pack/plugins/start/jsx-pretty"]
+	path = pack/plugins/start/jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
