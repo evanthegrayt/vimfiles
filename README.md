@@ -1,8 +1,9 @@
 # My Vimfiles
 All of my vim runtime files. Here be dragons.
 
-All of the plugins that I use are kept as git submodules. You can view all
-plugins in the [pack
+All of the plugins that I use are kept as git submodules. I mostly work with
+Ruby on Rails, so a lot of my plugins are geared towards a Rails workflow. You
+can view all plugins in the [pack
 directory](https://github.com/evanthegrayt/vimfiles/tree/master/pack). See the
 [installation instructions](#installation) to see how to recursively clone this
 repository and all of the plugins.

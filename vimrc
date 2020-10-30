@@ -260,6 +260,8 @@ let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
 
 " SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_align = 1
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_curly_braces = 0
 
 " EASTEREGG: my colorscheme
 let g:easteregg_use_italics = 1 " Use italics
@@ -285,8 +287,8 @@ let g:noteworthy_libraries = #{
       \   training:  $HOME . '/workflow/training',
       \   personal:  $HOME . '/Documents/notes',
       \ }
-let g:noteworthy_default_library    = 'work'
-let g:noteworthy_file_ext           = 'md'
+let g:noteworthy_default_library = 'work'
+let g:noteworthy_file_ext        = 'md'
 
 let g:db_switch_confirm_production = 0
 "}}}
