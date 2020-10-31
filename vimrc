@@ -186,20 +186,6 @@ nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>ggu :GitGutterUndoHunk<CR>
 let g:gitgutter_preview_win_floating = 1
 
-" BLADE: syntax highlighting for Laravel's Blade syntax
-let g:blade_custom_directives = [
-      \   'servers',
-      \   'datetime',
-      \   'javascript',
-      \   'csrf',
-      \ ]
-let g:blade_custom_directives_pairs = {
-      \   'setup': 'endsetup',
-      \   'task':  'endtask',
-      \   'story': 'endstory',
-      \   'error': 'enderror',
-      \ }
-
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
 let g:tagbar_type_ruby = {
@@ -266,14 +252,6 @@ let g:splitjoin_ruby_curly_braces = 0
 " EASTEREGG: my colorscheme
 let g:easteregg_use_italics = 1 " Use italics
 colorscheme easteregg           " Set my colorscheme
-
-" MARKDOWN: markdown syntax plugin
-let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_folding_disabled     = 1
-
-" PREVIM: live preview markdown, etc.
-let g:previm_open_cmd =
-      \ system('uname -s') =~# 'Darwin' ? 'open -a Firefox' : 'firefox'
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 1

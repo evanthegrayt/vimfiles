@@ -199,3 +199,6 @@
 [submodule "pack/plugins/start/jsx-pretty"]
 	path = pack/plugins/start/jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule "pack/plugins/start/rest-console"]
+	path = pack/plugins/start/rest-console
+	url = https://github.com/diepm/vim-rest-console.git
