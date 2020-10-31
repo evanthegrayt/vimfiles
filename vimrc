@@ -32,6 +32,7 @@ runtime macros/matchit.vim
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set nrformats+=alpha        " Allow <C-A> and <C-X> to work on letters
 set laststatus=2            " Always show the statusline; must be on for airline
 set encoding=utf-8          " Necessary to show unicode glyphs
 set showcmd                 " Display incomplete commands in statusline
@@ -140,6 +141,9 @@ let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
 nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
+
+" EASYMOTION: Easily jump to markers
+" let g:EasyMotion_force_csapprox = 1
 
 " RAINBOW: Different color parens
 let g:rainbow_active = 0
