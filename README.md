@@ -59,16 +59,16 @@ let g:easteregg_use_italics = 0
 ...or just delete the line entirely.
 
 ### Not all configurations are in your vimrc; where are they?
-Functions, autocommands, and GUI settings are under `pack/settings/start` to
+Functions, autocommands, and GUI settings are under `plugin/` to
 make my `vimrc` cleaner, as I rarely edit these.
 
-Also, a lot of people put file-type related settings -- such as indentation,
-autocommands, etc. -- in their `vimrc` files, but `vim` provides directories for
-these types of situations, getting rid of ugly conditionals cluttering your
+Also, a lot of people put file-type related settings -- such as autocommands --
+in their `vimrc` files, but `vim` provides directories for these types of
+situations, getting rid of ugly conditionals cluttering your
 `vimrc`. I utilize [these
 directories](http://www.panozzaj.com/blog/2011/09/09/vim-directory-structure/),
-so [indention](./indent/), [file type plugins](./ftplugin), etc., are located in
-the appropriate directories.
+so [file type plugins](./ftplugin), etc., are located in the appropriate
+directories.
 
 ### Why do I have no plugins?
 You probably didn't clone with the `--recursive` option, as stated above.
