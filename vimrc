@@ -264,10 +264,9 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
 
 " NOTEWORTHY: Notes
 let g:noteworthy_libraries = #{
-      \   work:      $HOME . '/workflow/notes/public_strategies',
-      \   adfitech:  $HOME . '/workflow/notes/adfitech',
-      \   training:  $HOME . '/workflow/training',
-      \   personal:  $HOME . '/Documents/notes',
+      \   code:     $HOME . '/workflow/notes/code',
+      \   work:     $HOME . '/workflow/notes/public_strategies',
+      \   personal: $HOME . '/Documents/notes',
       \ }
 let g:noteworthy_default_library = 'work'
 let g:noteworthy_file_ext        = 'md'
