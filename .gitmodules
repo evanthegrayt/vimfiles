@@ -202,3 +202,6 @@
 [submodule "pack/plugins/start/rest-console"]
 	path = pack/plugins/start/rest-console
 	url = https://github.com/diepm/vim-rest-console.git
+[submodule "pack/tpope/start/speeddating"]
+	path = pack/tpope/start/speeddating
+	url = https://github.com/tpope/vim-speeddating.git
