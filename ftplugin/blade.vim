@@ -1,4 +1,3 @@
-" BLADE: syntax highlighting for Laravel's Blade syntax
 let g:blade_custom_directives = [
       \   'servers',
       \   'datetime',

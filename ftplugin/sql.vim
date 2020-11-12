@@ -1,7 +1,3 @@
-if v:version > 701
-  call ToggleColorColumn()
-endif
-
 " DadBod stuff
 vnoremap <silent><leader>dbq :DB<cr>
 nnoremap <silent><leader>dbq vip:DB<cr>

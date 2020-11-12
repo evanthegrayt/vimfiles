@@ -32,6 +32,7 @@ runtime macros/matchit.vim
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set colorcolumn=81,101,121
 set nrformats+=alpha        " Allow <C-A> and <C-X> to work on letters
 set laststatus=2            " Always show the statusline; must be on for airline
 set encoding=utf-8          " Necessary to show unicode glyphs
