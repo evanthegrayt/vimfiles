@@ -193,39 +193,6 @@ let g:gitgutter_preview_win_floating = 1
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
-let g:tagbar_type_ruby = {
-      \   'kinds' : [
-      \     'T:todos',
-      \     'n:notes',
-      \     'R:required files',
-      \     'm:modules',
-      \     'c:classes',
-      \     'f:methods',
-      \     'a:aliases',
-      \     'P:private methods',
-      \     'p:protected methods',
-      \     'S:singleton methods',
-      \     'r:rules',
-      \     'o:buttons',
-      \     'Q:describes',
-      \     'Y:contexts',
-      \     'Z:examples',
-      \     'y:factories',
-      \     'z:traits',
-      \     's:test',
-      \     't:tasks'
-      \   ]
-      \ }
-let g:tagbar_type_sh = {
-      \   'kinds' : [
-      \     'T:todos',
-      \     'n:notes',
-      \     'S:sourced files',
-      \     'f:functions',
-      \     'a:aliases:0:0',
-      \     's:script files:0:0',
-      \   ],
-      \ }
 
 " UNDOTREE: Visualize the undo tree
 if has("persistent_undo")
@@ -250,7 +217,6 @@ let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
       \ '.hg/', '.bzr/', '.svn/']
 
 " SPLITJOIN: Split/Join lines of code syntastically
-let g:splitjoin_align = 1
 let g:splitjoin_ruby_hanging_args = 0
 let g:splitjoin_ruby_curly_braces = 0
 

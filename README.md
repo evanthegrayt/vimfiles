@@ -9,7 +9,6 @@ directory](https://github.com/evanthegrayt/vimfiles/tree/master/pack). See the
 repository and all of the plugins.
 
 Here's what my `vim` setup looks like. In this screenshot, you can see
-[Ctrlp](https://github.com/kien/ctrlp.vim),
 [Tagbar](https://github.com/majutsushi/tagbar.git),
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
 [Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
@@ -17,7 +16,7 @@ I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
 [italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
 
-![](https://user-images.githubusercontent.com/12698076/90970781-973d6300-e4ce-11ea-8be2-654dd8a3a81f.png)
+![](https://user-images.githubusercontent.com/12698076/99425841-0574a480-28c9-11eb-8bcc-8ab03e6413ea.png)
 
 ### Installation
 Clone the repository. Make sure to use `--recursive` if you want to clone the
@@ -77,19 +76,6 @@ You probably didn't clone with the `--recursive` option, as stated above.
 You're probably running an older version of `vim`, which doesn't know to check
 the `.vim` directory for a `vimrc` file. As stated above, you need to link it to
 your home directory.
-
-### Why do your additions to ctags not show up in tagbar?
-To use the [custom tags I've added to
-tagbar](https://github.com/evanthegrayt/vimfiles/blob/master/vimrc#L204), you
-need to get the tags from my [ctags
-directory](https://github.com/evanthegrayt/dotfiles/tree/master/dotfiles/ctags.d)
-and put them in a directory called `~/.ctags.d`.  I'm also using
-[Universal Ctags](https://github.com/universal-ctags/ctags) (recommended); if
-you're using [Exuberant Ctags](http://ctags.sourceforge.net/), you need all of
-the tags in one file named `~/.ctags`. If you choose to use Exuberant (which is
-basically unmaintained at this point), some tags may not work properly, as the
-two `ctags` programs have some differences in the way the process `regex`. If
-you need more info, please read about those programs.
 
 ## Reporting Bugs
 These are just my config files, so there shouldn't be (m)any bugs, but if you

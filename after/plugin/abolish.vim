@@ -3,4 +3,4 @@ if !exists(':Abolish')
     finish
 endif
 
-Abolish initaitive{,s} initiative{}
+Abolish -cmdline initaitive{,s} initiative{}
