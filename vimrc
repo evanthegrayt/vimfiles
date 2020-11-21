@@ -101,9 +101,6 @@ nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
 
-" File Path: Yank the expanded file-path of current file
-nnoremap <silent> <Leader>yfp :let @+ = expand("%:p") <CR>
-
 " Function Toggles: Mappings for functions in
 " plugin/functions.vim
 if v:version > 701

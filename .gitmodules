@@ -46,9 +46,6 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
-[submodule "pack/plugins/start/snippets"]
-	path = pack/plugins/start/snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "pack/plugins/start/gutentags"]
 	path = pack/plugins/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
