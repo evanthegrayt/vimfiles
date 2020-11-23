@@ -1,5 +1,3 @@
-doc/*
-!doc/.gitkeep
 view/*
 !view/.gitkeep
 backup/*

@@ -3,10 +3,14 @@ All of my vim runtime files. Here be dragons.
 
 All of the plugins that I use are kept as git submodules. I mostly work with
 Ruby on Rails, so a lot of my plugins are geared towards a Rails workflow. You
-can view all plugins in the [pack
-directory](https://github.com/evanthegrayt/vimfiles/tree/master/pack). See the
+can view all plugins in the [help
+documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L116). See the
 [installation instructions](#installation) to see how to recursively clone this
-repository and all of the plugins.
+repository and all of the plugins, and view the help documentation.
+
+I provide help documentation with this repository. It's mostly the custom key
+bindings I use, along with things I want to remember, but this would be useful
+to check out if you're going to clone this repository.
 
 Here's what my `vim` setup looks like. In this screenshot, you can see
 [Tagbar](https://github.com/majutsushi/tagbar.git),
@@ -19,8 +23,12 @@ and with the [Hack font](https://sourcefoundry.org/hack/).
 ![](https://user-images.githubusercontent.com/12698076/99425841-0574a480-28c9-11eb-8bcc-8ab03e6413ea.png)
 
 ### Installation
-Clone the repository. Make sure to use `--recursive` if you want to clone the
-plugins I use as well.
+The steps below show how to clone the repository, but if you're going to use
+this as your personal setup, I recommend forking the repository and maintaining
+your own copy.
+
+Clone (or fork) the repository. Make sure to use `--recursive` if you want to
+clone the plugins I use as well.
 
 ```bash
 git clone --recursive https://github.com/evanthegrayt/vimfiles.git ~/.vim
@@ -33,6 +41,13 @@ Once cloned, if your vim version is less than 7.4, you'll need to link the
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
+To read the documentation, generate your helptags and open the help.
+
+```
+:helptags ALL
+:help evanthegrayt
+```
+
 Be forewarned that I use `vim8` with packages, but I've configured this
 repository to work with older versions, using
 [pathogen](https://github.com/tpope/vim-pathogen). Because of this, plugins will
@@ -42,7 +57,8 @@ be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
 At least, I assume these would be frequently asked...
 ### Why do colors look weird?
 You probably don't have italics enabled in your terminal. Either
-[research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
+[research how to enable
+them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 or turn off italics by changing this line in `vimrc`:
 
 ```vim
