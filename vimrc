@@ -228,7 +228,10 @@ let g:noteworthy_libraries = #{
 let g:noteworthy_default_library = 'work'
 let g:noteworthy_file_ext        = 'md'
 
-let g:db_switch_confirm_production = 0
+" RI: Browse ruby's RI documentation through vim.
+let g:ri_no_mappings = 1
+nnoremap <silent> <leader>ri :call ri#OpenSearchPrompt(0)<CR>
+nnoremap <silent> <leader>RI :call ri#OpenSearchPrompt(1)<CR>
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{

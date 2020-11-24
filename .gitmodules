@@ -202,3 +202,6 @@
 [submodule "pack/tpope/start/speeddating"]
 	path = pack/tpope/start/speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "pack/plugins/start/ri"]
+	path = pack/plugins/start/ri
+	url = https://github.com/danchoi/ri.vim.git

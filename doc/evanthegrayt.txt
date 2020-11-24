@@ -71,13 +71,16 @@ n     \p       Preview file in browser (html only)
                                                   *evanthegrayt-plugin-mappings*
 Plugin Mappings~
 
-My custom mappings for plugins. For modes, "n" is normal, "v" is visual, etc.
+My custom mappings for plugins. For modes, "n" is normal, "v" is visual. It's
+definitely worth nothing that these are only my custom mappings; there are a
+lot more mappings for plugin functions, but you can read about those in their
+documentation.
 
                                                             *evanthegrayt-ctrlp*
 n     \be      Explore open buffers
 n     \bm      Explore most recently used files
 n     \bt      Explore tags
-n     \bb      Explore tags of currnt buffer
+n     \bb      Explore tags of current buffer
 n     ctrl-]   Jump to tag definition
 v     ctrl-]   Jump to tag definition
                                                             *evanthegrayt-netrw*
@@ -96,6 +99,9 @@ n     \j       Run a rest query (only in .rest files)
                                                            *evanthegrayt-dadbod*
 n     \dbq     Run the query under the cursor (only in .sql files)
 v     \dbq     Run the visually selected query (only in .sql files)
+                                                               *evanthegrayt-ri*
+n     \ri      Browse ruby's help documentation in a split
+n     \RI      Browse ruby's help documentation in a vertiacal split
 
 ================================================================================
 
@@ -192,3 +198,4 @@ Indent-Object       https://github.com/michaeljsmith/vim-indent-object
 Supertab            https://github.com/ervandew/supertab
 JSX-Pretty          https://github.com/MaxMEllon/vim-jsx-pretty
 REST-Console        https://github.com/diepm/vim-rest-console
+RI                  https://github.com/danchoi/ri.vim.git
