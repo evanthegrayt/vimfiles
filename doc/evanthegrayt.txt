@@ -111,6 +111,11 @@ pass a range to delete the matching line, and the one(s) before or after it.
     :g/pattern/-1d
 <
 
+Help docs I can never find~
+
+Read |filename-modifiers| to see how to manipulate a file path.
+Read |cmdline-special| to see how to grab things under the cursor.
+
 ================================================================================
 
 PLUGINS                                                   *evanthegrayt-plugins*
