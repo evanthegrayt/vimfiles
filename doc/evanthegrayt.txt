@@ -29,6 +29,7 @@ Mappings ............................................... |evanthegrayt-mappings|
     IndentLine ....................................... |evanthegrayt-indentline|
     GitGutter ......................................... |evanthegrayt-gitgutter|
     Tagbar ............................................... |evanthegrayt-tagbar|
+Commands ............................................... |evanthegrayt-commands|
 Things to Remember ..................................... |evanthegrayt-remember|
 Plugins ................................................. |evanthegrayt-plugins|
 
@@ -102,6 +103,14 @@ v     \dbq     Run the visually selected query (only in .sql files)
                                                                *evanthegrayt-ri*
 n     \ri      Browse ruby's help documentation in a split
 n     \RI      Browse ruby's help documentation in a vertiacal split
+
+================================================================================
+
+COMMANDS                                                 *evanthegrayt-commands*
+
+Custom command definitions.
+
+:Sloc                       Display the number of Source Lines of Code.
 
 ================================================================================
 

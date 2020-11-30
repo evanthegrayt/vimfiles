@@ -1,5 +1,5 @@
 " Toggle foldcolumn
-function! FoldColumnToggle() abort
+function! evanthegrayt#FoldColumnToggle() abort
   if &foldcolumn
     setlocal foldcolumn=0
   else
@@ -8,7 +8,7 @@ function! FoldColumnToggle() abort
 endfunction
 
 " Toggle the mouse between vim and terminal mode
-function! ToggleMouse() abort
+function! evanthegrayt#ToggleMouse() abort
   if !exists("l:old_mouse")
     let l:old_mouse = "a"
   endif
@@ -23,7 +23,7 @@ function! ToggleMouse() abort
 endfunction
 
 " Toggle a wide colorcolumn with \TC
-function! ToggleColorColumnWide(...) abort
+function! evanthegrayt#ToggleColorColumnWide(...) abort
   if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
     let &colorcolumn=join(range(81,100),",") .
           \ ',' . join(range(102,120),",") .
@@ -35,7 +35,7 @@ function! ToggleColorColumnWide(...) abort
 endfunction
 
 " Toggle normal colorcolumns
-function! ToggleColorColumn(...) abort
+function! evanthegrayt#ToggleColorColumn(...) abort
   if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
     set colorcolumn=81,101,121
     setlocal nowrap
@@ -45,7 +45,7 @@ function! ToggleColorColumn(...) abort
 endfunction
 
 " Toggle conceal level
-function! ToggleConceal() abort
+function! evanthegrayt#ToggleConceal() abort
   if &conceallevel == 2
     setlocal conceallevel=0
   else
@@ -54,7 +54,7 @@ function! ToggleConceal() abort
 endfunction
 
 " Append modeline after last line in buffer.
-function! AppendModeline() abort
+function! evanthegrayt#AppendModeline() abort
   let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
         \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
   let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
@@ -62,7 +62,7 @@ function! AppendModeline() abort
 endfunction
 
 " Show the syntax stack of keyword under the cursor.
-function! SynStack() abort
+function! evanthegrayt#SynStack() abort
   if !exists("*synstack") | return | endif
 
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')

@@ -7,8 +7,8 @@
 " To clean up this vimrc, some settings are kept in their own files:           "
 " Autocommands: plugin/autocommands.vim                                        "
 " Commands:     plugin/commands.vim                                            "
-" Functions:    plugin/functions.vim                                           "
 " GUI Settings: plugin/gui.vim                                                 "
+" Functions:    autoload/functions.vim                                         "
 "                                                                              "
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
@@ -43,6 +43,7 @@ set list                    " Mark tabs, EOL, trailing whitespace, etc
 exec "set listchars=tab:¦\uB7,trail:\uB7,nbsp:~,eol:¬,extends:→,precedes:←"
 set number                  " Show line numbers (can toggle with \n)
 set noerrorbells            " Turn off visual and audible error notifications
+set belloff=all             " Turn off visual and audible error notifications
 set sidescroll=1            " Minimum cols to scroll horizontally with nowrap
 set sidescrolloff=3         " When sidescrolling, n lines show beside the cursor
 set scrolloff=3             " When vertscrolling, n lines show beside the cursor
@@ -72,6 +73,7 @@ set backupdir=~/.vim/backup        " Set directory where backups will be stored
 set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
 set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
 if executable('ag') | set grepprg=ag\ --nogroup\ --nocolor | endif
+if exists('+spelloptions') | set spelloptions=camel | endif
 "}}}
 
 " MAPPINGS: Custom key mappings {{{
@@ -95,16 +97,16 @@ nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 nnoremap Y y$
 
 " Function Toggles: Mappings for functions in
-" plugin/functions.vim
+" autoload/functions.vim
 if v:version > 701
-  nnoremap <silent> <Leader>tc :call ToggleConceal()<CR>
-  nnoremap <silent> <Leader>TC :call ToggleColorColumn()<CR>
+  nnoremap <silent> <Leader>tc :call evanthegrayt#ToggleConceal()<CR>
+  nnoremap <silent> <Leader>TC :call evanthegrayt#ToggleColorColumn()<CR>
 endif
-nnoremap <silent> <Leader>mt :call ToggleMouse() <CR>
-nnoremap <silent> <leader>tf :call FoldColumnToggle()<CR>
+nnoremap <silent> <Leader>mt :call evanthegrayt#ToggleMouse() <CR>
+nnoremap <silent> <leader>tf :call evanthegrayt#FoldColumnToggle()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
-nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
-nnoremap <silent> <Leader>ss :call SynStack()<CR>
+nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
+nnoremap <silent> <Leader>ss :call evanthegrayt#SynStack()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
