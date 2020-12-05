@@ -57,17 +57,19 @@ Custom functions~
 These are mappings that perform custom functions. For modes, "n" is normal, "v"
 is visual, etc.
 
-Mode  Keys     Descriptions~
-n     \fi      Let vim try to auto-indent the whole file
-n     \TS      Remove all trailing whitespace from the current file
-n     \co      List lines containing the word under cursor and jump to match
-n     ctrl-k   Move current line up a line
-n     ctrl-j   Move current line down a line
-v     ctrl-k   Move current selection up a line
-v     ctrl-j   Move current selection down a line
-n     \ss      Get the syntax stack for the word under the cursor
-n     \ml      Append a modeline magic comment to the end of the current file
-n     \p       Preview file in browser (html only)
+Mode  Keys       Descriptions~
+n     \fi        Let vim try to auto-indent the whole file
+n     \TS        Remove all trailing whitespace from the current file
+n     \co        List lines containing the word under cursor and jump to match
+n     ctrl-k     Move current line up a line
+n     ctrl-j     Move current line down a line
+v     ctrl-k     Move current selection up a line
+v     ctrl-j     Move current selection down a line
+n     \ss        Get the syntax stack for the word under the cursor
+n     \ml        Append a modeline magic comment to the end of the current file
+n     \p         Preview file in browser (html only)
+i     ctrl-g u   Downcase the current word
+i     ctrl-g U   Up the current word
 
                                                   *evanthegrayt-plugin-mappings*
 Plugin Mappings~
@@ -78,31 +80,31 @@ lot more mappings for plugin functions, but you can read about those in their
 documentation.
 
                                                             *evanthegrayt-ctrlp*
-n     \be      Explore open buffers
-n     \bm      Explore most recently used files
-n     \bt      Explore tags
-n     \bb      Explore tags of current buffer
-n     ctrl-]   Jump to tag definition
-v     ctrl-]   Jump to tag definition
+n     \be        Explore open buffers
+n     \bm        Explore most recently used files
+n     \bt        Explore tags
+n     \bb        Explore tags of current buffer
+n     ctrl-]     Jump to tag definition
+v     ctrl-]     Jump to tag definition
                                                             *evanthegrayt-netrw*
-n     \nt      Open Netrw (Ntree)
+n     \nt        Open Netrw (Ntree)
                                                           *evanthegrayt-rainbow*
-n     \rt      Toggle whether plugin is enabled
+n     \rt        Toggle whether plugin is enabled
                                                        *evanthegrayt-indentline*
-n     \it      Toggle whether plugin is enabled
+n     \it        Toggle whether plugin is enabled
                                                         *evanthegrayt-gitgutter*
-n     \ggt     Toggle whether plugin is enabled
-n     \ggu     Undo the hunk under the cursor
+n     \ggt       Toggle whether plugin is enabled
+n     \ggu       Undo the hunk under the cursor
                                                            *evanthegrayt-tagbar*
-n     \TT      Toggle the tagbar pane
+n     \TT        Toggle the tagbar pane
                                                      *evanthegrayt-rest-console*
-n     \j       Run a rest query (only in .rest files)
+n     \j         Run a rest query (only in .rest files)
                                                            *evanthegrayt-dadbod*
-n     \dbq     Run the query under the cursor (only in .sql files)
-v     \dbq     Run the visually selected query (only in .sql files)
+n     \dbq       Run the query under the cursor (only in .sql files)
+v     \dbq       Run the visually selected query (only in .sql files)
                                                                *evanthegrayt-ri*
-n     \ri      Browse ruby's help documentation in a split
-n     \RI      Browse ruby's help documentation in a vertiacal split
+n     \ri        Browse ruby's help documentation in a split
+n     \RI        Browse ruby's help documentation in a vertiacal split
 
 ================================================================================
 

@@ -77,6 +77,11 @@ if exists('+spelloptions') | set spelloptions=camel | endif
 "}}}
 
 " MAPPINGS: Custom key mappings {{{
+
+" Up/Downcase the current word while in insert mode.
+inoremap <c-g>u <esc>guawea
+inoremap <c-g>U <esc>gUawea
+
 " Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
