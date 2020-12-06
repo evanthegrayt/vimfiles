@@ -1,8 +1,7 @@
-if !has("autocmd")
-  finish
-endif
+if !has("autocmd") | finish | endif
 
 augroup vimrc
+  autocmd!
   " SET BACKUP EXTENSION - will save one backup per file per hour, per day
   autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
   " TURN OFF AUTO-COMMENTS ON RETURN
@@ -18,9 +17,7 @@ augroup vimrc
   else     " Save folds when opening/leaving files, unless it's a diff
     setlocal viewoptions-=options
     autocmd BufWritePost *
-          \   if expand('%') != '' && &buftype !~ 'nofile'
-          \|      mkview
-          \|  endif
+          \ if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
     autocmd BufRead *
           \   if expand('%') != '' && &buftype !~ 'nofile'
           \|      silent loadview
