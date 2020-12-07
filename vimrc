@@ -79,8 +79,8 @@ if exists('+spelloptions') | set spelloptions=camel | endif
 " MAPPINGS: Custom key mappings {{{
 
 " Up/Downcase the current word while in insert mode.
-inoremap <c-g>u <esc>guawea
-inoremap <c-g>U <esc>gUawea
+inoremap <silent> <c-g>u <esc>guawea
+inoremap <silent> <c-g>U <esc>gUawea
 
 " Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
 nnoremap <silent> <C-j> :m .+1<CR>==
@@ -240,8 +240,6 @@ let g:noteworthy_file_ext        = 'md'
 
 " RI: Browse ruby's RI documentation through vim.
 let g:ri_no_mappings = 1
-nnoremap <silent> <leader>ri :call ri#OpenSearchPrompt(0)<CR>
-nnoremap <silent> <leader>RI :call ri#OpenSearchPrompt(1)<CR>
 "}}}
 
 " LOCAL: source local vimrc if it exists {{{

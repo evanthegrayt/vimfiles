@@ -19,23 +19,27 @@ License: MIT License
 
 TABLE OF CONTENTS                                                 *evanthegrayt*
 
-Mappings ............................................... |evanthegrayt-mappings|
+Mappings and Commands ..................... |evanthegrayt-mappings-and-commands|
   Vim Setting Toggles ............................... |evanthegrayt-vim-toggles|
   Custom Functions ............................. |evanthegrayt-custom-functions|
   Plugin Mappings ............................... |evanthegrayt-plugin-mappings|
-    CtrlP ................................................. |evanthegrayt-ctrlp|
-    Netrw ................................................. |evanthegrayt-netrw|
-    Rainbow ............................................. |evanthegrayt-rainbow|
-    IndentLine ....................................... |evanthegrayt-indentline|
-    GitGutter ......................................... |evanthegrayt-gitgutter|
-    Tagbar ............................................... |evanthegrayt-tagbar|
-Commands ............................................... |evanthegrayt-commands|
+    CtrlP ........................................ |evanthegrayt-ctrlp-mappings|
+    Netrw ........................................ |evanthegrayt-netrw-mappings|
+    Rainbow .................................... |evanthegrayt-rainbow-mappings|
+    IndentLine .............................. |evanthegrayt-indentline-mappings|
+    GitGutter ................................ |evanthegrayt-gitgutter-mappings|
+    Tagbar ...................................... |evanthegrayt-tagbar-mappings|
+    Rest Console .......................... |evanthegrayt-rest-console-mappings|
+    Dadbod ...................................... |evanthegrayt-dadbod-mappings|
+  Plugin Commands ............................... |evanthegrayt-plugin-commands|
+    RI .............................................. |evanthegrayt-ri-commands|
+  Custom Commands ............................... |evanthegrayt-custom-commands|
 Things to Remember ..................................... |evanthegrayt-remember|
 Plugins ................................................. |evanthegrayt-plugins|
 
 ================================================================================
 
-MAPPINGS                                                 *evanthegrayt-mappings*
+MAPPINGS AND COMMANDS                       *evanthegrayt-mappings-and-commands*
 
                                                       *evanthegrayt-vim-toggles*
 Vim setting toggles~
@@ -79,39 +83,45 @@ definitely worth nothing that these are only my custom mappings; there are a
 lot more mappings for plugin functions, but you can read about those in their
 documentation.
 
-                                                            *evanthegrayt-ctrlp*
+                                                   *evanthegrayt-ctrlp-mappings*
 n     \be        Explore open buffers
 n     \bm        Explore most recently used files
 n     \bt        Explore tags
 n     \bb        Explore tags of current buffer
 n     ctrl-]     Jump to tag definition
 v     ctrl-]     Jump to tag definition
-                                                            *evanthegrayt-netrw*
-n     \nt        Open Netrw (Ntree)
-                                                          *evanthegrayt-rainbow*
+                                                   *evanthegrayt-netrw-mappings*
+n     \nt        Open Netrw (:Ntree)
+                                                 *evanthegrayt-rainbow-mappings*
 n     \rt        Toggle whether plugin is enabled
-                                                       *evanthegrayt-indentline*
+                                              *evanthegrayt-indentline-mappings*
 n     \it        Toggle whether plugin is enabled
-                                                        *evanthegrayt-gitgutter*
+                                               *evanthegrayt-gitgutter-mappings*
 n     \ggt       Toggle whether plugin is enabled
 n     \ggu       Undo the hunk under the cursor
-                                                           *evanthegrayt-tagbar*
+                                                  *evanthegrayt-tagbar-mappings*
 n     \TT        Toggle the tagbar pane
-                                                     *evanthegrayt-rest-console*
+                                            *evanthegrayt-rest-console-mappings*
 n     \j         Run a rest query (only in .rest files)
-                                                           *evanthegrayt-dadbod*
+                                                  *evanthegrayt-dadbod-mappings*
 n     \dbq       Run the query under the cursor (only in .sql files)
 v     \dbq       Run the visually selected query (only in .sql files)
-                                                               *evanthegrayt-ri*
-n     \ri        Browse ruby's help documentation in a split
-n     \RI        Browse ruby's help documentation in a vertiacal split
 
-================================================================================
+                                                  *evanthegrayt-plugin-commands*
+Plugin Commands~
 
-COMMANDS                                                 *evanthegrayt-commands*
+My custom commands for plugins.
 
-Custom command definitions.
+                                                *:Ri* *evanthegrayt-ri-commands*
+:Ri[!]                      Open RI search prompt in a split. If ! is supplied,
+                            will open in a vertical split.
 
+                                                  *evanthegrayt-custom-commands*
+Custom Commands~
+
+Custom command definitions, unrelated to a plugin..
+
+                                                                         *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
 
 ================================================================================
@@ -209,4 +219,4 @@ Indent-Object       https://github.com/michaeljsmith/vim-indent-object
 Supertab            https://github.com/ervandew/supertab
 JSX-Pretty          https://github.com/MaxMEllon/vim-jsx-pretty
 REST-Console        https://github.com/diepm/vim-rest-console
-RI                  https://github.com/danchoi/ri.vim.git
+RI                  https://github.com/danchoi/ri.vim
