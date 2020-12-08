@@ -119,10 +119,17 @@ My custom commands for plugins.
                                                   *evanthegrayt-custom-commands*
 Custom Commands~
 
-Custom command definitions, unrelated to a plugin..
+Custom command definitions, unrelated to a plugin.
 
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
+
+                                                                      *:Standup*
+:Standup[!] [{file}]        If the StandupMD ruby gem is installed, execute the
+                            gem and open the {file} in a split. If ! is
+                            supplied, open in a vertical split. If {file} is
+                            not supplied, open the current month's file.
+                            https://github.com/evanthegrayt/standup_md
 
 ================================================================================
 
@@ -138,6 +145,11 @@ pass a range to delete the matching line, and the one(s) before or after it.
     :g/pattern/-1d
 <
 
+Use "gn" to visually select the next match, and "gN" to select the previous.
+
+Use your most recent yank/delete in insert/command mode. For example, press / to
+search, then '<c-r>"' as your search pattern.
+
 Help docs I can never find~
 
 Read |filename-modifiers| to see how to manipulate a file path.
@@ -147,7 +159,7 @@ Read |cmdline-special| to see how to grab things under the cursor.
 
 PLUGINS                                                   *evanthegrayt-plugins*
 
-This is a list of the plugins I use. You can hit "gx" on the url to open it in
+This is a list of the plugins I use. You can hit "gx" on the URL to open it in
 a browser.
 
 Plugin              URL~

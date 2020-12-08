@@ -4,7 +4,7 @@ All of my vim runtime files. Here be dragons.
 All of the plugins that I use are kept as git submodules. I mostly work with
 Ruby on Rails, so a lot of my plugins are geared towards a Rails workflow. You
 can view all plugins in the [help
-documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L127). See the
+documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L155). See the
 [installation instructions](#installation) to see how to recursively clone this
 repository and all of the plugins, and view the help documentation.
 
@@ -74,8 +74,9 @@ let g:easteregg_use_italics = 0
 ...or just delete the line entirely.
 
 ### Not all configurations are in your vimrc; where are they?
-Functions, autocommands, and GUI settings are under `plugin/` to
-make my `vimrc` cleaner, as I rarely edit these.
+Autocommands, commands, and GUI settings are under `plugin/` to
+make my `vimrc` cleaner, as I rarely edit these. Similarly, functions are kept
+in `autload/`.
 
 Also, a lot of people put file-type related settings -- such as autocommands --
 in their `vimrc` files, but `vim` provides directories for these types of

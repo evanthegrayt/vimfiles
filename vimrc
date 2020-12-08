@@ -8,7 +8,7 @@
 " Autocommands: plugin/autocommands.vim                                        "
 " Commands:     plugin/commands.vim                                            "
 " GUI Settings: plugin/gui.vim                                                 "
-" Functions:    autoload/functions.vim                                         "
+" Functions:    autoload/evanthegrayt.vim                                      "
 "                                                                              "
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
