@@ -47,13 +47,13 @@ Vim setting toggles~
 These are mappings that toggle vim's built-in options. All mappings in this
 section are performed in normal mode.
 
-Keys   Toggles         Between~
-\l     'list'          off and on
-\sc    'spell'         off and spelllang=en_us
-\tc    'conceallevel'  off and 2
-\TC    'colorcolumn'   off and columns 81,101,121
-\mt    'mouse'         "a" and ""
-\tf    'foldcolumn'    off and 2
+Keys   Toggles            Between~
+\nu    'relativenumber'   off and on
+\sc    'spell'            off and spelllang=en_us
+\tc    'conceallevel'     off and 2
+\TC    'colorcolumn'      off and columns 81,101,121
+\mt    'mouse'            "a" and ""
+\tf    'foldcolumn'       off and 2
 
                                                  *evanthegrayt-custom-functions*
 Custom functions~

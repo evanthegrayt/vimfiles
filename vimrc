@@ -41,7 +41,7 @@ set shortmess=at            " Shortens about every message to a minimum
 set clipboard=unnamed       " Share clipboard with system
 set list                    " Mark tabs, EOL, trailing whitespace, etc
 exec "set listchars=tab:¦\uB7,trail:\uB7,nbsp:~,eol:¬,extends:→,precedes:←"
-set number                  " Show line numbers (can toggle with \n)
+set number                  " Show line numbers
 set noerrorbells            " Turn off visual and audible error notifications
 set belloff=all             " Turn off visual and audible error notifications
 set sidescroll=1            " Minimum cols to scroll horizontally with nowrap
@@ -89,8 +89,8 @@ vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
 " Toggles: Toggle common vim settings local to buffer
-nnoremap <silent> <Leader>l :setlocal list!<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
+nnoremap <silent> <Leader>nu :call evanthegrayt#RelativeNumberToggle()<CR>
 
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi mzgg=G'z
@@ -132,6 +132,8 @@ if !executable('git')
   let g:loaded_gitgutter = 1
   let g:loaded_fugitive = 1
 endif
+
+call evanthegrayt#RelativeNumberEnable()
 
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"

@@ -67,3 +67,27 @@ function! evanthegrayt#SynStack() abort
 
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+function! evanthegrayt#RelativeNumberToggle() abort
+  if &relativenumber
+    call evanthegrayt#RelativeNumberDisable()
+  else
+    call evanthegrayt#RelativeNumberEnable()
+  endif
+endfunction
+
+function! evanthegrayt#RelativeNumberEnable() abort
+  set rnu
+  augroup numbertoggles
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+  augroup END
+endfunction
+
+function! evanthegrayt#RelativeNumberDisable() abort
+  set nornu
+  augroup numbertoggles
+    autocmd!
+  augroup END
+endfunction
