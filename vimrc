@@ -1,4 +1,3 @@
-" vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:
 "=============================================================================="
 " FILE:         vimrc                                                          "
 " AUTHOR:       Evan Gray                                                      "
@@ -13,18 +12,15 @@
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
 
-" FILETYPE AND SYNTAX:      " Enable plugins, filetype detection, etc. {{{1
-filetype on                 " Enable filetype detection
-filetype plugin on          " Enable filetype dection for plugins
-filetype indent on          " Enable indention by filetype
-syntax   enable             " Turn on syntax highlighting
+" FILETYPE AND SYNTAX: " Enable plugins, filetype detection, etc. {{{1
+filetype on            " Enable filetype detection
+filetype plugin on     " Enable filetype dection for plugins
+filetype indent on     " Enable indention by filetype
+syntax   enable        " Turn on syntax highlighting
 "}}}
 
 " RUNTIME PATH: Make sure plugins are in &rtp {{{1
-if has('nvim')
-  set rtp+=~/.config/bundle/pathogen/
-  call pathogen#infect()
-elseif v:version < 800 && isdirectory($HOME . '/.vim/pack')
+if v:version < 800
   set rtp+=~/.vim/pack/tpope/opt/pathogen/
   call pathogen#infect()
 endif
@@ -111,7 +107,6 @@ nnoremap <silent> <Leader>mt :call evanthegrayt#ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#FoldColumnToggle()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
-nnoremap <silent> <Leader>ss :call evanthegrayt#SynStack()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
@@ -138,7 +133,7 @@ endif
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
-nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
+nnoremap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " EASYMOTION: Easily jump to markers
 " let g:EasyMotion_force_csapprox = 1
@@ -247,3 +242,5 @@ if filereadable($HOME . "/.vimrc.local")
   source $HOME/.vimrc.local
 endif
 "}}}
+
+" vi: set et ft=vim foldenable foldmethod=marker ts=2 sw=2 sts=2:

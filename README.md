@@ -76,7 +76,7 @@ let g:easteregg_use_italics = 0
 ### Not all configurations are in your vimrc; where are they?
 Autocommands, commands, and GUI settings are under `plugin/` to
 make my `vimrc` cleaner, as I rarely edit these. Similarly, functions are kept
-in `autload/`.
+in `autoload/`.
 
 Also, a lot of people put file-type related settings -- such as autocommands --
 in their `vimrc` files, but `vim` provides directories for these types of
