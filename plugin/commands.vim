@@ -1,5 +1,6 @@
 command! Sloc echo len(filter(getline(1, '$'), 'v:val =~# "\\S"'))
 command! -bang Ri call ri#OpenSearchPrompt(<bang>0)
+command! SynStack call evanthegrayt#SynStack()
 
 " TODO: This might be worth turning into a plugin.
 if executable('standup')

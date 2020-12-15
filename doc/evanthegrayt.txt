@@ -69,7 +69,6 @@ n     ctrl-k     Move current line up a line
 n     ctrl-j     Move current line down a line
 v     ctrl-k     Move current selection up a line
 v     ctrl-j     Move current selection down a line
-n     \ss        Get the syntax stack for the word under the cursor
 n     \ml        Append a modeline magic comment to the end of the current file
 n     \p         Preview file in browser (html only)
 i     ctrl-g u   Downcase the current word
@@ -102,7 +101,7 @@ n     \ggu       Undo the hunk under the cursor
                                                   *evanthegrayt-tagbar-mappings*
 n     \TT        Toggle the tagbar pane
                                             *evanthegrayt-rest-console-mappings*
-n     \j         Run a rest query (only in .rest files)
+n     \rq        Run a rest query (only in .rest files)
                                                   *evanthegrayt-dadbod-mappings*
 n     \dbq       Run the query under the cursor (only in .sql files)
 v     \dbq       Run the visually selected query (only in .sql files)
@@ -120,6 +119,9 @@ My custom commands for plugins.
 Custom Commands~
 
 Custom command definitions, unrelated to a plugin.
+
+                                                                     *:SynStack*
+:SynStack                   Get the syntax stack for the word under the cursor
 
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
@@ -152,6 +154,7 @@ search, then '<c-r>"' as your search pattern.
 
 Help docs I can never find~
 
+Read |mark-motions| to see how advanced jumps work.
 Read |filename-modifiers| to see how to manipulate a file path.
 Read |cmdline-special| to see how to grab things under the cursor.
 

@@ -111,7 +111,6 @@ nnoremap <silent> <Leader>mt :call evanthegrayt#ToggleMouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#FoldColumnToggle()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
-nnoremap <silent> <Leader>ss :call evanthegrayt#SynStack()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
@@ -138,7 +137,7 @@ endif
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
-nmap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
+nnoremap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " EASYMOTION: Easily jump to markers
 " let g:EasyMotion_force_csapprox = 1
