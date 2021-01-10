@@ -1,4 +1,4 @@
-setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=80
+setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=80 spell spelllang=en_us
 
 " MARKDOWN: markdown syntax plugin
 let g:vim_markdown_new_list_item_indent = 0

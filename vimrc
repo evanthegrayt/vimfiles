@@ -129,8 +129,6 @@ if !executable('git')
   let g:loaded_fugitive = 1
 endif
 
-call evanthegrayt#RelativeNumberEnable()
-
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
