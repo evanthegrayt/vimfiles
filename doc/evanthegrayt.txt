@@ -133,6 +133,16 @@ Custom command definitions, unrelated to a plugin.
                             not supplied, open the current month's file.
                             https://github.com/evanthegrayt/standup_md
 
+                                                                          *:Cdc*
+:Cdc {directory}            Poor man's implementation of my shell plugin "cdc",
+                            linked below. In short, define "g:cdc_dirs" as a
+                            list of directories. You can then use this command
+                            to quickly change the working directory to a
+                            subdirectory of one of the directories in the list.
+                            If I ever add more features, this will probably
+                            become its own plugin.
+                            https://github.com/evanthegrayt/cdc
+
 ================================================================================
 
 THINGS I WANT TO REMEMBER                                *evanthegrayt-remember*
@@ -152,11 +162,21 @@ Use "gn" to visually select the next match, and "gN" to select the previous.
 Use your most recent yank/delete in insert/command mode. For example, press / to
 search, then '<c-r>"' as your search pattern.
 
+Move or copy/paste a line without moving the cursor.
+>
+    :0move.
+    :0m.
+
+    :0copy.
+    :0t.
+<
+
 Help docs I can never find~
 
 Read |mark-motions| to see how advanced jumps work.
 Read |filename-modifiers| to see how to manipulate a file path.
 Read |cmdline-special| to see how to grab things under the cursor.
+Read |ins-completion| to learn vim's built-in completion.
 
 ================================================================================
 

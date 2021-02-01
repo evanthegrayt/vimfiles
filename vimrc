@@ -233,6 +233,14 @@ let g:noteworthy_libraries = #{
 let g:noteworthy_default_library = 'work'
 let g:noteworthy_file_ext        = 'md'
 
+let g:cdc_dirs = [
+      \   $HOME . '/.oh-my-zsh/custom/plugins',
+      \   $HOME . '/workflow',
+      \   $HOME . '/workflow/vagrant-ofa/src',
+      \   $HOME . '/.vim/pack/evanthegrayt/start',
+      \   $HOME . '/.vim/pack/public-strategies/start'
+      \ ]
+
 " RI: Browse ruby's RI documentation through vim.
 let g:ri_no_mappings = 1
 "}}}
