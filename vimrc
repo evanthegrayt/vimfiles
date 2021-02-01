@@ -89,7 +89,7 @@ nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 nnoremap <silent> <Leader>nu :call evanthegrayt#RelativeNumberToggle()<CR>
 
 " Indenting: `\fi` to fix the whole file's indenting
-nnoremap <silent> <Leader>fi mzgg=G'z
+nnoremap <silent> <Leader>fi gg=G``
 
 " Trailing Spaces: hit `\TS` to remove all trailing whitespace
 nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
@@ -229,6 +229,7 @@ let g:noteworthy_libraries = #{
       \   code:     $HOME . '/workflow/notes/code',
       \   work:     $HOME . '/workflow/notes/public_strategies',
       \   personal: $HOME . '/Documents/notes',
+      \   project:  'doc/notes',
       \ }
 let g:noteworthy_default_library = 'work'
 let g:noteworthy_file_ext        = 'md'
