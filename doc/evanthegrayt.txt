@@ -173,10 +173,11 @@ Move or copy/paste a line without moving the cursor.
 
 Help docs I can never find~
 
-Read |mark-motions| to see how advanced jumps work.
-Read |filename-modifiers| to see how to manipulate a file path.
-Read |cmdline-special| to see how to grab things under the cursor.
-Read |ins-completion| to learn vim's built-in completion.
+|mark-motions| to see how advanced jumps work.
+|filename-modifiers| to see how to manipulate a file path.
+|cmdline-special| to see how to grab things under the cursor.
+|ins-completion| to learn vim's built-in completion.
+|:Cfilter| to filter the quickfix/loclist.
 
 ================================================================================
 

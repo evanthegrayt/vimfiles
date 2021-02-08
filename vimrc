@@ -29,45 +29,44 @@ runtime macros/matchit.vim
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
 set colorcolumn=81,101,121
-set nrformats+=alpha        " Allow <C-A> and <C-X> to work on letters
-set laststatus=2            " Always show the statusline; must be on for airline
-set encoding=utf-8          " Necessary to show unicode glyphs
-set showcmd                 " Display incomplete commands in statusline
-set shortmess=at            " Shortens about every message to a minimum
-set clipboard=unnamed       " Share clipboard with system
-set list                    " Mark tabs, EOL, trailing whitespace, etc
+set nrformats+=alpha
+set laststatus=2
+set encoding=utf-8
+set showcmd
+set shortmess=at
+set clipboard=unnamed
+set list
 exec "set listchars=tab:¦\uB7,trail:\uB7,nbsp:~,eol:¬,extends:→,precedes:←"
-set number                  " Show line numbers
-set noerrorbells            " Turn off visual and audible error notifications
-set belloff=all             " Turn off visual and audible error notifications
-set sidescroll=1            " Minimum cols to scroll horizontally with nowrap
-set sidescrolloff=3         " When sidescrolling, n lines show beside the cursor
-set scrolloff=3             " When vertscrolling, n lines show beside the cursor
-set wildmenu                " Command line completion
-set expandtab               " convert tabs to spaces
-set autoindent              " Keep indention of prev line when creating new line
-set smartindent             " Will auto-indent when needed
-set title                   " Display vim info in terminal title bar
-set history=1000            " Set the size of history
-set backup                  " Turn on backups
-set wrapscan                " Wrap search to top of document when bottom is hit
-set nowrap                  " Do not wrap lines if they are wider than the term
-set linebreak               " Wrap lines at a space instead of character limit
-set smartcase               " Don't ignore case when the pattern has uppercase
-set infercase               " During keyword completion, fix case of new word
-set ignorecase              " Ignore case when searching
-set incsearch               " Search as you type
-set hlsearch                " Turn on higlight searching, toggle with \h
-set backspace=2             " Allow backspacing past starting point
-set tabstop=4               " Set tabs to 4 by default.
-set shiftwidth=4            " Number of spaces used for (auto)indenting
-set hidden                  " A buffer becomes hidden when abandoned
-set confirm                 " If unsaved changes, ask to save
-set lazyredraw              " don't update the display while executing macros
-set exrc                    " Source .vimrc if it exists in current directory
-set backupdir=~/.vim/backup        " Set directory where backups will be stored
-set viminfo+=n~/.vim/cache/viminfo " Keep viminfo in .vim dir
-set directory=~/.vim/tmp           " keep .swp files in [dir], not the cwd.
+set number
+set noerrorbells
+set belloff=all
+set sidescroll=1
+set sidescrolloff=3
+set scrolloff=3
+set wildmenu
+set expandtab
+set autoindent
+set smartindent
+set title
+set history=1000
+set backup
+set wrapscan
+set nowrap
+set linebreak
+set smartcase
+set infercase
+set ignorecase
+set incsearch
+set hlsearch
+set backspace=2
+set tabstop=4
+set shiftwidth=4
+set hidden
+set confirm
+set lazyredraw
+set backupdir=~/.vim/backup
+set viminfo+=n~/.vim/cache/viminfo
+set directory=~/.vim/tmp
 if executable('ag') | set grepprg=ag\ --nogroup\ --nocolor | endif
 if exists('+spelloptions') | set spelloptions=camel | endif
 "}}}
@@ -244,9 +243,13 @@ let g:cdc_dirs = [
 
 " RI: Browse ruby's RI documentation through vim.
 let g:ri_no_mappings = 1
+
+let g:evanthegrayt_ps_projects = [
+      \   $HOME . '/workflow/srae-pas-dashboard'
+      \ ]
 "}}}
 
-" LOCAL: source local vimrc if it exists {{{
+" LOCAL: source ~/.vimrc.local if it exists {{{
 if filereadable($HOME . "/.vimrc.local")
   source $HOME/.vimrc.local
 endif
