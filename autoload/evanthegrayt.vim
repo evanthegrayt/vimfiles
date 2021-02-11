@@ -1,5 +1,5 @@
 " Toggle foldcolumn
-function! evanthegrayt#FoldColumnToggle() abort
+function! evanthegrayt#ToggleFoldColumn() abort
   if &foldcolumn
     setlocal foldcolumn=0
   else
@@ -61,72 +61,10 @@ function! evanthegrayt#AppendModeline() abort
   call append(line("$"), l:modeline)
 endfunction
 
-" Show the syntax stack of keyword under the cursor.
-function! evanthegrayt#SynStack() abort
-  if !exists("*synstack") | return | endif
-
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
-function! evanthegrayt#RelativeNumberToggle() abort
-  if &relativenumber
-    call evanthegrayt#RelativeNumberDisable()
-  else
-    call evanthegrayt#RelativeNumberEnable()
-  endif
+function! evanthegrayt#Warn(message) abort
+  echohl WarningMsg | echo 'evanthegrayt: ' . a:message | echohl None
 endfunction
 
-function! evanthegrayt#RelativeNumberEnable() abort
-  set rnu
-  augroup numbertoggles
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
-    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
-  augroup END
-endfunction
-
-function! evanthegrayt#RelativeNumberDisable() abort
-  set nornu
-  augroup numbertoggles
-    autocmd!
-  augroup END
-endfunction
-
-""
-" StandupMD. Might make this a plugin later.
-function! evanthegrayt#StandupCompletion(...) abort
-  let l:dir = get(g:, 'standup_dir', $HOME . '/.cache/standup_md') . '/'
-  if !isdirectory(l:dir) | return '' | endif
-  let l:list = glob(l:dir . '*.md', 0, 1)
-  return join(map(l:list, "substitute(v:val, l:dir, '', '')"), "\n")
-endfunction
-
-function! evanthegrayt#OpenStandupFile(split, ...)
-  let l:dir = get(g:, 'standup_dir', $HOME . '/.cache/standup_md') . '/'
-  let l:file = a:0 ? a:1 : get(g:, 'standup_file', strftime('%Y_%m') . '.md')
-  call system('standup --no-edit')
-  execute a:split ? 'vsplit' : 'split' l:dir . l:file
-endfunction
-
-""
-" CDC for vim. Might make this a plugin later.
-function! evanthegrayt#ChangeDirectory(directory) abort
-  for l:dir in g:cdc_dirs
-    let l:path = l:dir . '/' . a:directory
-    if isdirectory(l:path)
-      execute "chdir" . l:path
-      return
-    endif
-  endfor
-  echo "Directory " . l:dir . " not found in g:cdc_dirs"
-endfunction
-
-function! evanthegrayt#CdcCompletion(...) abort
-  let l:dirs = []
-  for l:dir in g:cdc_dirs
-    call add(l:dirs, map(
-          \   glob(l:dir . '/*', 0, 1), "substitute(v:val, l:dir . '/', '', '')"
-          \ ))
-  endfor
-  return join(sort(flatten(l:dirs)), "\n")
+function! evanthegrayt#Error(message) abort
+  echohl ErrorMsg | echo 'evanthegrayt: ' . a:message | echohl None
 endfunction

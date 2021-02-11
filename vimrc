@@ -1,13 +1,10 @@
 "=============================================================================="
 " FILE:         vimrc                                                          "
-" AUTHOR:       Evan Gray                                                      "
-" DESCRIPTION:  My general vim settings                                        "
+" AUTHOR:       Evan Gray (evanthegrayt)                                       "
+" DESCRIPTION:  My general vim settings.                                       "
 "                                                                              "
-" To clean up this vimrc, some settings are kept in their own files:           "
-" Autocommands: plugin/autocommands.vim                                        "
-" Commands:     plugin/commands.vim                                            "
-" GUI Settings: plugin/gui.vim                                                 "
-" Functions:    autoload/evanthegrayt.vim                                      "
+" For custom commands and functions that aren't full plugins, check            "
+" plugin/evanthegrayt.vim and autoload/evanthegrayt.vim.                       " 
 "                                                                              "
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
@@ -28,6 +25,8 @@ runtime macros/matchit.vim
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set diffopt+=iwhite
+set viewoptions-=options
 set colorcolumn=81,101,121
 set nrformats+=alpha
 set laststatus=2
@@ -85,7 +84,7 @@ vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
 " Toggles: Toggle common vim settings local to buffer
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
-nnoremap <silent> <Leader>nu :call evanthegrayt#RelativeNumberToggle()<CR>
+nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
 
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi gg=G``
@@ -96,14 +95,13 @@ nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
 
-" Function Toggles: Mappings for functions in
-" autoload/functions.vim
+" Function Toggles: Mappings for functions in autoload/evanthegrayt.vim
 if v:version > 701
   nnoremap <silent> <Leader>tc :call evanthegrayt#ToggleConceal()<CR>
   nnoremap <silent> <Leader>TC :call evanthegrayt#ToggleColorColumn()<CR>
 endif
 nnoremap <silent> <Leader>mt :call evanthegrayt#ToggleMouse() <CR>
-nnoremap <silent> <leader>tf :call evanthegrayt#FoldColumnToggle()<CR>
+nnoremap <silent> <leader>tf :call evanthegrayt#ToggleFoldColumn()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
 "}}}
@@ -247,6 +245,45 @@ let g:ri_no_mappings = 1
 let g:evanthegrayt_ps_projects = [
       \   $HOME . '/workflow/srae-pas-dashboard'
       \ ]
+"}}}
+
+" GUI: GUI-specific settings {{{
+if has('gui_running')
+  set guioptions-=L
+  set guioptions-=l
+  set guioptions-=R
+  set guioptions-=r
+  set vb t_vb=
+  set mouse=
+
+  if has('gui_gtk2')
+    set guifont=Monospace\ 9
+  elseif has("gui_macvim")
+    set guifont=Hack:h11,Monaco:h11
+  elseif has("gui_win32") || has("gui_win64")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+"}}}
+
+" Autocommands: Non-filetype-related autocommands {{{
+if has('autocmd')
+  augroup vimrc
+    autocmd!
+    " Set backup extension. Saves one backup per file per hour, per day.
+    autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
+    " Turn off auto-comments on return.
+    autocmd FileType * setlocal fo-=c fo-=r fo-=o
+    autocmd BufWritePost *
+          \ if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
+    autocmd BufRead *
+          \ if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+    " Global syntax hightligting for NOTE, etc. in comments.
+    autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
+          \ containedin=.*Comment,vimCommentTitle
+    hi def link MyTodo Todo
+  augroup END
+endif
 "}}}
 
 " LOCAL: source ~/.vimrc.local if it exists {{{

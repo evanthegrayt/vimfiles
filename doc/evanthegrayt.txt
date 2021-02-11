@@ -19,6 +19,7 @@ License: MIT License
 
 TABLE OF CONTENTS                                                 *evanthegrayt*
 
+Settings ............................................... |evanthegrayt-settings|
 Mappings and Commands ..................... |evanthegrayt-mappings-and-commands|
   Vim Setting Toggles ............................... |evanthegrayt-vim-toggles|
   Custom Functions ............................. |evanthegrayt-custom-functions|
@@ -36,6 +37,22 @@ Mappings and Commands ..................... |evanthegrayt-mappings-and-commands|
   Custom Commands ............................... |evanthegrayt-custom-commands|
 Things to Remember ..................................... |evanthegrayt-remember|
 Plugins ................................................. |evanthegrayt-plugins|
+
+================================================================================
+
+SETTINGS                                                 *evanthegrayt-settings*
+
+Most of my personal settings are kept in my vimrc file. Vim 7.4+ allows you to
+keep your vimrc file as "~/.vim/vimrc", instead of "~/.vimrc". For this reason,
+my vimrc is kept in the root of this repository.  If you're using a version of
+vim that's less than 7.4, you'll need to link it to "~/.vimrc". On Mac/Linux:
+>
+    ln -s ~/.vim/vimrc ~/.vimrc
+<
+
+For settings that require more advanced vimscript, check in the "plugin/" and
+"autoload/" directories. They contain commands and functions that are like
+mini-plugins. These are described in |evanthegrayt-mappings-and-commands|.
 
 ================================================================================
 
