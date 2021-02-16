@@ -205,3 +205,6 @@
 [submodule "pack/plugins/start/ri"]
 	path = pack/plugins/start/ri
 	url = https://github.com/danchoi/ri.vim.git
+[submodule "pack/tpope/start/scriptease"]
+	path = pack/tpope/start/scriptease
+	url = https://github.com/tpope/vim-scriptease.git
