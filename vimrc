@@ -82,10 +82,6 @@ nnoremap <silent> <C-k> :m .-2<CR>==
 vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
-" Toggles: Toggle common vim settings local to buffer
-nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
-nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
-
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi gg=G``
 
@@ -97,11 +93,13 @@ nnoremap Y y$
 
 " Function Toggles: Mappings for functions in autoload/evanthegrayt.vim
 if v:version > 701
-  nnoremap <silent> <Leader>tc :call evanthegrayt#ToggleConceal()<CR>
-  nnoremap <silent> <Leader>TC :call evanthegrayt#ToggleColorColumn()<CR>
+  nnoremap <silent> <Leader>tc :call evanthegrayt#toggle#Conceal()<CR>
+  nnoremap <silent> <Leader>TC :call evanthegrayt#toggle#ColorColumn()<CR>
 endif
-nnoremap <silent> <Leader>mt :call evanthegrayt#ToggleMouse() <CR>
-nnoremap <silent> <leader>tf :call evanthegrayt#ToggleFoldColumn()<CR>
+nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
+nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
+nnoremap <silent> <Leader>mt :call evanthegrayt#toggle#Mouse() <CR>
+nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
 "}}}
