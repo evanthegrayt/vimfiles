@@ -211,3 +211,6 @@
 [submodule "pack/plugins/start/sql-heredoc-ruby"]
 	path = pack/plugins/start/sql-heredoc-ruby
 	url = https://github.com/aliou/sql-heredoc.vim.git
+[submodule "pack/plugins/start/bats-syntax"]
+	path = pack/plugins/start/bats-syntax
+	url = https://github.com/aliou/bats.vim.git
