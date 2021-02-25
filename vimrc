@@ -4,7 +4,7 @@
 " DESCRIPTION:  My general vim settings.                                       "
 "                                                                              "
 " For custom commands and functions that aren't full plugins, check            "
-" plugin/evanthegrayt.vim and autoload/evanthegrayt.vim.                       " 
+" plugin/evanthegrayt.vim and autoload/evanthegrayt.vim.                       "
 "                                                                              "
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
@@ -25,6 +25,7 @@ runtime macros/matchit.vim
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set formatoptions+=j
 set diffopt+=iwhite
 set viewoptions-=options
 set colorcolumn=81,101,121
@@ -252,6 +253,7 @@ if has('gui_running')
   set guioptions-=R
   set guioptions-=r
   set vb t_vb=
+  set showcmd
   set mouse=
 
   if has('gui_gtk2')

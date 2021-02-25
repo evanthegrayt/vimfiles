@@ -208,3 +208,6 @@
 [submodule "pack/tpope/start/scriptease"]
 	path = pack/tpope/start/scriptease
 	url = https://github.com/tpope/vim-scriptease.git
+[submodule "pack/plugins/start/sql-heredoc-ruby"]
+	path = pack/plugins/start/sql-heredoc-ruby
+	url = https://github.com/aliou/sql-heredoc.vim.git
