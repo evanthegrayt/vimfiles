@@ -208,9 +208,9 @@
 [submodule "pack/tpope/start/scriptease"]
 	path = pack/tpope/start/scriptease
 	url = https://github.com/tpope/vim-scriptease.git
-[submodule "pack/plugins/start/sql-heredoc-ruby"]
-	path = pack/plugins/start/sql-heredoc-ruby
-	url = https://github.com/aliou/sql-heredoc.vim.git
 [submodule "pack/plugins/start/bats-syntax"]
 	path = pack/plugins/start/bats-syntax
 	url = https://github.com/aliou/bats.vim.git
+[submodule "pack/plugins/start/ruby-heredoc-syntax"]
+	path = pack/plugins/start/ruby-heredoc-syntax
+	url = https://github.com/joker1007/vim-ruby-heredoc-syntax.git
