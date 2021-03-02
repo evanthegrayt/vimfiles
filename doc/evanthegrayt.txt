@@ -275,4 +275,4 @@ JSX-Pretty              https://github.com/MaxMEllon/vim-jsx-pretty
 REST-Console            https://github.com/diepm/vim-rest-console
 RI                      https://github.com/danchoi/ri.vim
 BATS-Syntax             https://github.com/aliou/bats.vim.git
-Ruby-Heredoc-Syntax     https://github.com/joker1007/vim-ruby-heredoc-syntax.git
+SQL-Heredoc             https://github.com/aliou/sql-heredoc.vim
