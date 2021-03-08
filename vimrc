@@ -102,7 +102,6 @@ nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
 nnoremap <silent> <Leader>mt :call evanthegrayt#toggle#Mouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
-nnoremap <silent> <Leader>ml :call evanthegrayt#AppendModeline()<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1

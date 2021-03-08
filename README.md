@@ -4,7 +4,7 @@ All of my vim runtime files. Here be dragons.
 All of the plugins that I use are kept as git submodules. I mostly work with
 Ruby on Rails, so a lot of my plugins are geared towards a Rails workflow. You
 can view all plugins at the bottom of the [help
-documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L201). See the
+documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L211). See the
 [installation instructions](#installation) to see how to recursively clone this
 repository and all of the plugins, and view the help documentation.
 

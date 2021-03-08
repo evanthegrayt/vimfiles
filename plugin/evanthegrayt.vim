@@ -8,3 +8,4 @@ command! -complete=custom,evanthegrayt#standup#Completion -nargs=? -bang Standup
       \ call evanthegrayt#standup#OpenFile(<bang>0, <f-args>)
 command! -nargs=1 -complete=custom,evanthegrayt#cdc#Completion Cdc
       \ call evanthegrayt#cdc#ChangeDirectory(<f-args>)
+command! -count -bang Modeline call evanthegrayt#modeline#Add(<bang>0, <count>)

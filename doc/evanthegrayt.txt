@@ -86,7 +86,6 @@ n     ctrl-k     Move current line up a line
 n     ctrl-j     Move current line down a line
 v     ctrl-k     Move current selection up a line
 v     ctrl-j     Move current selection down a line
-n     \ml        Append a modeline magic comment to the end of the current file
 n     \p         Preview file in browser (html only)
 i     ctrl-g u   Downcase the current word
 i     ctrl-g U   Up the current word
@@ -140,6 +139,15 @@ Custom command definitions, unrelated to a plugin.
                                                                      *:SynStack*
 :SynStack                   Get the syntax stack for the word under the cursor
 
+                                                                     *:Modeline*
+:[{count}]Modeline[!]       Append a modeline to the top of the current file. If
+                            ! is supplied, add to end of the file. If {count} is
+                            supplied, the modeline will be placed at the
+                            {count} line from the top of the file. When ! is
+                            present, it will be placed at the {count} line from
+                            the bottom of the file.
+
+
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
 
@@ -179,7 +187,9 @@ Use "gn" to visually select the next match, and "gN" to select the previous.
 Use your most recent yank/delete in insert/command mode. For example, press / to
 search, then '<c-r>"' as your search pattern.
 
-Move or copy/paste a line without moving the cursor.
+Move or copy/paste a line without moving the cursor. The number or range before
+the command are the lines to copy. The number after the command is where to put
+the yanked lines. This can be a period, meaning put below the current line.
 >
     :0move.
     :0m.
