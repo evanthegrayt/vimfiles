@@ -6,7 +6,7 @@
   (____)  \/(__)(__)(_)\_) (__) (_) (_)(____)\___/(_)\_)(__)(__)(__)  (__)     ~
 ================================================================================
 
-ABOUT                                                       *evanthegrayt-about*
+ABOUT                                                             *evanthegrayt*
 
 Sometimes I forget things. Also, a few people use my vim configuration, so this
 will serve as a way for people to learn my mappings and plugin settings.
@@ -17,21 +17,13 @@ License: MIT License
 
 ================================================================================
 
-TABLE OF CONTENTS                                                 *evanthegrayt*
+TABLE OF CONTENTS
 
 Settings ............................................... |evanthegrayt-settings|
 Mappings and Commands ..................... |evanthegrayt-mappings-and-commands|
   Vim Setting Toggles ............................... |evanthegrayt-vim-toggles|
   Custom Functions ............................. |evanthegrayt-custom-functions|
   Plugin Mappings ............................... |evanthegrayt-plugin-mappings|
-    CtrlP ........................................ |evanthegrayt-ctrlp-mappings|
-    Netrw ........................................ |evanthegrayt-netrw-mappings|
-    Rainbow .................................... |evanthegrayt-rainbow-mappings|
-    IndentLine .............................. |evanthegrayt-indentline-mappings|
-    GitGutter ................................ |evanthegrayt-gitgutter-mappings|
-    Tagbar ...................................... |evanthegrayt-tagbar-mappings|
-    Rest Console .......................... |evanthegrayt-rest-console-mappings|
-    Dadbod ...................................... |evanthegrayt-dadbod-mappings|
   Plugin Commands ............................... |evanthegrayt-plugin-commands|
     RI .............................................. |evanthegrayt-ri-commands|
   Custom Commands ............................... |evanthegrayt-custom-commands|
@@ -93,32 +85,29 @@ i     ctrl-g U   Up the current word
                                                   *evanthegrayt-plugin-mappings*
 Plugin Mappings~
 
-My custom mappings for plugins. For modes, "n" is normal, "v" is visual. It's
-definitely worth nothing that these are only my custom mappings; there are a
-lot more mappings for plugin functions, but you can read about those in their
-documentation.
+My custom mappings for plugins.
 
-                                                   *evanthegrayt-ctrlp-mappings*
+CtrlP~
 n     \be        Explore open buffers
 n     \bm        Explore most recently used files
 n     \bt        Explore tags
 n     \bb        Explore tags of current buffer
 n     ctrl-]     Jump to tag definition
 v     ctrl-]     Jump to tag definition
-                                                   *evanthegrayt-netrw-mappings*
+Netrw~
 n     \nt        Open Netrw (:Ntree)
-                                                 *evanthegrayt-rainbow-mappings*
+Rainbow~
 n     \rt        Toggle whether plugin is enabled
-                                              *evanthegrayt-indentline-mappings*
+IndentLine~
 n     \it        Toggle whether plugin is enabled
-                                               *evanthegrayt-gitgutter-mappings*
+GitGutter~
 n     \ggt       Toggle whether plugin is enabled
 n     \ggu       Undo the hunk under the cursor
-                                                  *evanthegrayt-tagbar-mappings*
+Tagbar~
 n     \TT        Toggle the tagbar pane
-                                            *evanthegrayt-rest-console-mappings*
+RestConsole~
 n     \rq        Run a rest query (only in .rest files)
-                                                  *evanthegrayt-dadbod-mappings*
+DadBod~
 n     \dbq       Run the query under the cursor (only in .sql files)
 v     \dbq       Run the visually selected query (only in .sql files)
 
@@ -127,7 +116,7 @@ Plugin Commands~
 
 My custom commands for plugins.
 
-                                                *:Ri* *evanthegrayt-ri-commands*
+                                                                           *:Ri*
 :Ri[!]                      Open RI search prompt in a split. If ! is supplied,
                             will open in a vertical split.
 
@@ -205,84 +194,86 @@ Help docs I can never find~
 |cmdline-special| to see how to grab things under the cursor.
 |ins-completion| to learn vim's built-in completion.
 |:Cfilter| to filter the quickfix/loclist.
+|pattern| to learn about vim's regex engine.
 
 ================================================================================
 
 PLUGINS                                                   *evanthegrayt-plugins*
 
-This is a list of the plugins I use. You can hit "gx" on the URL to open it in
-a browser.
+This is a list of the plugins I use. You can hit "CTRL-]" on an item in the
+left column to view its help documentation. If the item doesn't have syntax
+highlighting, then the plugin didn't come with vim documentation, but you can
+hit "gx" on the URL to open it in a browser to view the plugin's README.
 
-Plugin                  URL~
-Easteregg               https://github.com/evanthegrayt/vim-easteregg
-Easteregg-Airline       https://github.com/evanthegrayt/vim-easteregg-airline
-Update-Plugins          https://github.com/evanthegrayt/vim-update-plugins
-Lovehandle              https://github.com/evanthegrayt/vim-lovehandle
-Noteworthy              https://github.com/evanthegrayt/vim-noteworthy
-Bundler                 https://github.com/tpope/vim-bundler
-Capslock                https://github.com/tpope/vim-capslock
-Endwise                 https://github.com/tpope/vim-endwise
-Fugitive                https://github.com/tpope/vim-fugitive
-Repeat                  https://github.com/tpope/vim-repeat
-RSI                     https://github.com/tpope/vim-rsi
-Surround                https://github.com/tpope/vim-surround
-Git                     https://github.com/tpope/vim-git
-Rails                   https://github.com/tpope/vim-rails
-Dispatch                https://github.com/tpope/vim-dispatch
-Eunuch                  https://github.com/tpope/vim-eunuch
-Jdaddy                  https://github.com/tpope/vim-jdaddy
-Dadbod                  https://github.com/tpope/vim-dadbod
-Rake                    https://github.com/tpope/vim-rake
-Projectionist           https://github.com/tpope/vim-projectionist
-Dotenv                  https://github.com/tpope/vim-dotenv
-Abolish                 https://github.com/tpope/vim-abolish
-Commentary              https://github.com/tpope/vim-commentary
-Scriptease              https://github.com/tpope/vim-scriptease.git
-Vinegar                 https://github.com/tpope/vim-vinegar
-Rbenv                   https://github.com/tpope/vim-rbenv
-Rhubarb                 https://github.com/tpope/vim-rhubarb
-Pathogen                https://github.com/tpope/vim-pathogen
-Speeddating             https://github.com/tpope/vim-speeddating
-Laravel                 https://github.com/noahfrederick/vim-laravel
-Composer                https://github.com/noahfrederick/vim-composer
-Visual-Increment        https://github.com/vim-scripts/visual-increment
-GitGutter               https://github.com/airblade/vim-gitgutter
-Rooter                  https://github.com/airblade/vim-rooter
-Airline                 https://github.com/vim-airline/vim-airline
-Easymotion              https://github.com/easymotion/vim-easymotion
-IndentLine              https://github.com/Yggdroot/indentLine
-Indexed Search          https://github.com/henrik/vim-indexed-search
-Robocop                 https://github.com/ngmy/vim-rubocop
-SplitJoin               https://github.com/AndrewRadev/splitjoin.vim
-Tabular                 https://github.com/godlygeek/tabular
-Tagbar                  https://github.com/majutsushi/tagbar
-Man                     https://github.com/vim-utils/vim-man
-PHP-Complete            https://github.com/shawncplus/phpcomplete.vim
-ALE                     https://github.com/dense-analysis/ale
-Gutentags               https://github.com/ludovicchabant/vim-gutentags
-Ferret                  https://github.com/wincent/ferret
-UndoTree                https://github.com/mbbill/undotree
-CtrlP                   https://github.com/ctrlpvim/ctrlp.vim
-TJump                   https://github.com/ivalkeen/vim-ctrlp-tjump
-CSApprox                https://github.com/vim-scripts/CSApprox
-BATS                    https://github.com/vim-scripts/bats.vim
-Blade                   https://github.com/jwalton512/vim-blade
-CSV                     https://github.com/chrisbra/csv.vim
-DBML                    https://github.com/jidn/vim-dbml
-Haskell                 https://github.com/neovimhaskell/haskell-vim
-Javascript              https://github.com/pangloss/vim-javascript
-JSON                    https://github.com/elzr/vim-json
-Markdown                https://github.com/plasticboy/vim-markdown
-Previm                  https://github.com/previm/previm
-Rainbow                 https://github.com/luochen1990/rainbow
-Syntax-Extra            https://github.com/justinmk/vim-syntax-extra
-Tagbar-Markdown         https://github.com/lvht/tagbar-markdown
-Textobj-Rubyblock       https://github.com/nelstrom/vim-textobj-rubyblock
-Textobj-User            https://github.com/kana/vim-textobj-user
-Indent-Object           https://github.com/michaeljsmith/vim-indent-object
-Supertab                https://github.com/ervandew/supertab
-JSX-Pretty              https://github.com/MaxMEllon/vim-jsx-pretty
-REST-Console            https://github.com/diepm/vim-rest-console
-RI                      https://github.com/danchoi/ri.vim
-BATS-Syntax             https://github.com/aliou/bats.vim.git
-SQL-Heredoc             https://github.com/aliou/sql-heredoc.vim
+Plugin/Helptag          URL~
+easteregg               https://github.com/evanthegrayt/vim-easteregg
+easteregg-airline       https://github.com/evanthegrayt/vim-easteregg-airline
+|update-plugins|          https://github.com/evanthegrayt/vim-update-plugins
+|lovehandle|              https://github.com/evanthegrayt/vim-lovehandle
+|noteworthy|              https://github.com/evanthegrayt/vim-noteworthy
+|bundler|                 https://github.com/tpope/vim-bundler
+|capslock|                https://github.com/tpope/vim-capslock
+endwise                 https://github.com/tpope/vim-endwise
+|fugitive|                https://github.com/tpope/vim-fugitive
+repeat                  https://github.com/tpope/vim-repeat
+|rsi|                     https://github.com/tpope/vim-rsi
+|surround|                https://github.com/tpope/vim-surround
+|ft-git|                  https://github.com/tpope/vim-git
+|rails|                   https://github.com/tpope/vim-rails
+|dispatch|                https://github.com/tpope/vim-dispatch
+|eunuch|                  https://github.com/tpope/vim-eunuch
+|jdaddy|                  https://github.com/tpope/vim-jdaddy
+|dadbod|                  https://github.com/tpope/vim-dadbod
+|rake|                    https://github.com/tpope/vim-rake
+|projectionist|           https://github.com/tpope/vim-projectionist
+|dotenv|                  https://github.com/tpope/vim-dotenv
+|abolish|                 https://github.com/tpope/vim-abolish
+|commentary|              https://github.com/tpope/vim-commentary
+|scriptease|              https://github.com/tpope/vim-scriptease.git
+|vinegar|                 https://github.com/tpope/vim-vinegar
+|rbenv|                   https://github.com/tpope/vim-rbenv
+|rhubarb|                 https://github.com/tpope/vim-rhubarb
+pathogen                https://github.com/tpope/vim-pathogen
+|speeddating|             https://github.com/tpope/vim-speeddating
+|laravel|                 https://github.com/noahfrederick/vim-laravel
+|composer|                https://github.com/noahfrederick/vim-composer
+|visual-increment|        https://github.com/vim-scripts/visual-increment
+|gitgutter|               https://github.com/airblade/vim-gitgutter
+|rooter|                  https://github.com/airblade/vim-rooter
+|airline|                 https://github.com/vim-airline/vim-airline
+|easymotion|              https://github.com/easymotion/vim-easymotion
+|indentline.txt|          https://github.com/Yggdroot/indentLine
+|indexed-search|          https://github.com/henrik/vim-indexed-search
+|splitjoin|               https://github.com/AndrewRadev/splitjoin.vim
+|tabular|                 https://github.com/godlygeek/tabular
+|tagbar|                  https://github.com/majutsushi/tagbar
+|man|                     https://github.com/vim-utils/vim-man
+php-complete            https://github.com/shawncplus/phpcomplete.vim
+|ale|                     https://github.com/dense-analysis/ale
+|gutentags|               https://github.com/ludovicchabant/vim-gutentags
+|ferret|                  https://github.com/wincent/ferret
+|undotree.txt|            https://github.com/mbbill/undotree
+|ctrlp|                   https://github.com/ctrlpvim/ctrlp.vim
+tjump                   https://github.com/ivalkeen/vim-ctrlp-tjump
+|csapprox|                https://github.com/vim-scripts/CSApprox
+bats                    https://github.com/vim-scripts/bats.vim
+blade                   https://github.com/jwalton512/vim-blade
+|ft-csv|                  https://github.com/chrisbra/csv.vim
+|dbml|                    https://github.com/jidn/vim-dbml
+|haskell-vim.txt|         https://github.com/neovimhaskell/haskell-vim
+javascript              https://github.com/pangloss/vim-javascript
+json                    https://github.com/elzr/vim-json
+|vim-markdown|            https://github.com/plasticboy/vim-markdown
+|previm|                  https://github.com/previm/previm
+|rainbow|                 https://github.com/luochen1990/rainbow
+syntax-extra            https://github.com/justinmk/vim-syntax-extra
+tagbar-markdown         https://github.com/lvht/tagbar-markdown
+|textobj-rubyblock|       https://github.com/nelstrom/vim-textobj-rubyblock
+|textobj-user|            https://github.com/kana/vim-textobj-user
+|indent-object|           https://github.com/michaeljsmith/vim-indent-object
+|supertab|                https://github.com/ervandew/supertab
+|vim-jsx-pretty|          https://github.com/MaxMEllon/vim-jsx-pretty
+|vim-rest-console|        https://github.com/diepm/vim-rest-console
+ri                      https://github.com/danchoi/ri.vim
+bats-syntax             https://github.com/aliou/bats.vim.git
+sql-heredoc             https://github.com/aliou/sql-heredoc.vim
