@@ -243,7 +243,6 @@ pathogen                https://github.com/tpope/vim-pathogen
 |airline|                 https://github.com/vim-airline/vim-airline
 |easymotion|              https://github.com/easymotion/vim-easymotion
 |indentline.txt|          https://github.com/Yggdroot/indentLine
-|indexed-search|          https://github.com/henrik/vim-indexed-search
 |splitjoin|               https://github.com/AndrewRadev/splitjoin.vim
 |tabular|                 https://github.com/godlygeek/tabular
 |tagbar|                  https://github.com/majutsushi/tagbar

@@ -106,9 +106,6 @@ nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 
 " PLUGIN SETTINGS {{{1
 " Disable Plugins Based On Version: Some plugins echo output. I don't want that.
-if v:version <= 701
-  let g:loaded_indexed_search = 1
-endif
 if v:version < 703
   let g:loaded_tagbar = 1
   let g:CSApprox_loaded = 1

@@ -22,9 +22,6 @@
 [submodule "pack/plugins/start/indentline"]
 	path = pack/plugins/start/indentline
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "pack/plugins/start/indexed-search"]
-	path = pack/plugins/start/indexed-search
-	url = https://github.com/henrik/vim-indexed-search.git
 [submodule "pack/plugins/start/rubocop"]
 	path = pack/plugins/start/rubocop
 	url = https://github.com/ngmy/vim-rubocop.git
