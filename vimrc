@@ -93,10 +93,8 @@ nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
 nnoremap Y y$
 
 " Function Toggles: Mappings for functions in autoload/evanthegrayt.vim
-if v:version > 701
-  nnoremap <silent> <Leader>tc :call evanthegrayt#toggle#Conceal()<CR>
-  nnoremap <silent> <Leader>TC :call evanthegrayt#toggle#ColorColumn()<CR>
-endif
+nnoremap <silent> <Leader>tc :call evanthegrayt#toggle#Conceal()<CR>
+nnoremap <silent> <Leader>TC :call evanthegrayt#toggle#ColorColumn()<CR>
 nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
 nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
 nnoremap <silent> <Leader>mt :call evanthegrayt#toggle#Mouse() <CR>
@@ -105,30 +103,11 @@ nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 "}}}
 
 " PLUGIN SETTINGS {{{1
-" Disable Plugins Based On Version: Some plugins echo output. I don't want that.
-if v:version < 703
-  let g:loaded_tagbar = 1
-  let g:CSApprox_loaded = 1
-endif
-if v:version < 704
-  let g:airline#extensions#tagbar#enabled = 0
-endif
-if v:version < 800 && isdirectory($HOME . "/.vim/pack/")
-  let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
-endif
-if !executable('git')
-  let g:loaded_gitgutter = 1
-  let g:loaded_fugitive = 1
-endif
-
 " NETRW: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
 nnoremap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
-
-" EASYMOTION: Easily jump to markers
-" let g:EasyMotion_force_csapprox = 1
 
 " RAINBOW: Different color parens
 let g:rainbow_active = 0
@@ -149,6 +128,7 @@ let g:ruby_debugger_progname = 'mvim'
 
 " UPDATE PLUGINS: update plugins from vim
 let g:update_plugins_exclude = ['update-plugins']
+let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
 
 " AIRLINE: advanced status line
 if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif

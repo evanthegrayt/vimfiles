@@ -9,7 +9,7 @@
 ABOUT                                                             *evanthegrayt*
 
 Sometimes I forget things. Also, a few people use my vim configuration, so this
-will serve as a way for people to learn my mappings and plugin settings.
+will also serve as a way for people to learn my mappings and plugin settings.
 
 Author:  Evan Gray <mailto:evanthegrayt@vivaldi.net>
 Repo:    https://github.com/evanthegrayt/vimfiles
@@ -23,10 +23,9 @@ Settings ............................................... |evanthegrayt-settings|
 Mappings and Commands ..................... |evanthegrayt-mappings-and-commands|
   Vim Setting Toggles ............................... |evanthegrayt-vim-toggles|
   Custom Functions ............................. |evanthegrayt-custom-functions|
+  Custom Commands ............................... |evanthegrayt-custom-commands|
   Plugin Mappings ............................... |evanthegrayt-plugin-mappings|
   Plugin Commands ............................... |evanthegrayt-plugin-commands|
-    RI .............................................. |evanthegrayt-ri-commands|
-  Custom Commands ............................... |evanthegrayt-custom-commands|
 Things to Remember ..................................... |evanthegrayt-remember|
 Plugins ................................................. |evanthegrayt-plugins|
 
@@ -61,7 +60,7 @@ Keys   Toggles            Between~
 \sc    'spell'            off and spelllang=en_us
 \tc    'conceallevel'     off and 2
 \TC    'colorcolumn'      off and columns 81,101,121
-\mt    'mouse'            "a" and ""
+\mt    'mouse'            "" and "a"
 \tf    'foldcolumn'       off and 2
 
                                                  *evanthegrayt-custom-functions*
@@ -81,44 +80,6 @@ v     ctrl-j     Move current selection down a line
 n     \p         Preview file in browser (html only)
 i     ctrl-g u   Downcase the current word
 i     ctrl-g U   Up the current word
-
-                                                  *evanthegrayt-plugin-mappings*
-Plugin Mappings~
-
-My custom mappings for plugins.
-
-CtrlP~
-n     \be        Explore open buffers
-n     \bm        Explore most recently used files
-n     \bt        Explore tags
-n     \bb        Explore tags of current buffer
-n     ctrl-]     Jump to tag definition
-v     ctrl-]     Jump to tag definition
-Netrw~
-n     \nt        Open Netrw (:Ntree)
-Rainbow~
-n     \rt        Toggle whether plugin is enabled
-IndentLine~
-n     \it        Toggle whether plugin is enabled
-GitGutter~
-n     \ggt       Toggle whether plugin is enabled
-n     \ggu       Undo the hunk under the cursor
-Tagbar~
-n     \TT        Toggle the tagbar pane
-RestConsole~
-n     \rq        Run a rest query (only in .rest files)
-DadBod~
-n     \dbq       Run the query under the cursor (only in .sql files)
-v     \dbq       Run the visually selected query (only in .sql files)
-
-                                                  *evanthegrayt-plugin-commands*
-Plugin Commands~
-
-My custom commands for plugins.
-
-                                                                           *:Ri*
-:Ri[!]                      Open RI search prompt in a split. If ! is supplied,
-                            will open in a vertical split.
 
                                                   *evanthegrayt-custom-commands*
 Custom Commands~
@@ -157,6 +118,44 @@ Custom command definitions, unrelated to a plugin.
                             become its own plugin.
                             https://github.com/evanthegrayt/cdc
 
+                                                  *evanthegrayt-plugin-mappings*
+Plugin Mappings~
+
+My custom mappings for plugins. For modes, "n" is normal, "v" is visual, etc.
+
+CtrlP~
+n     \be        Explore open buffers
+n     \bm        Explore most recently used files
+n     \bt        Explore tags
+n     \bb        Explore tags of current buffer
+n     ctrl-]     Jump to tag definition
+v     ctrl-]     Jump to tag definition
+Netrw~
+n     \nt        Open Netrw (:Ntree)
+Rainbow~
+n     \rt        Toggle whether plugin is enabled
+IndentLine~
+n     \it        Toggle whether plugin is enabled
+GitGutter~
+n     \ggt       Toggle whether plugin is enabled
+n     \ggu       Undo the hunk under the cursor
+Tagbar~
+n     \TT        Toggle the tagbar pane
+RestConsole~
+n     \rq        Run a rest query (only in .rest files)
+DadBod~
+n     \dbq       Run the query under the cursor (only in .sql files)
+v     \dbq       Run the visually selected query (only in .sql files)
+
+                                                  *evanthegrayt-plugin-commands*
+Plugin Commands~
+
+My custom commands for plugins.
+
+                                                                           *:Ri*
+:Ri[!]                      Open RI search prompt in a split. If ! is supplied,
+                            will open in a vertical split.
+
 ================================================================================
 
 THINGS I WANT TO REMEMBER                                *evanthegrayt-remember*
@@ -169,6 +168,17 @@ pass a range to delete the matching line, and the one(s) before or after it.
     :g/pattern/d
     :v/pattern/d
     :g/pattern/-1d
+<
+
+Make a table of contents for markdown.
+>
+    :g/^##/t 1
+    :g/^/m 1
+<
+
+Find all methods with two arguments and swap the arguments.
+>
+    :%s/\v^\s*def\s+\w+\(\s*\zs(\w+)\s*,\s*(\w+)\ze\s*\)/\2, \1
 <
 
 Use "gn" to visually select the next match, and "gN" to select the previous.
@@ -201,21 +211,23 @@ Help docs I can never find~
 PLUGINS                                                   *evanthegrayt-plugins*
 
 This is a list of the plugins I use. You can hit "CTRL-]" on an item in the
-left column to view its help documentation. If the item doesn't have syntax
-highlighting, then the plugin didn't come with vim documentation, but you can
-hit "gx" on the URL to open it in a browser to view the plugin's README.
+left column to view its help documentation. If the item doesn't have its own
+help documentation, then the syntax color will probably be the same color as
+the URL, meaning this is the tag definition (see easteregg as example). I did
+this so I could easily jump to this list (":h easteregg"), hit "gx" on the URL
+to open the project in a browser, and read the README in the repository.
 
 Plugin/Helptag          URL~
-easteregg               https://github.com/evanthegrayt/vim-easteregg
-easteregg-airline       https://github.com/evanthegrayt/vim-easteregg-airline
+*easteregg*               https://github.com/evanthegrayt/vim-easteregg
+*easteregg-airline*       https://github.com/evanthegrayt/vim-easteregg-airline
 |update-plugins|          https://github.com/evanthegrayt/vim-update-plugins
 |lovehandle|              https://github.com/evanthegrayt/vim-lovehandle
 |noteworthy|              https://github.com/evanthegrayt/vim-noteworthy
 |bundler|                 https://github.com/tpope/vim-bundler
 |capslock|                https://github.com/tpope/vim-capslock
-endwise                 https://github.com/tpope/vim-endwise
+*endwise*                 https://github.com/tpope/vim-endwise
 |fugitive|                https://github.com/tpope/vim-fugitive
-repeat                  https://github.com/tpope/vim-repeat
+*repeat*                  https://github.com/tpope/vim-repeat
 |rsi|                     https://github.com/tpope/vim-rsi
 |surround|                https://github.com/tpope/vim-surround
 |ft-git|                  https://github.com/tpope/vim-git
@@ -233,7 +245,7 @@ repeat                  https://github.com/tpope/vim-repeat
 |vinegar|                 https://github.com/tpope/vim-vinegar
 |rbenv|                   https://github.com/tpope/vim-rbenv
 |rhubarb|                 https://github.com/tpope/vim-rhubarb
-pathogen                https://github.com/tpope/vim-pathogen
+*pathogen*                https://github.com/tpope/vim-pathogen
 |speeddating|             https://github.com/tpope/vim-speeddating
 |laravel|                 https://github.com/noahfrederick/vim-laravel
 |composer|                https://github.com/noahfrederick/vim-composer
@@ -247,32 +259,32 @@ pathogen                https://github.com/tpope/vim-pathogen
 |tabular|                 https://github.com/godlygeek/tabular
 |tagbar|                  https://github.com/majutsushi/tagbar
 |man|                     https://github.com/vim-utils/vim-man
-php-complete            https://github.com/shawncplus/phpcomplete.vim
+*php-complete*            https://github.com/shawncplus/phpcomplete.vim
 |ale|                     https://github.com/dense-analysis/ale
 |gutentags|               https://github.com/ludovicchabant/vim-gutentags
 |ferret|                  https://github.com/wincent/ferret
 |undotree.txt|            https://github.com/mbbill/undotree
 |ctrlp|                   https://github.com/ctrlpvim/ctrlp.vim
-tjump                   https://github.com/ivalkeen/vim-ctrlp-tjump
+*ctrlp-tjump*             https://github.com/ivalkeen/vim-ctrlp-tjump
 |csapprox|                https://github.com/vim-scripts/CSApprox
-bats                    https://github.com/vim-scripts/bats.vim
-blade                   https://github.com/jwalton512/vim-blade
+*bats*                    https://github.com/vim-scripts/bats.vim
+*blade*                   https://github.com/jwalton512/vim-blade
 |ft-csv|                  https://github.com/chrisbra/csv.vim
 |dbml|                    https://github.com/jidn/vim-dbml
 |haskell-vim.txt|         https://github.com/neovimhaskell/haskell-vim
-javascript              https://github.com/pangloss/vim-javascript
-json                    https://github.com/elzr/vim-json
+*javascript*              https://github.com/pangloss/vim-javascript
+*vim-json*                https://github.com/elzr/vim-json
 |vim-markdown|            https://github.com/plasticboy/vim-markdown
 |previm|                  https://github.com/previm/previm
 |rainbow|                 https://github.com/luochen1990/rainbow
-syntax-extra            https://github.com/justinmk/vim-syntax-extra
-tagbar-markdown         https://github.com/lvht/tagbar-markdown
+*syntax-extra*            https://github.com/justinmk/vim-syntax-extra
+*tagbar-markdown*         https://github.com/lvht/tagbar-markdown
 |textobj-rubyblock|       https://github.com/nelstrom/vim-textobj-rubyblock
 |textobj-user|            https://github.com/kana/vim-textobj-user
 |indent-object|           https://github.com/michaeljsmith/vim-indent-object
 |supertab|                https://github.com/ervandew/supertab
 |vim-jsx-pretty|          https://github.com/MaxMEllon/vim-jsx-pretty
 |vim-rest-console|        https://github.com/diepm/vim-rest-console
-ri                      https://github.com/danchoi/ri.vim
-bats-syntax             https://github.com/aliou/bats.vim.git
-sql-heredoc             https://github.com/aliou/sql-heredoc.vim
+*ri*                      https://github.com/danchoi/ri.vim
+*bats-syntax*             https://github.com/aliou/bats.vim.git
+*sql-heredoc*             https://github.com/aliou/sql-heredoc.vim
