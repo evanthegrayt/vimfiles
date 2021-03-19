@@ -78,8 +78,8 @@ n     ctrl-j     Move current line down a line
 v     ctrl-k     Move current selection up a line
 v     ctrl-j     Move current selection down a line
 n     \p         Preview file in browser (html only)
-i     ctrl-g u   Downcase the current word
-i     ctrl-g U   Up the current word
+i     ctrl-g u   Downcase the word currently being typed
+i     ctrl-g U   Upcase the word currently being typed
 
                                                   *evanthegrayt-custom-commands*
 Custom Commands~
@@ -160,8 +160,13 @@ My custom commands for plugins.
 
 THINGS I WANT TO REMEMBER                                *evanthegrayt-remember*
 
+Random things I learn that I want to have quick access to remember. Things in
+this section are subject to be removed as I commit them to memory.
+
+Command Completion~
 In command-line mode, <c-d> will show all completions for a command at once.
 
+Global~
 Delete all lines matching a pattern, or NOT matching a pattern. You can also
 pass a range to delete the matching line, and the one(s) before or after it.
 >
@@ -169,36 +174,24 @@ pass a range to delete the matching line, and the one(s) before or after it.
     :v/pattern/d
     :g/pattern/-1d
 <
-
-Make a table of contents for markdown.
+Make a table of contents for markdown. The "t" command copies, "m" moves.
 >
     :g/^##/t 1
     :g/^/m 1
 <
 
+Pattern Matching/Regex~
 Find all methods with two arguments and swap the arguments.
 >
     :%s/\v^\s*def\s+\w+\(\s*\zs(\w+)\s*,\s*(\w+)\ze\s*\)/\2, \1
 <
-
 Use "gn" to visually select the next match, and "gN" to select the previous.
 
+Registers~
 Use your most recent yank/delete in insert/command mode. For example, press / to
 search, then '<c-r>"' as your search pattern.
 
-Move or copy/paste a line without moving the cursor. The number or range before
-the command are the lines to copy. The number after the command is where to put
-the yanked lines. This can be a period, meaning put below the current line.
->
-    :0move.
-    :0m.
-
-    :0copy.
-    :0t.
-<
-
 Help docs I can never find~
-
 |mark-motions| to see how advanced jumps work.
 |filename-modifiers| to see how to manipulate a file path.
 |cmdline-special| to see how to grab things under the cursor.

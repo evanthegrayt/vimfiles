@@ -1,19 +1,22 @@
 "=============================================================================="
 " FILE:         vimrc                                                          "
-" AUTHOR:       Evan Gray (evanthegrayt)                                       "
+" AUTHOR:       Evan Gray :: https://github.com/evanthegrayt                   "
 " DESCRIPTION:  My general vim settings.                                       "
 "                                                                              "
-" For custom commands and functions that aren't full plugins, check            "
+" For custom commands and functions that aren't full plugins, check here.      "
 " plugin/evanthegrayt.vim and autoload/evanthegrayt.vim.                       "
+"                                                                              "
+" Read my help documentation for information about this repository.            "
+" :help evanthegrayt                                                           "
 "                                                                              "
 " NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
 "=============================================================================="
 
-" FILETYPE AND SYNTAX: " Enable plugins, filetype detection, etc. {{{1
-filetype on            " Enable filetype detection
-filetype plugin on     " Enable filetype dection for plugins
-filetype indent on     " Enable indention by filetype
-syntax   enable        " Turn on syntax highlighting
+" FILETYPE AND SYNTAX: {{{1
+filetype on
+filetype plugin on
+filetype indent on
+syntax   enable
 "}}}
 
 " RUNTIME PATH: Make sure plugins are in &rtp {{{1
