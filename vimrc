@@ -200,15 +200,24 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
       \ '*.css', '*.html', '*.svg', '*.json', '*.xml']
 
 " NOTEWORTHY: Notes
-let g:noteworthy_libraries = #{
-      \   code:     $HOME . '/workflow/notes/code',
-      \   work:     $HOME . '/workflow/notes/public_strategies',
-      \   personal: $HOME . '/Documents/notes',
-      \   project:  'doc/notes',
+let g:noteworthy_libraries = {
+      \   'code':     $HOME . '/workflow/notes/code',
+      \   'work':     $HOME . '/workflow/notes/public_strategies',
+      \   'personal': $HOME . '/Documents/notes',
       \ }
 let g:noteworthy_default_library = 'work'
-let g:noteworthy_file_ext        = 'md'
+let g:noteworthy_dynamic_libraries = {
+      \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
+      \   $HOME . '/workflow/fasttrac-backend': 'docs',
+      \ }
+let g:noteworthy_dynamic_library_name = 'project'
+let g:noteworthy_prefer_dynamic = 0
+let g:noteworthy_file_ext = 'md'
 
+" RI: Browse ruby's RI documentation through vim.
+let g:ri_no_mappings = 1
+
+" CDC: Easily change directory. Not an actual plugin.
 let g:cdc_dirs = [
       \   $HOME . '/.oh-my-zsh/custom/plugins',
       \   $HOME . '/workflow',
@@ -216,9 +225,6 @@ let g:cdc_dirs = [
       \   $HOME . '/.vim/pack/evanthegrayt/start',
       \   $HOME . '/.vim/pack/public-strategies/start'
       \ ]
-
-" RI: Browse ruby's RI documentation through vim.
-let g:ri_no_mappings = 1
 
 let g:evanthegrayt_ps_projects = [
       \   $HOME . '/workflow/srae-pas-dashboard'
