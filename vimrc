@@ -229,6 +229,13 @@ let g:cdc_dirs = [
 let g:evanthegrayt_ps_projects = [
       \   $HOME . '/workflow/srae-pas-dashboard'
       \ ]
+
+" REST Console: Run curl through vim.
+let g:vrc_curl_opts = {'-i': '', '-s': ''}
+let g:vrc_set_default_mapping = 0
+
+nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
+
 "}}}
 
 " GUI: GUI-specific settings {{{

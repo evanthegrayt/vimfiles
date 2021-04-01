@@ -143,6 +143,7 @@ Tagbar~
 n     \TT        Toggle the tagbar pane
 RestConsole~
 n     \rq        Run a rest query (only in .rest files)
+n     \rc        Close the response buffer if it exists
 DadBod~
 n     \dbq       Run the query under the cursor (only in .sql files)
 v     \dbq       Run the visually selected query (only in .sql files)
