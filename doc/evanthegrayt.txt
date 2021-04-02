@@ -56,11 +56,11 @@ These are mappings that toggle vim's built-in options. All mappings in this
 section are performed in normal mode.
 
 Keys   Toggles            Between~
-\nu    'relativenumber'   off and on
-\sc    'spell'            off and spelllang=en_us
+\tn    'relativenumber'   off and on
+\ts    'spell'            off and spelllang=en_us
 \tc    'conceallevel'     off and 2
-\TC    'colorcolumn'      off and columns 81,101,121
-\mt    'mouse'            "" and "a"
+\tC    'colorcolumn'      off and columns 81,101,121
+\tm    'mouse'            "" and "a"
 \tf    'foldcolumn'       off and 2
 
                                                  *evanthegrayt-custom-functions*
@@ -71,8 +71,10 @@ is visual, etc.
 
 Mode  Keys       Descriptions~
 n     \fi        Let vim try to auto-indent the whole file
-n     \TS        Remove all trailing whitespace from the current file
+n     \st        Remove all trailing whitespace from the current file
 n     \co        List lines containing the word under cursor and jump to match
+n     \gg        Go to the top of the file, but stay in the current column
+n     \G         Go to the bottom of the file, but stay in the current column
 n     ctrl-k     Move current line up a line
 n     ctrl-j     Move current line down a line
 v     ctrl-k     Move current selection up a line
@@ -137,8 +139,8 @@ n     \rt        Toggle whether plugin is enabled
 IndentLine~
 n     \it        Toggle whether plugin is enabled
 GitGutter~
-n     \ggt       Toggle whether plugin is enabled
-n     \ggu       Undo the hunk under the cursor
+n     \gt        Toggle whether plugin is enabled
+n     \gu        Undo the hunk under the cursor
 Tagbar~
 n     \TT        Toggle the tagbar pane
 RestConsole~

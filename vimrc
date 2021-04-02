@@ -76,6 +76,11 @@ if exists('+spelloptions') | set spelloptions=camel | endif
 
 " MAPPINGS: Custom key mappings {{{
 
+" Go to the top/bottom of file, while staying in the current column. I've
+" tried `:set nostartofline` but it's very disorienting.
+nnoremap <silent> <Leader>gg :call evanthegrayt#movement#TopOfFileSameColumn()<CR>
+nnoremap <silent> <Leader>G :call evanthegrayt#movement#BottomOfFileSameColumn()<CR>
+
 " Up/Downcase the current word while in insert mode.
 inoremap <silent> <c-g>u <esc>guawea
 inoremap <silent> <c-g>U <esc>gUawea
@@ -89,19 +94,21 @@ vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi gg=G``
 
-" Trailing Spaces: hit `\TS` to remove all trailing whitespace
-nnoremap <silent> <Leader>TS :%s/\s\+$//<CR>
+" Trailing Spaces: hit `\st` to remove all trailing whitespace
+nnoremap <silent> <Leader>st :%s/\s\+$//<CR>
 
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
 
 " Function Toggles: Mappings for functions in autoload/evanthegrayt.vim
 nnoremap <silent> <Leader>tc :call evanthegrayt#toggle#Conceal()<CR>
-nnoremap <silent> <Leader>TC :call evanthegrayt#toggle#ColorColumn()<CR>
-nnoremap <silent> <Leader>sc :setlocal spell! spelllang=en_us<CR>
-nnoremap <silent> <Leader>nu :call evanthegrayt#relative_number#Toggle()<CR>
-nnoremap <silent> <Leader>mt :call evanthegrayt#toggle#Mouse() <CR>
+nnoremap <silent> <Leader>tC :call evanthegrayt#toggle#ColorColumn()<CR>
+nnoremap <silent> <Leader>ts :setlocal spell! spelllang=en_us<CR>
+nnoremap <silent> <Leader>tn :call evanthegrayt#relative_number#Toggle()<CR>
+nnoremap <silent> <Leader>tm :call evanthegrayt#toggle#Mouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
+
+" List all matches of word under cursor and prompt to jump to one.
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 "}}}
 
@@ -157,8 +164,8 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
 
 " GITGUTTER: show diff in gutter
-nnoremap <silent> <Leader>ggt :GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>ggu :GitGutterUndoHunk<CR>
+nnoremap <silent> <Leader>gt :GitGutterBufferToggle<CR>
+nnoremap <silent> <Leader>gu :GitGutterUndoHunk<CR>
 let g:gitgutter_preview_win_floating = 1
 
 " TAGBAR: show classes/methods/functions in side window
@@ -233,7 +240,6 @@ let g:evanthegrayt_ps_projects = [
 " REST Console: Run curl through vim.
 let g:vrc_curl_opts = {'-i': '', '-s': ''}
 let g:vrc_set_default_mapping = 0
-
 nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 
 "}}}
