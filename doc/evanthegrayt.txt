@@ -172,10 +172,13 @@ In command-line mode, <c-d> will show all completions for a command at once.
 Global~
 Delete all lines matching a pattern, or NOT matching a pattern. You can also
 pass a range to delete the matching line, and the one(s) before or after it.
+Raw VimScript can also be used.
 >
     :g/pattern/d
     :v/pattern/d
     :g/pattern/-1d
+    :g/^/if line(".") % 2 == 0 | d
+    :g/^/if strlen(getline(".")) < 3 | d
 <
 Make a table of contents for markdown. The "t" command copies, "m" moves.
 >
@@ -193,6 +196,11 @@ Use "gn" to visually select the next match, and "gN" to select the previous.
 Registers~
 Use your most recent yank/delete in insert/command mode. For example, press / to
 search, then '<c-r>"' as your search pattern.
+
+Use '<c-r>=' in insert or command mode to evaluate an expression in-place.
+>
+    <c-r>=getcwd()
+<
 
 Help docs I can never find~
 |mark-motions| to see how advanced jumps work.
