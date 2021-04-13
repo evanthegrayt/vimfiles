@@ -19,12 +19,8 @@ filetype indent on
 syntax   enable
 "}}}
 
-" RUNTIME PATH: Make sure plugins are in &rtp {{{1
-if v:version < 800
-  set rtp+=~/.vim/pack/tpope/opt/pathogen/
-  call pathogen#infect()
-endif
-runtime macros/matchit.vim
+" RUNTIME PATH: Load the things. {{{1
+packadd matchit
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
@@ -181,6 +177,7 @@ endif
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public\|tmp'
+let g:ctrlp_cache_dir = $HOME . "/.vim/cache/ctrlp"
 nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
 nnoremap <silent> <Leader>bt :CtrlPTag<CR>
@@ -218,8 +215,7 @@ let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
       \ }
 let g:noteworthy_dynamic_library_name = 'project'
-let g:noteworthy_prefer_dynamic = 0
-let g:noteworthy_file_ext = 'md'
+let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
 
 " RI: Browse ruby's RI documentation through vim.
 let g:ri_no_mappings = 1
@@ -265,23 +261,21 @@ endif
 "}}}
 
 " Autocommands: Non-filetype-related autocommands {{{
-if has('autocmd')
-  augroup vimrc
-    autocmd!
-    " Set backup extension. Saves one backup per file per hour, per day.
-    autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
-    " Turn off auto-comments on return.
-    autocmd FileType * setlocal fo-=c fo-=r fo-=o
-    autocmd BufWritePost *
-          \ if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
-    autocmd BufRead *
-          \ if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
-    " Global syntax hightligting for NOTE, etc. in comments.
-    autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
-          \ containedin=.*Comment,vimCommentTitle
-    hi def link MyTodo Todo
-  augroup END
-endif
+augroup vimrc
+  autocmd!
+  " Set backup extension. Saves one backup per file per hour, per day.
+  autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
+  " Turn off auto-comments on return.
+  autocmd FileType * setlocal fo-=c fo-=r fo-=o
+  autocmd BufWritePost *
+        \ if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
+  autocmd BufRead *
+        \ if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+  " Global syntax hightligting for NOTE, etc. in comments.
+  autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
+        \ containedin=.*Comment,vimCommentTitle
+  hi def link MyTodo Todo
+augroup END
 "}}}
 
 " LOCAL: source ~/.vimrc.local if it exists {{{

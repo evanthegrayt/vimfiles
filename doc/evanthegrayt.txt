@@ -217,12 +217,12 @@ PLUGINS                                                   *evanthegrayt-plugins*
 This is a list of the plugins I use. You can hit "CTRL-]" on an item in the
 left column to view its help documentation. If the item doesn't have its own
 help documentation, then the syntax color will probably be the same color as
-the URL, meaning this is the tag definition (see easteregg as example). I did
-this so I could easily jump to this list (":h easteregg"), hit "gx" on the URL
+the URL, meaning this is the tag definition (see repeat as example). I did
+this so I could easily jump to this list (":h repeat"), hit "gx" on the URL
 to open the project in a browser, and read the README in the repository.
 
 Plugin/Helptag          URL~
-*easteregg*               https://github.com/evanthegrayt/vim-easteregg
+|easteregg|               https://github.com/evanthegrayt/vim-easteregg
 *easteregg-airline*       https://github.com/evanthegrayt/vim-easteregg-airline
 |update-plugins|          https://github.com/evanthegrayt/vim-update-plugins
 |lovehandle|              https://github.com/evanthegrayt/vim-lovehandle
