@@ -4,8 +4,7 @@ function! evanthegrayt#standup#Completion(...) abort
   if !s:Validate() | return | endif
   let l:dir = get(g:, 'standup_dir', $HOME . '/.cache/standup_md') . '/'
   if !isdirectory(l:dir) | return '' | endif
-  let l:list = glob(l:dir . '*.md', 0, 1)
-  return join(map(l:list, "substitute(v:val, l:dir, '', '')"), "\n")
+  return join(map(glob(l:dir . '*.md', 0, 1), "fnamemodify(v:val, ':t')"), "\n")
 endfunction
 
 function! evanthegrayt#standup#OpenFile(split, ...) abort
