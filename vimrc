@@ -32,6 +32,7 @@ set nrformats+=alpha
 set laststatus=2
 set encoding=utf-8
 set showcmd
+set noshowmode
 set shortmess=at
 set clipboard=unnamed
 set list
@@ -275,6 +276,11 @@ augroup vimrc
   autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
         \ containedin=.*Comment,vimCommentTitle
   hi def link MyTodo Todo
+augroup END
+
+augroup skeletons
+  autocmd!
+  autocmd BufNewFile README.md 0r ~/skeletons/readme.md
 augroup END
 "}}}
 
