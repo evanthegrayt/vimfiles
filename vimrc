@@ -239,6 +239,10 @@ let g:vrc_curl_opts = {'-i': '', '-s': ''}
 let g:vrc_set_default_mapping = 0
 nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 
+" Lovehandle: Database URL manager.
+let g:lovehandle_projects = [
+      \   $HOME . '/workflow/bluegrass'
+      \ ]
 "}}}
 
 " GUI: GUI-specific settings {{{
