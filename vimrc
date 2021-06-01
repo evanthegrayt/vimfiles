@@ -92,7 +92,7 @@ vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 nnoremap <silent> <Leader>fi gg=G``
 
 " Trailing Spaces: hit `\st` to remove all trailing whitespace
-nnoremap <silent> <Leader>st :%s/\s\+$//<CR>
+nnoremap <silent> <Leader>st :%s/\s\+$//<CR><c-o>
 
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
