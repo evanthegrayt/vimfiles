@@ -112,13 +112,37 @@ Custom command definitions, unrelated to a plugin.
 
                                                                           *:Cdc*
 :Cdc {directory}            Poor man's implementation of my shell plugin "cdc",
-                            linked below. In short, define "g:cdc_dirs" as a
+                            linked below. In short, define *g:cdc_dirs* as a
                             list of directories. You can then use this command
                             to quickly change the working directory to a
                             subdirectory of one of the directories in the list.
                             If I ever add more features, this will probably
                             become its own plugin.
                             https://github.com/evanthegrayt/cdc
+
+                                                                    *:Mksession*
+:Mksession[!] [{session}]   Like |mksession|, but create a session file based
+                            on current directory. If current directory is a git
+                            repository, make a session file for the current
+                            directory plus the current branch. Session files
+                            are kept in "$HOME/.cache/vim_sessions", but the
+                            directory can be changed with
+                            *g:session_directory*.
+
+                                                                 *:SessionStart*
+:SessionStart [{session}]   Like |Mksession|, but continue tracking any window
+                            changes. Must have tpope's vim-obsession installed.
+
+                                                                  *:SessionLoad*
+:SessionLoad [{session}]    Load the session file for the current directory. If
+                            the current directory is a git repository, load the
+                            session file for the current directory and branch.
+
+                                                                *:SessionDelete*
+:SessionDelete [{session}]  Delete the session file for the current directory.
+                            If the current directory is a git repository, delete
+                            the session file for the current directory and
+                            branch.
 
                                                   *evanthegrayt-plugin-mappings*
 Plugin Mappings~
@@ -251,6 +275,7 @@ Plugin/Helptag          URL~
 |rhubarb|                 https://github.com/tpope/vim-rhubarb
 *pathogen*                https://github.com/tpope/vim-pathogen
 |speeddating|             https://github.com/tpope/vim-speeddating
+|obsession|               https://github.com/tpope/vim-obsession
 |laravel|                 https://github.com/noahfrederick/vim-laravel
 |composer|                https://github.com/noahfrederick/vim-composer
 |visual-increment|        https://github.com/vim-scripts/visual-increment
@@ -292,3 +317,4 @@ Plugin/Helptag          URL~
 *ri*                      https://github.com/danchoi/ri.vim
 *bats-syntax*             https://github.com/aliou/bats.vim.git
 *sql-heredoc*             https://github.com/aliou/sql-heredoc.vim
+|reply|                   https://github.com/rhysd/reply.vim

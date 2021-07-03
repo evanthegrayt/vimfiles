@@ -135,7 +135,7 @@
 	url = https://github.com/evanthegrayt/vim-lovehandle.git
 [submodule "pack/evanthegrayt/start/noteworthy"]
 	path = pack/evanthegrayt/start/noteworthy
-	url = https://github.com/evanthegrayt/vim-noteworthy.git
+	url = git@github.com:evanthegrayt/vim-noteworthy.git
 [submodule "pack/plugins/start/csapprox"]
 	path = pack/plugins/start/csapprox
 	url = https://github.com/vim-scripts/CSApprox.git
@@ -211,3 +211,9 @@
 [submodule "pack/plugins/start/sql-heredoc-ruby"]
 	path = pack/plugins/start/sql-heredoc-ruby
 	url = https://github.com/aliou/sql-heredoc.vim.git
+[submodule "pack/plugins/start/reply"]
+	path = pack/plugins/start/reply
+	url = https://github.com/rhysd/reply.vim.git
+[submodule "pack/tpope/start/obsession"]
+	path = pack/tpope/start/obsession
+	url = https://github.com/tpope/vim-obsession.git

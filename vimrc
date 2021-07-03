@@ -196,8 +196,8 @@ let g:splitjoin_ruby_hanging_args = 0
 let g:splitjoin_ruby_curly_braces = 0
 
 " EASTEREGG: my colorscheme
-let g:easteregg_use_italics = 1 " Use italics
-colorscheme easteregg           " Set my colorscheme
+let g:easteregg_use_italics = 1
+colorscheme easteregg
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 1
@@ -207,13 +207,14 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
 " NOTEWORTHY: Notes
 let g:noteworthy_libraries = {
       \   'code':     $HOME . '/workflow/notes/code',
-      \   'work':     $HOME . '/workflow/notes/public_strategies',
       \   'personal': $HOME . '/Documents/notes',
+      \   'work':     $HOME . '/workflow/notes/public_strategies'
       \ }
 let g:noteworthy_default_library = 'work'
 let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
+      \   $HOME . '/workflow/fe-backend': 'docs',
       \ }
 let g:noteworthy_dynamic_library_name = 'project'
 let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
@@ -233,6 +234,9 @@ let g:cdc_dirs = [
 let g:evanthegrayt_ps_projects = [
       \   $HOME . '/workflow/srae-pas-dashboard'
       \ ]
+
+let g:session_directory = $HOME . '/.vim/cache/sessions'
+let g:session_mksession_bang = 1
 
 " REST Console: Run curl through vim.
 let g:vrc_curl_opts = {'-i': '', '-s': ''}
