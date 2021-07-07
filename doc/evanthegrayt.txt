@@ -226,6 +226,9 @@ Use '<c-r>=' in insert or command mode to evaluate an expression in-place.
     <c-r>=getcwd()
 <
 
+Changes~
+Use "g;" and "g," to jump through the change list.
+
 Help docs I can never find~
 |mark-motions| to see how advanced jumps work.
 |filename-modifiers| to see how to manipulate a file path.
