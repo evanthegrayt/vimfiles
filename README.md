@@ -8,9 +8,9 @@ documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evantheg
 [installation instructions](#installation) to see how to recursively clone this
 repository and all of the plugins, and view the help documentation.
 
-I provide help documentation with this repository. It's mostly the custom key
-bindings I use, along with things I want to remember, but this would be useful
-to check out if you're going to clone this repository.
+I provide [help documentation](doc/evanthegrayt.txt) with this repository. It's
+mostly the custom key bindings I use, along with things I want to remember, but
+this would be useful to check out if you're going to clone this repository.
 
 Here's what my `vim` setup looks like. In this screenshot, you can see
 [Tagbar](https://github.com/majutsushi/tagbar.git),
