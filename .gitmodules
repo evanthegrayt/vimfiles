@@ -4,9 +4,6 @@
 [submodule "pack/plugins/start/composer"]
 	path = pack/plugins/start/composer
 	url = https://github.com/noahfrederick/vim-composer.git
-[submodule "pack/plugins/start/visual-increment"]
-	path = pack/plugins/start/visual-increment
-	url = https://github.com/vim-scripts/visual-increment.git
 [submodule "pack/plugins/start/gitgutter"]
 	path = pack/plugins/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
