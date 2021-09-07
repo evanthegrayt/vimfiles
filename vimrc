@@ -104,6 +104,7 @@ nnoremap <silent> <Leader>ts :setlocal spell! spelllang=en_us<CR>
 nnoremap <silent> <Leader>tn :call evanthegrayt#relative_number#Toggle()<CR>
 nnoremap <silent> <Leader>tm :call evanthegrayt#toggle#Mouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
+nnoremap <silent> <leader>dt :call evanthegrayt#rails#DescribeTable()<CR>
 
 " List all matches of word under cursor and prompt to jump to one.
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
