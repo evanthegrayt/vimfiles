@@ -254,6 +254,7 @@ Plugin/Helptag          URL~
 |update-plugins|          https://github.com/evanthegrayt/vim-update-plugins
 |lovehandle|              https://github.com/evanthegrayt/vim-lovehandle
 |noteworthy|              https://github.com/evanthegrayt/vim-noteworthy
+|branch-sessions|         https://github.com/evanthegrayt/vim-branch-sessions
 |bundler|                 https://github.com/tpope/vim-bundler
 |capslock|                https://github.com/tpope/vim-capslock
 *endwise*                 https://github.com/tpope/vim-endwise
@@ -279,6 +280,7 @@ Plugin/Helptag          URL~
 *pathogen*                https://github.com/tpope/vim-pathogen
 |speeddating|             https://github.com/tpope/vim-speeddating
 |obsession|               https://github.com/tpope/vim-obsession
+|fugitive-gitlab|         https://github.com/shumphrey/fugitive-gitlab.vim.git
 |laravel|                 https://github.com/noahfrederick/vim-laravel
 |composer|                https://github.com/noahfrederick/vim-composer
 |visual-increment|        https://github.com/vim-scripts/visual-increment
