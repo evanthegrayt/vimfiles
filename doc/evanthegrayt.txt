@@ -33,17 +33,17 @@ Plugins ................................................. |evanthegrayt-plugins|
 
 SETTINGS                                                 *evanthegrayt-settings*
 
-Most of my personal settings are kept in my vimrc file. Vim 7.4+ allows you to
-keep your vimrc file as "~/.vim/vimrc", instead of "~/.vimrc". For this reason,
-my vimrc is kept in the root of this repository.  If you're using a version of
-vim that's less than 7.4, you'll need to link it to "~/.vimrc". On Mac/Linux:
->
-    ln -s ~/.vim/vimrc ~/.vimrc
-<
+Most of my personal settings are kept in my vimrc file. Modern vim allows you
+to keep your vimrc file as "~/.vim/vimrc", instead of "~/.vimrc". For this
+reason, my vimrc is kept in the root of this repository.
 
 For settings that require more advanced vimscript, check in the "plugin/" and
 "autoload/" directories. They contain commands and functions that are like
 mini-plugins. These are described in |evanthegrayt-mappings-and-commands|.
+
+Please note that this repository used to support versions of vim less than 8.0.
+This is no longer the case. If you're using an old version of vim, please
+upgrade to 8.0+.
 
 ================================================================================
 

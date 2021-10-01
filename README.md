@@ -34,13 +34,6 @@ clone the plugins I use as well.
 git clone --recursive https://github.com/evanthegrayt/vimfiles.git ~/.vim
 ```
 
-Once cloned, if your vim version is less than 7.4, you'll need to link the
-`vimrc` file to your home directory, as a dotfile.
-
-```bash
-ln -s ~/.vim/vimrc ~/.vimrc
-```
-
 I highly recommend generating the helptags and reading [the
 documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt)
 to see my custom commands and mappings.
@@ -50,10 +43,8 @@ to see my custom commands and mappings.
 :help evanthegrayt
 ```
 
-Be forewarned that I use `vim8` with packages, but I've configured this
-repository to work with older versions, using
-[pathogen](https://github.com/tpope/vim-pathogen). Because of this, plugins will
-be located in `pack/plugins/{start,opt}`, NOT `bundle/`.
+Be forewarned that I use `vim8` with packages, so plugins are located in
+`pack/`, not `bundle/`.
 
 # FAQ
 At least, I assume these would be frequently asked...
@@ -93,9 +84,8 @@ directories.
 You probably didn't clone with the `--recursive` option, as stated above.
 
 ### Why isn't my vimrc being loaded?
-You're probably running an older version of `vim`, which doesn't know to check
-the `.vim` directory for a `vimrc` file. As stated above, you need to link it to
-your home directory.
+You're probably running an older version of `vim`. This setup is now only
+compatible with version of vim running 8.0 or higher.
 
 ## Reporting Bugs
 These are just my config files, so there shouldn't be (m)any bugs, but if you

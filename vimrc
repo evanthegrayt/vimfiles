@@ -20,7 +20,11 @@ syntax   enable
 "}}}
 
 " RUNTIME PATH: Load the things. {{{1
-packadd matchit
+if v:version < 800
+  echoerr 'Versions less than 8.0 no longer supported. Please upgrade vim.'
+else
+  packadd matchit
+endif
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
@@ -236,8 +240,8 @@ let g:evanthegrayt_ps_projects = [
       \   $HOME . '/workflow/srae-pas-dashboard'
       \ ]
 
-let g:session_directory = $HOME . '/.vim/cache/sessions'
-let g:session_mksession_bang = 1
+let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
+let g:branch_session_mksession_bang = 1
 
 " REST Console: Run curl through vim.
 let g:vrc_curl_opts = {'-i': '', '-s': ''}
