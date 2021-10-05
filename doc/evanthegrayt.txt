@@ -88,9 +88,6 @@ Custom Commands~
 
 Custom command definitions, unrelated to a plugin.
 
-                                                                     *:SynStack*
-:SynStack                   Get the syntax stack for the word under the cursor
-
                                                                      *:Modeline*
 :[{count}]Modeline[!]       Append a modeline to the top of the current file. If
                             ! is supplied, add to end of the file. If {count} is
