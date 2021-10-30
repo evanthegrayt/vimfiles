@@ -130,9 +130,7 @@ let g:SuperTabDefaultCompletionType = 'context'
 augroup vimrc_supertab
   autocmd!
   autocmd FileType *
-        \ if &omnifunc != '' |
-        \   call SuperTabChain(&omnifunc, "<c-p>") |
-        \ endif
+        \ if &omnifunc != '' | call SuperTabChain(&omnifunc, "<c-p>") | endif
 augroup END
 
 " RUBOCOP: debug ruby
@@ -249,9 +247,9 @@ let g:vrc_set_default_mapping = 0
 nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 
 " Lovehandle: Database URL manager.
-let g:lovehandle_projects = [
-      \   $HOME . '/workflow/bluegrass'
-      \ ]
+let g:lovehandle_projects = {
+      \   $HOME . '/workflow/bluegrass': '.vimrc'
+      \ }
 "}}}
 
 " GUI: GUI-specific settings {{{
