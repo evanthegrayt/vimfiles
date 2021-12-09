@@ -220,3 +220,6 @@
 [submodule "pack/plugins/start/fugitive-gitlab"]
 	path = pack/plugins/start/fugitive-gitlab
 	url = https://github.com/shumphrey/fugitive-gitlab.vim.git
+[submodule "pack/plugins/start/elixir"]
+	path = pack/plugins/start/elixir
+	url = https://github.com/elixir-editors/vim-elixir

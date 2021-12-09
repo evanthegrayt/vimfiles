@@ -231,7 +231,7 @@ let g:cdc_dirs = [
       \   $HOME . '/workflow',
       \   $HOME . '/workflow/vagrant-ofa/src',
       \   $HOME . '/.vim/pack/evanthegrayt/start',
-      \   $HOME . '/.vim/pack/public-strategies/start'
+      \   $HOME . '/.vim/pack/public-strategies/opt'
       \ ]
 
 let g:evanthegrayt_ps_projects = [
