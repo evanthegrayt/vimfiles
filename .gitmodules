@@ -223,3 +223,6 @@
 [submodule "pack/plugins/start/elixir"]
 	path = pack/plugins/start/elixir
 	url = https://github.com/elixir-editors/vim-elixir
+[submodule "pack/plugins/start/textobj-erb"]
+	path = pack/plugins/start/textobj-erb
+	url = https://github.com/whatyouhide/vim-textobj-erb.git

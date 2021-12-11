@@ -310,8 +310,9 @@ Plugin/Helptag          URL~
 |rainbow|                 https://github.com/luochen1990/rainbow
 *syntax-extra*            https://github.com/justinmk/vim-syntax-extra
 *tagbar-markdown*         https://github.com/lvht/tagbar-markdown
-|textobj-rubyblock|       https://github.com/nelstrom/vim-textobj-rubyblock
 |textobj-user|            https://github.com/kana/vim-textobj-user
+|textobj-rubyblock|       https://github.com/nelstrom/vim-textobj-rubyblock
+*textobj-erb*             https://github.com/whatyouhide/vim-textobj-erb
 |indent-object|           https://github.com/michaeljsmith/vim-indent-object
 |supertab|                https://github.com/ervandew/supertab
 |vim-jsx-pretty|          https://github.com/MaxMEllon/vim-jsx-pretty
