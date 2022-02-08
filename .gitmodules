@@ -226,3 +226,6 @@
 [submodule "pack/plugins/start/textobj-erb"]
 	path = pack/plugins/start/textobj-erb
 	url = https://github.com/whatyouhide/vim-textobj-erb.git
+[submodule "pack/plugins/start/move"]
+	path = pack/plugins/start/move
+	url = https://github.com/matze/vim-move.git

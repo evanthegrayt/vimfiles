@@ -86,12 +86,6 @@ nnoremap <silent> <Leader>G :call evanthegrayt#movement#BottomOfFileSameColumn()
 inoremap <silent> <c-g>u <esc>guawea
 inoremap <silent> <c-g>U <esc>gUawea
 
-" Textmate Line Movement: Remap Ctrl + j/k move line or selection up/down
-nnoremap <silent> <C-j> :m .+1<CR>==
-nnoremap <silent> <C-k> :m .-2<CR>==
-vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
-vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
-
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <Leader>fi gg=G``
 
@@ -224,6 +218,9 @@ let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
 
 " RI: Browse ruby's RI documentation through vim.
 let g:ri_no_mappings = 1
+
+" Move: Move lines and selections.
+let g:move_key_modifier = 'C'
 
 " CDC: Easily change directory. Not an actual plugin.
 let g:cdc_dirs = [
