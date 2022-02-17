@@ -77,11 +77,6 @@ if exists('+spelloptions') | set spelloptions=camel | endif
 
 " MAPPINGS: Custom key mappings {{{
 
-" Go to the top/bottom of file, while staying in the current column. I've
-" tried `:set nostartofline` but it's very disorienting.
-nnoremap <silent> <Leader>gg :call evanthegrayt#movement#TopOfFileSameColumn()<CR>
-nnoremap <silent> <Leader>G :call evanthegrayt#movement#BottomOfFileSameColumn()<CR>
-
 " Up/Downcase the current word while in insert mode.
 inoremap <silent> <c-g>u <esc>guawea
 inoremap <silent> <c-g>U <esc>gUawea
@@ -205,9 +200,10 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
 let g:noteworthy_libraries = {
       \   'code':     $HOME . '/workflow/notes/code',
       \   'personal': $HOME . '/Documents/notes',
-      \   'work':     $HOME . '/workflow/notes/public_strategies'
+      \   'ps':       $HOME . '/workflow/notes/public_strategies',
+      \   'wm':       $HOME . '/workflow/notes/weedmaps'
       \ }
-let g:noteworthy_default_library = 'work'
+let g:noteworthy_default_library = 'wm'
 let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
