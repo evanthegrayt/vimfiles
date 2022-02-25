@@ -193,8 +193,12 @@ colorscheme easteregg
 
 " GUTENTAGS: Tags manager
 let g:gutentags_enabled = 1
+" TODO: For some reason, rspec files make ctags hang?
 let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
-      \ '*.css', '*.html', '*.svg', '*.json', '*.xml']
+      \ '*.css', '*.html', '*.svg', '*.json', '*.xml', '*_spec.rb']
+if executable('/opt/homebrew/bin/ctags')
+  let g:gutentags_ctags_executable='/opt/homebrew/bin/ctags'
+endif
 
 " NOTEWORTHY: Notes
 let g:noteworthy_libraries = {
