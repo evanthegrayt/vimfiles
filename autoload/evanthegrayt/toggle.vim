@@ -12,19 +12,19 @@ function! evanthegrayt#toggle#Mouse() abort
   if !exists("l:old_mouse")
     let l:old_mouse = "a"
   endif
-  if &mouse == ""
+  if empty(&mouse)
     let &mouse = l:old_mouse
     echo "Mouse is for Vim (" . &mouse . ")."
   else
     let l:old_mouse = &mouse
-    let &mouse=""
+    set mouse=
     echo "Mouse is for terminal."
   endif
 endfunction
 
 " Toggle a wide colorcolumn with \TC
 function! evanthegrayt#toggle#ColorColumnWide(...) abort
-  if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
+  if empty(&colorcolumn) || (exists('a:1') && a:1 == 1)
     let &colorcolumn=join(range(81,100),",") .
           \ ',' . join(range(102,120),",") .
           \ ',' . join(range(122,272),",")
@@ -36,7 +36,7 @@ endfunction
 
 " Toggle normal colorcolumns
 function! evanthegrayt#toggle#ColorColumn(...) abort
-  if &colorcolumn == "" || (exists('a:1') && a:1 == 1)
+  if empty(&colorcolumn) || (exists('a:1') && a:1 == 1)
     set colorcolumn=81,101,121
     setlocal nowrap
   else

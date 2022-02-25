@@ -119,7 +119,7 @@ let g:SuperTabDefaultCompletionType = 'context'
 augroup vimrc_supertab
   autocmd!
   autocmd FileType *
-        \ if &omnifunc != '' | call SuperTabChain(&omnifunc, "<c-p>") | endif
+        \ if !empty(&omnifunc) | call SuperTabChain(&omnifunc, "<c-p>") | endif
 augroup END
 
 " RUBOCOP: debug ruby
@@ -273,9 +273,9 @@ augroup vimrc
   " Turn off auto-comments on return.
   autocmd FileType * setlocal fo-=c fo-=r fo-=o
   autocmd BufWritePost *
-        \ if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
+        \ if !(empty(expand('%')) || &buftype =~ 'nofile') | mkview | endif
   autocmd BufRead *
-        \ if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+        \ if !(empty(expand('%')) || &buftype =~ 'nofile') | silent loadview | endif
   " Global syntax hightligting for NOTE, etc. in comments.
   autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
         \ containedin=.*Comment,vimCommentTitle
