@@ -169,9 +169,6 @@
 [submodule "pack/plugins/start/syntax-extra"]
 	path = pack/plugins/start/syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra.git
-[submodule "pack/plugins/start/tagbar-markdown"]
-	path = pack/plugins/start/tagbar-markdown
-	url = https://github.com/lvht/tagbar-markdown.git
 [submodule "pack/plugins/start/textobj-rubyblock"]
 	path = pack/plugins/start/textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git

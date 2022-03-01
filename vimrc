@@ -159,6 +159,9 @@ let g:gitgutter_preview_win_floating = 1
 
 " TAGBAR: show classes/methods/functions in side window
 nnoremap <silent> <Leader>TT :Tagbar<CR>
+if executable('/opt/homebrew/bin/ctags')
+  let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
+endif
 
 " UNDOTREE: Visualize the undo tree
 if has("persistent_undo")
