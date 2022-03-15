@@ -226,3 +226,6 @@
 [submodule "pack/plugins/start/move"]
 	path = pack/plugins/start/move
 	url = https://github.com/matze/vim-move.git
+[submodule "pack/plugins/start/graphql"]
+	path = pack/plugins/start/graphql
+	url = https://github.com/jparise/vim-graphql.git

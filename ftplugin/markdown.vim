@@ -5,5 +5,7 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_folding_disabled     = 1
 
 " PREVIM: live preview markdown, etc.
-let g:previm_open_cmd =
-      \ system('uname -s') =~# 'Darwin' ? 'open -a Firefox' : 'firefox'
+if !exists('g:previm_open_cmd')
+  let g:previm_open_cmd =
+        \ system('uname -s') =~# 'Darwin' ? 'open -a Firefox' : 'firefox'
+endif

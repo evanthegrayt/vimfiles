@@ -289,6 +289,7 @@ Plugin/Helptag          URL~
 |ft-csv|                  https://github.com/chrisbra/csv.vim
 |fugitive-gitlab|         https://github.com/shumphrey/fugitive-gitlab.vim.git
 |gitgutter|               https://github.com/airblade/vim-gitgutter
+|graphql|                 https://github.com/jparise/vim-graphql.git
 |gutentags|               https://github.com/ludovicchabant/vim-gutentags
 |haskell-vim.txt|         https://github.com/neovimhaskell/haskell-vim
 |indent-object|           https://github.com/michaeljsmith/vim-indent-object
