@@ -9,7 +9,7 @@
 " Read my help documentation for information about this repository.            "
 " :help evanthegrayt                                                           "
 "                                                                              "
-" NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zc` to close. "
+" NOTE: Type `zo` on a fold to open it, `zn` to open all folds. `zN` to close. "
 "=============================================================================="
 
 " FILETYPE AND SYNTAX: {{{1
@@ -201,6 +201,9 @@ let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
       \ '*.css', '*.html', '*.svg', '*.json', '*.xml', '*_spec.rb']
 if executable('/opt/homebrew/bin/ctags')
   let g:gutentags_ctags_executable='/opt/homebrew/bin/ctags'
+endif
+if executable('ripper-tags')
+  let g:gutentags_ctags_executable_ruby='ripper-tags'
 endif
 
 " NOTEWORTHY: Notes

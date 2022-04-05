@@ -80,6 +80,7 @@ v     ctrl-j     Move current selection down a line
 n     \p         Preview file in browser (html only)
 i     ctrl-g u   Downcase the word currently being typed
 i     ctrl-g U   Upcase the word currently being typed
+n     \bp        Insert a pry breakpoint above current line (ruby only)
 
                                                   *evanthegrayt-custom-commands*
 Custom Commands~
@@ -211,6 +212,15 @@ Find all methods with two arguments and swap the arguments.
     :%s/\v^\s*def\s+\w+\(\s*\zs(\w+)\s*,\s*(\w+)\ze\s*\)/\2, \1
 <
 Use "gn" to visually select the next match, and "gN" to select the previous.
+
+Not necessarily vim-specific, but I always forget lookarounds.
+Further reading: http://www.rexegg.com/regex-lookarounds.html
+>
+    (?=foo)  | Positive Lookahead
+    (?<=foo) | Positive Lookbehind
+    (?!foo)  | Negative Lookahead
+    (?<!foo) | Negative Lookbehind
+<
 
 Registers~
 Use your most recent yank/delete in insert/command mode. For example, press / to
