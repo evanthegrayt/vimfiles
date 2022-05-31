@@ -229,3 +229,9 @@
 [submodule "pack/plugins/start/graphql"]
 	path = pack/plugins/start/graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "pack/plugins/start/graphql"]
+	path = pack/plugins/start/graphql
+	url = https://github.com/jparise/vim-graphql.git
+[submodule "pack/plugins/start/replace_with_register"]
+	path = pack/plugins/start/replace_with_register
+	url = https://github.com/inkarkat/vim-ReplaceWithRegister.git

@@ -311,6 +311,7 @@ Plugin/Helptag          URL~
 *php-complete*            https://github.com/shawncplus/phpcomplete.vim
 |previm|                  https://github.com/previm/previm
 |rainbow|                 https://github.com/luochen1990/rainbow
+|ReplaceWithRegister.vim| https://github.com/inkarkat/vim-ReplaceWithRegister
 |reply|                   https://github.com/rhysd/reply.vim
 *ri*                      https://github.com/danchoi/ri.vim
 |rooter|                  https://github.com/airblade/vim-rooter
