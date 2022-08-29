@@ -213,7 +213,7 @@ let g:noteworthy_libraries = {
       \   'ps':       $HOME . '/workflow/notes/public_strategies',
       \   'wm':       $HOME . '/workflow/notes/weedmaps'
       \ }
-let g:noteworthy_default_library = 'wm'
+let g:noteworthy_default_library = 'ps'
 let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
@@ -235,10 +235,6 @@ let g:cdc_dirs = [
       \   $HOME . '/workflow/vagrant-ofa/src',
       \   $HOME . '/.vim/pack/evanthegrayt/start',
       \   $HOME . '/.vim/pack/public-strategies/opt'
-      \ ]
-
-let g:evanthegrayt_ps_projects = [
-      \   $HOME . '/workflow/srae-pas-dashboard'
       \ ]
 
 let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
