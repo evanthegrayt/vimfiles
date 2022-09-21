@@ -28,6 +28,7 @@ endif
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set showmatch
 set formatoptions+=j
 set diffopt+=iwhite
 set viewoptions-=options
