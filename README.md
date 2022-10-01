@@ -4,7 +4,7 @@ All of my vim runtime files. Here be dragons.
 All of the plugins that I use are kept as git submodules. I mostly work with
 Ruby on Rails, so a lot of my plugins are geared towards a Rails workflow. You
 can view all plugins at the bottom of the [help
-documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L215). See the
+documentation](https://github.com/evanthegrayt/vimfiles/blob/master/doc/evanthegrayt.txt#L247). See the
 [installation instructions](#installation) to see how to recursively clone this
 repository and all of the plugins, and view the help documentation.
 
@@ -15,7 +15,7 @@ this would be useful to check out if you're going to clone this repository.
 Here's what my `vim` setup looks like. In this screenshot, you can see
 [Tagbar](https://github.com/majutsushi/tagbar.git),
 [Easteregg Colorscheme](https://github.com/evanthegrayt/vim-easteregg.git), and
-[Airline with a bunch of integrated plugins](https://github.com/vim-airline/vim-airline.git).
+[Airline](https://github.com/vim-airline/vim-airline.git) with a bunch of integrated plugins.
 I'm using [iTerm2](https://www.iterm2.com/) on MacOS, with
 [italics enabled](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3),
 and with the [Hack font](https://sourcefoundry.org/hack/).
@@ -27,8 +27,8 @@ The steps below show how to clone the repository, but if you're going to use
 this as your personal setup, I recommend forking the repository and maintaining
 your own copy.
 
-Clone (or fork) the repository. Make sure to use `--recursive` if you want to
-clone the plugins I use as well.
+Clone the repository. Make sure to use `--recursive` if you want to clone the
+plugins I use as well.
 
 ```bash
 git clone --recursive https://github.com/evanthegrayt/vimfiles.git ~/.vim
