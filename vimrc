@@ -54,7 +54,6 @@ set autoindent
 set smartindent
 set title
 set history=1000
-set backup
 set wrapscan
 set nowrap
 set linebreak
@@ -144,7 +143,11 @@ let g:airline#extensions#whitespace#enabled = 1
 
 " ALE: Asynchronous Linting Engine
 let g:ale_set_highlights = 0
-let g:ale_fixers = { 'ruby': 'rubocop' }
+if executable('standardrb')
+  let g:ale_fixers = { 'ruby': 'standardrb' }
+  let g:ale_ruby_rubocop_executable = 'standardrb'
+endif
+
 " let g:ale_completion_enabled = 1
 
 " INDENT LINE: draw lines every indention level
@@ -166,8 +169,8 @@ endif
 
 " UNDOTREE: Visualize the undo tree
 if has("persistent_undo")
-  set undodir=$HOME."/.vim/cache"
   set undofile
+  let &undodir = $HOME . "/.vim/cache/undo//"
 endif
 
 " CTRLP: project file search
@@ -190,6 +193,7 @@ let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
 " SPLITJOIN: Split/Join lines of code syntastically
 let g:splitjoin_ruby_hanging_args = 0
 let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_curly_brace_padding = 0
 
 " EASTEREGG: my colorscheme
 let g:easteregg_use_italics = 1
@@ -244,7 +248,12 @@ let g:branch_session_mksession_bang = 1
 " REST Console: Run curl through vim.
 let g:vrc_curl_opts = {'-i': '', '-s': ''}
 let g:vrc_set_default_mapping = 0
+let g:vrc_auto_format_response_patterns = {
+      \   'json': "ruby -e \"require 'json'; puts JSON.pretty_generate(JSON.parse(ARGF.read))\"",
+      \   'xml': 'xmllint --format -',
+      \ }
 nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
+
 
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {
