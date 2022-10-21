@@ -259,6 +259,8 @@ nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 let g:lovehandle_projects = {
       \   $HOME . '/workflow/bluegrass': '.vimrc'
       \ }
+
+let g:evanthegrayt_jira_board_url = 'https://publicstrategies.atlassian.net'
 "}}}
 
 " GUI: GUI-specific settings {{{
@@ -290,7 +292,7 @@ augroup vimrc
   autocmd FileType * setlocal fo-=c fo-=r fo-=o
   autocmd BufWritePost *
         \ if !(empty(expand('%')) || &buftype =~ 'nofile') | mkview | endif
-  autocmd BufRead *
+  autocmd BufReadPost *
         \ if !(empty(expand('%')) || &buftype =~ 'nofile') | silent loadview | endif
   " Global syntax hightligting for NOTE, etc. in comments.
   autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
