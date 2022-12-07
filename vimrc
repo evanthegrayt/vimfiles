@@ -232,6 +232,7 @@ let g:ri_no_mappings = 1
 
 " Move: Move lines and selections.
 let g:move_key_modifier = 'C'
+let g:move_key_modifier_visualmode = 'C'
 
 " CDC: Easily change directory. Not an actual plugin.
 let g:cdc_dirs = [
@@ -243,7 +244,7 @@ let g:cdc_dirs = [
       \ ]
 
 let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
-let g:branch_session_mksession_bang = 1
+let g:branch_sessions_mksession_bang = 1
 
 " REST Console: Run curl through vim.
 let g:vrc_curl_opts = {'-i': '', '-s': ''}

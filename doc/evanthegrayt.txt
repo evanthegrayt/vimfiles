@@ -213,13 +213,22 @@ Find all methods with two arguments and swap the arguments.
 <
 Use "gn" to visually select the next match, and "gN" to select the previous.
 
-Not necessarily vim-specific, but I always forget lookarounds.
-Further reading: http://www.rexegg.com/regex-lookarounds.html
+Lookarounds~
+Further reading:
+https://www.rexegg.com/regex-lookarounds.html
+https://vim.fandom.com/wiki/Regex_lookahead_and_lookbehind
 >
-    (?=foo)  | Positive Lookahead
-    (?<=foo) | Positive Lookbehind
-    (?!foo)  | Negative Lookahead
-    (?<!foo) | Negative Lookbehind
+                        | Perl     | Vim
+    Positive Lookahead  | (?=foo)  | (atom)\@=
+    Positive Lookbehind | (?<=foo) | (atom)\@<=
+    Negative Lookahead  | (?!foo)  | (atom)\@!
+    Negative Lookbehind | (?<!foo) | (atom)\@<!
+<
+
+Lookarounds should be fairly uncommon in vimscript due to the "\zs" and "\ze"
+operators. For example, to find all non-leading double whitespace:
+>
+    \v\S\zs\s{2,}
 <
 
 Registers~
