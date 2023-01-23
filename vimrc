@@ -82,20 +82,20 @@ inoremap <silent> <c-g>u <esc>guawea
 inoremap <silent> <c-g>U <esc>gUawea
 
 " Indenting: `\fi` to fix the whole file's indenting
-nnoremap <silent> <Leader>fi gg=G``
+nnoremap <silent> <leader>fi gg=G``
 
 " Trailing Spaces: hit `\st` to remove all trailing whitespace
-nnoremap <silent> <Leader>st :%s/\s\+$//<CR><c-o>
+nnoremap <silent> <leader>st :%s/\s\+$//<CR><c-o>
 
 " Yanking: Make Y behave like D and C
 nnoremap Y y$
 
 " Function Toggles: Mappings for functions in autoload/evanthegrayt.vim
-nnoremap <silent> <Leader>tc :call evanthegrayt#toggle#Conceal()<CR>
-nnoremap <silent> <Leader>tC :call evanthegrayt#toggle#ColorColumn()<CR>
-nnoremap <silent> <Leader>ts :setlocal spell! spelllang=en_us<CR>
-nnoremap <silent> <Leader>tn :call evanthegrayt#relative_number#Toggle()<CR>
-nnoremap <silent> <Leader>tm :call evanthegrayt#toggle#Mouse() <CR>
+nnoremap <silent> <leader>tc :call evanthegrayt#toggle#Conceal()<CR>
+nnoremap <silent> <leader>tC :call evanthegrayt#toggle#ColorColumn()<CR>
+nnoremap <silent> <leader>ts :setlocal spell! spelllang=en_us<CR>
+nnoremap <silent> <leader>tn :call evanthegrayt#relative_number#Toggle()<CR>
+nnoremap <silent> <leader>tm :call evanthegrayt#toggle#Mouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
 nnoremap <silent> <leader>dt :call evanthegrayt#rails#DescribeTable()<CR>
 
@@ -112,7 +112,7 @@ nnoremap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
 " RAINBOW: Different color parens
 let g:rainbow_active = 0
-nnoremap <silent> <Leader>rt :RainbowToggle<CR>
+nnoremap <silent> <leader>rt :RainbowToggle<CR>
 
 " SUPERTAB: tab auto-completion when in insert-mode
 let g:SuperTabDefaultCompletionType = 'context'
@@ -154,15 +154,15 @@ endif
 let g:indentLine_color_term = 239
 let g:indentLine_enabled    = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-nnoremap <silent> <Leader>it :IndentLinesToggle<CR>
+nnoremap <silent> <leader>it :IndentLinesToggle<CR>
 
 " GITGUTTER: show diff in gutter
-nnoremap <silent> <Leader>gt :GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>gu :GitGutterUndoHunk<CR>
+nnoremap <silent> <leader>gt :GitGutterBufferToggle<CR>
+nnoremap <silent> <leader>gu :GitGutterUndoHunk<CR>
 let g:gitgutter_preview_win_floating = 1
 
 " TAGBAR: show classes/methods/functions in side window
-nnoremap <silent> <Leader>TT :Tagbar<CR>
+nnoremap <silent> <leader>TT :Tagbar<CR>
 if executable('/opt/homebrew/bin/ctags')
   let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 endif
@@ -178,10 +178,10 @@ let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public\|tmp'
 let g:ctrlp_cache_dir = $HOME . "/.vim/cache/ctrlp"
-nnoremap <silent> <Leader>be :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>bm :CtrlPMRUFiles<CR>
-nnoremap <silent> <Leader>bt :CtrlPTag<CR>
-nnoremap <silent> <Leader>bb :CtrlPBufTag<CR>
+nnoremap <silent> <leader>be :CtrlPBuffer<CR>
+nnoremap <silent> <leader>bm :CtrlPMRUFiles<CR>
+nnoremap <silent> <leader>bt :CtrlPTag<CR>
+nnoremap <silent> <leader>bb :CtrlPBufTag<CR>
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
@@ -253,7 +253,7 @@ let g:vrc_auto_format_response_patterns = {
       \   'json': "ruby -e \"require 'json'; puts JSON.pretty_generate(JSON.parse(ARGF.read))\"",
       \   'xml': 'xmllint --format -',
       \ }
-nnoremap <silent> <Leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
+nnoremap <silent> <leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 
 
 " Lovehandle: Database URL manager.
@@ -261,7 +261,10 @@ let g:lovehandle_projects = {
       \   $HOME . '/workflow/bluegrass': '.vimrc'
       \ }
 
+" Jira: Open Jira issues in a browser.
 let g:evanthegrayt_jira_board_url = 'https://publicstrategies.atlassian.net'
+let g:evanthegrayt_jira_keywords = ['JIRA', 'ISSUE', 'TODO']
+nnoremap <silent> <leader>jo :Jira!<cr>
 "}}}
 
 " GUI: GUI-specific settings {{{
