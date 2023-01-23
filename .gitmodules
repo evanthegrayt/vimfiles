@@ -235,3 +235,6 @@
 [submodule "pack/plugins/start/replace_with_register"]
 	path = pack/plugins/start/replace_with_register
 	url = https://github.com/inkarkat/vim-ReplaceWithRegister.git
+[submodule "pack/plugins/start/cpp-modern"]
+	path = pack/plugins/start/cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern.git
