@@ -258,7 +258,7 @@ nnoremap <silent> <leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
 
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {
-      \   $HOME . '/workflow/bluegrass': '.vimrc'
+      \   $HOME . '/workflow/localite-backend': '.vimrc'
       \ }
 
 " Jira: Open Jira issues in a browser.
@@ -306,7 +306,7 @@ augroup END
 
 augroup skeletons
   autocmd!
-  autocmd BufNewFile README.md 0r ~/skeletons/readme.md
+  autocmd BufNewFile README.md 0r ~/.vim/skeletons/readme.md
 augroup END
 "}}}
 
