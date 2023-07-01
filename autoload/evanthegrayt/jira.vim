@@ -1,3 +1,6 @@
+""
+" Open a Jira issue either by passing it as an argument, by prefacing your git
+" branch with the issue number, or by seaching the current line. :h :Jira
 function! evanthegrayt#jira#OpenIssue(current_line, ...) abort
   if !exists('g:evanthegrayt_jira_board_url')
     return evanthegrayt#Error('You must set g:evanthegrayt_jira_board_url')
@@ -18,8 +21,7 @@ function! evanthegrayt#jira#OpenIssue(current_line, ...) abort
     if a:0
       let l:issue_number = matchstr(a:1, l:issue_regex)
       if empty(l:issue_number)
-        call evanthegrayt#Error('Invalid issue number')
-        return
+        return evanthegrayt#Error('Invalid issue number')
       endif
     else
       let l:issue_number = matchstr(evanthegrayt#git#Branch(), l:issue_regex)
