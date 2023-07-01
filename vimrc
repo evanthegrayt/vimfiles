@@ -299,8 +299,9 @@ augroup vimrc
   autocmd BufReadPost *
         \ if !(empty(expand('%')) || &buftype =~ 'nofile') | silent loadview | endif
   " Global syntax hightligting for NOTE, etc. in comments.
-  autocmd Syntax * syn match MyTodo /\v<(HACK|FIXME|NOTE|TODO)/
-        \ containedin=.*Comment,vimCommentTitle
+  autocmd Syntax * syntax match MyTodo
+        \ "\<\(HACK\|FIXME\|NOTE\|TODO\|JIRA\|ISSUE\)\>"
+        \ containedin=.*Comment.* contained
   hi def link MyTodo Todo
 augroup END
 
