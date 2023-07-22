@@ -112,12 +112,9 @@ Custom command definitions, unrelated to a plugin.
                             case-insensitive.
 
                                                                      *:Modeline*
-:[{count}]Modeline[!]       Append a modeline to the top of the current file. If
-                            ! is supplied, add to end of the file. If {count} is
-                            supplied, the modeline will be placed at the
-                            {count} line from the top of the file. When ! is
-                            present, it will be placed at the {count} line from
-                            the bottom of the file.
+:[{count}]Modeline[!]       Add a modeline {count} lines from the top of the
+                            file. If ! is supplied, add a modeline {count}
+                            lines from the end of the file.
 
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
