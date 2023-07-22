@@ -238,6 +238,11 @@ https://vim.fandom.com/wiki/Regex_lookahead_and_lookbehind
     Negative Lookbehind | (?<!foo) | (atom)\@<!
 <
 
+For example, to find function definitions that are not followed by a "!":
+>
+    \v^function(!)@!
+<
+
 Lookarounds should be fairly uncommon in vimscript due to the "\zs" and "\ze"
 operators. For example, to find all non-leading double whitespace:
 >
