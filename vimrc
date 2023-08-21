@@ -16,7 +16,7 @@
 filetype on
 filetype plugin on
 filetype indent on
-syntax   enable
+syntax enable
 "}}}
 
 " RUNTIME PATH: Load the things. {{{1
@@ -71,7 +71,12 @@ set lazyredraw
 set backupdir=~/.vim/backup
 set viminfo+=n~/.vim/cache/viminfo
 set directory=~/.vim/tmp
-if executable('ag') | set grepprg=ag\ --nogroup\ --nocolor | endif
+if executable('ugrep')
+    set grepprg=ugrep\ -RInk\ -j\ -u\ --tabs=1\ --ignore-files
+    set grepformat=%f:%l:%c:%m,%f+%l+%c+%m,%-G%f\\\|%l\\\|%c\\\|%m
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
 if exists('+spelloptions') | set spelloptions=camel | endif
 "}}}
 
@@ -131,14 +136,14 @@ let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
 
 " AIRLINE: advanced status line
 if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
-let g:airline_symbols.readonly              = '±'
-let g:airline_symbols.linenr                = '¶'
-let g:airline_symbols.paste                 = 'Þ'
-let g:airline_symbols.whitespace            = '!'
-let g:airline#extensions#ale#enabled        = 1
-let g:airline#extensions#branch#enabled     = 1
-let g:airline_detect_paste                  = 1
-let g:airline_theme                         = 'easteregg'
+let g:airline_symbols.readonly = '±'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.whitespace = '!'
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_detect_paste = 1
+let g:airline_theme = 'easteregg'
 let g:airline#extensions#whitespace#enabled = 1
 
 " ALE: Asynchronous Linting Engine
@@ -152,7 +157,7 @@ endif
 
 " INDENT LINE: draw lines every indention level
 let g:indentLine_color_term = 239
-let g:indentLine_enabled    = 1
+let g:indentLine_enabled = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <leader>it :IndentLinesToggle<CR>
 
@@ -205,18 +210,18 @@ let g:gutentags_enabled = 1
 let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
       \ '*.css', '*.html', '*.svg', '*.json', '*.xml', '*_spec.rb']
 if executable('/opt/homebrew/bin/ctags')
-  let g:gutentags_ctags_executable='/opt/homebrew/bin/ctags'
+  let g:gutentags_ctags_executable = '/opt/homebrew/bin/ctags'
 endif
 if executable('ripper-tags')
-  let g:gutentags_ctags_executable_ruby='ripper-tags'
+  let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 endif
 
 " NOTEWORTHY: Notes
 let g:noteworthy_libraries = {
-      \   'code':     $HOME . '/workflow/notes/code',
+      \   'code': $HOME . '/workflow/notes/code',
       \   'personal': $HOME . '/Documents/notes',
-      \   'ps':       $HOME . '/workflow/notes/public_strategies',
-      \   'wm':       $HOME . '/workflow/notes/weedmaps'
+      \   'ps': $HOME . '/workflow/notes/public_strategies',
+      \   'wm': $HOME . '/workflow/notes/weedmaps'
       \ }
 let g:noteworthy_default_library = 'ps'
 let g:noteworthy_dynamic_libraries = {
@@ -254,7 +259,6 @@ let g:vrc_auto_format_response_patterns = {
       \   'xml': 'xmllint --format -',
       \ }
 nnoremap <silent> <leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
-
 
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {

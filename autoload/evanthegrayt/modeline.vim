@@ -12,7 +12,9 @@ function! evanthegrayt#modeline#Add(bang, count) abort
         \ &filetype, &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
   let l:line = a:bang ? (line('$') - a:count) : a:count
   call append(l:line, printf(&commentstring, l:modeline))
-  let l:phrase = a:count ? (a:count . ' lines from') : 'to'
-  let l:top_or_bottom = a:bang ? 'bottom' : 'top'
-  echo 'Modeline added ' . l:phrase . ' ' . l:top_or_bottom . ' of file.'
+  echo 'Modeline added '
+        \ . (a:count ? (a:count . ' lines from') : 'to')
+        \ . ' '
+        \ . (a:bang ? 'bottom' : 'top')
+        \ . ' of file.'
 endfunction

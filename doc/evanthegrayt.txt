@@ -114,7 +114,7 @@ Custom command definitions, unrelated to a plugin.
                                                                      *:Modeline*
 :[{count}]Modeline[!]       Add a modeline {count} lines from the top of the
                             file. If ! is supplied, add a modeline {count}
-                            lines from the end of the file.
+                            lines from the bottom of the file.
 
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
