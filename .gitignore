@@ -7,5 +7,6 @@ tmp/*
 !tmp/.gitkeep
 cache/*
 !cache/.gitkeep
+!cache/undo/.gitkeep
 tags
 pack/public-strategies/
