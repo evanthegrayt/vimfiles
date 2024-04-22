@@ -28,6 +28,7 @@ endif
 "}}}
 
 " GLOBAL OPTIONS: Settings regardless of filetype or buffer {{{1
+set modeline
 set showmatch
 set formatoptions+=j
 set diffopt+=iwhite
@@ -221,9 +222,10 @@ let g:noteworthy_libraries = {
       \   'code': $HOME . '/workflow/notes/code',
       \   'personal': $HOME . '/Documents/notes',
       \   'ps': $HOME . '/workflow/notes/public_strategies',
-      \   'wm': $HOME . '/workflow/notes/weedmaps'
+      \   'wm': $HOME . '/workflow/notes/weedmaps',
+      \   'adf': $HOME . '/workflow/notes/adfitech'
       \ }
-let g:noteworthy_default_library = 'ps'
+let g:noteworthy_default_library = 'adf'
 let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
