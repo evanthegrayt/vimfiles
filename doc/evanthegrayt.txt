@@ -126,30 +126,6 @@ Custom command definitions, unrelated to a plugin.
                             not supplied, open the current month's file.
                             https://github.com/evanthegrayt/standup_md
 
-                                                                    *:Mksession*
-:Mksession[!] [{session}]   Like |mksession|, but create a session file based
-                            on current directory. If current directory is a git
-                            repository, make a session file for the current
-                            directory plus the current branch. Session files
-                            are kept in "$HOME/.cache/vim_sessions", but the
-                            directory can be changed with
-                            *g:session_directory*.
-
-                                                                 *:SessionStart*
-:SessionStart [{session}]   Like |Mksession|, but continue tracking any window
-                            changes. Must have tpope's vim-obsession installed.
-
-                                                                  *:SessionLoad*
-:SessionLoad [{session}]    Load the session file for the current directory. If
-                            the current directory is a git repository, load the
-                            session file for the current directory and branch.
-
-                                                                *:SessionDelete*
-:SessionDelete [{session}]  Delete the session file for the current directory.
-                            If the current directory is a git repository, delete
-                            the session file for the current directory and
-                            branch.
-
                                                   *evanthegrayt-plugin-mappings*
 Plugin Mappings~
 
