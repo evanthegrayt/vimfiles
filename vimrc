@@ -63,7 +63,7 @@ set infercase
 set ignorecase
 set incsearch
 set hlsearch
-set backspace=2
+set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set hidden
@@ -109,18 +109,18 @@ nnoremap <silent> <leader>dt :call evanthegrayt#rails#DescribeTable()<CR>
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 "}}}
 
-" PLUGIN SETTINGS {{{1
-" NETRW: file browser
+" PLUGIN SETTINGS: Settings for plugins or custom functions {{{1
+" Netrw: file browser
 let g:netrw_home = $HOME . "/.vim/cache"
 nnoremap <silent> <leader>nt :Ntree<CR>
 " Workaround for broken 'gx'
 nnoremap gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
 
-" RAINBOW: Different color parens
+" Rainbow: Different color parens
 let g:rainbow_active = 0
 nnoremap <silent> <leader>rt :RainbowToggle<CR>
 
-" SUPERTAB: tab auto-completion when in insert-mode
+" Supertab: tab auto-completion when in insert-mode
 let g:SuperTabDefaultCompletionType = 'context'
 augroup vimrc_supertab
   autocmd!
@@ -128,14 +128,10 @@ augroup vimrc_supertab
         \ if !empty(&omnifunc) | call SuperTabChain(&omnifunc, "<c-p>") | endif
 augroup END
 
-" RUBOCOP: debug ruby
+" Rubocop: debug ruby
 let g:ruby_debugger_progname = 'mvim'
 
-" UPDATE PLUGINS: update plugins from vim
-let g:update_plugins_exclude = ['update-plugins']
-let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
-
-" AIRLINE: advanced status line
+" Airline: advanced status line
 if !exists('g:airline_symbols') | let g:airline_symbols = {} | endif
 let g:airline_symbols.readonly = '±'
 let g:airline_symbols.linenr = '¶'
@@ -154,32 +150,30 @@ if executable('standardrb')
   let g:ale_ruby_rubocop_executable = 'standardrb'
 endif
 
-" let g:ale_completion_enabled = 1
-
-" INDENT LINE: draw lines every indention level
+" Indent Line: draw lines every indention level
 let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <leader>it :IndentLinesToggle<CR>
 
-" GITGUTTER: show diff in gutter
+" Gitgutter: show diff in gutter
 nnoremap <silent> <leader>gt :GitGutterBufferToggle<CR>
 nnoremap <silent> <leader>gu :GitGutterUndoHunk<CR>
 let g:gitgutter_preview_win_floating = 1
 
-" TAGBAR: show classes/methods/functions in side window
+" Tagbar: show classes/methods/functions in side window
 nnoremap <silent> <leader>TT :Tagbar<CR>
 if executable('/opt/homebrew/bin/ctags')
   let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 endif
 
-" UNDOTREE: Visualize the undo tree
+" Undotree: Visualize the undo tree
 if has("persistent_undo")
   set undofile
   let &undodir = $HOME . "/.vim/cache/undo//"
 endif
 
-" CTRLP: project file search
+" Ctrlp: project file search
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public\|tmp'
@@ -191,21 +185,17 @@ nnoremap <silent> <leader>bb :CtrlPBufTag<CR>
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
-" ROOTER: set root directory at beginning of project
+" Rooter: set root directory at beginning of project
 let g:rooter_silent_chdir = 1
 let g:rooter_patterns = ['.git', '.git/', 'Rakefile', 'Makefile',
       \ '.hg/', '.bzr/', '.svn/']
 
-" SPLITJOIN: Split/Join lines of code syntastically
+" Splitjoin: Split/Join lines of code syntastically
 let g:splitjoin_ruby_hanging_args = 0
 let g:splitjoin_ruby_curly_braces = 0
 let g:splitjoin_curly_brace_padding = 0
 
-" EASTEREGG: my colorscheme
-let g:easteregg_use_italics = 1
-colorscheme easteregg
-
-" GUTENTAGS: Tags manager
+" Gutentags: Tags manager
 let g:gutentags_enabled = 1
 " TODO: For some reason, rspec files make ctags hang?
 let g:gutentags_ctags_exclude = ['node_modules', 'vendor', 'public', '*.md',
@@ -217,7 +207,31 @@ if executable('ripper-tags')
   let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 endif
 
-" NOTEWORTHY: Notes
+" RI: Browse ruby's RI documentation through vim.
+let g:ri_no_mappings = 1
+
+" Move: Move lines and selections.
+let g:move_key_modifier = 'C'
+let g:move_key_modifier_visualmode = 'C'
+
+" REST Console: Run curl through vim.
+let g:vrc_curl_opts = {'-i': '', '-s': ''}
+let g:vrc_set_default_mapping = 0
+let g:vrc_auto_format_response_patterns = {
+      \   'json': "ruby -e \"require 'json'; puts JSON.pretty_generate(JSON.parse(ARGF.read))\"",
+      \   'xml': 'xmllint --format -',
+      \ }
+nnoremap <silent> <leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
+
+" Easteregg: my colorscheme
+let g:easteregg_use_italics = 1
+colorscheme easteregg
+
+" Update Plugins: update plugins from vim
+let g:update_plugins_exclude = ['update-plugins']
+let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
+
+" Noteworthy: Notes
 let g:noteworthy_libraries = {
       \   'code': $HOME . '/workflow/notes/code',
       \   'personal': $HOME . '/Documents/notes',
@@ -234,43 +248,27 @@ let g:noteworthy_dynamic_libraries = {
 let g:noteworthy_dynamic_library_name = 'project'
 let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
 
-" RI: Browse ruby's RI documentation through vim.
-let g:ri_no_mappings = 1
-
-" Move: Move lines and selections.
-let g:move_key_modifier = 'C'
-let g:move_key_modifier_visualmode = 'C'
-
-" CDC: Easily change directory. Not an actual plugin.
-let g:cdc_dirs = [
-      \   $HOME . '/.oh-my-zsh/custom/plugins',
-      \   $HOME . '/workflow',
-      \   $HOME . '/workflow/vagrant-ofa/src',
-      \   $HOME . '/.vim/pack/evanthegrayt/start',
-      \   $HOME . '/.vim/pack/public-strategies/opt'
-      \ ]
-
-let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
-let g:branch_sessions_mksession_bang = 1
-
-" REST Console: Run curl through vim.
-let g:vrc_curl_opts = {'-i': '', '-s': ''}
-let g:vrc_set_default_mapping = 0
-let g:vrc_auto_format_response_patterns = {
-      \   'json': "ruby -e \"require 'json'; puts JSON.pretty_generate(JSON.parse(ARGF.read))\"",
-      \   'xml': 'xmllint --format -',
-      \ }
-nnoremap <silent> <leader>rc :call evanthegrayt#rest#CloseResponseBuffer()<CR>
-
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {
       \   $HOME . '/workflow/localite-backend': '.vimrc'
       \ }
 
+" Branch Sessions: Vim sessions based on your git branches.
+let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
+let g:branch_sessions_mksession_bang = 1
+
 " Jira: Open Jira issues in a browser.
 let g:evanthegrayt_jira_board_url = 'https://publicstrategies.atlassian.net'
 let g:evanthegrayt_jira_keywords = ['JIRA', 'ISSUE', 'TODO']
 nnoremap <silent> <leader>jo :Jira!<cr>
+
+" CDC: Easily change directory.
+let g:cdc_dirs = [
+      \   $HOME . '/.oh-my-zsh/custom/plugins',
+      \   $HOME . '/workflow',
+      \   $HOME . '/.vim/pack/evanthegrayt/start',
+      \   $HOME . '/.vim/pack/public-strategies/opt'
+      \ ]
 "}}}
 
 " GUI: GUI-specific settings {{{
@@ -299,7 +297,7 @@ augroup vimrc
   " Set backup extension. Saves one backup per file per hour, per day.
   autocmd BufWritePre * let &backupext = '.' . strftime("%Y%m%d%H")
   " Turn off auto-comments on return.
-  autocmd FileType * setlocal fo-=c fo-=r fo-=o
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd BufWritePost *
         \ if !(empty(expand('%')) || &buftype =~ 'nofile') | mkview | endif
   autocmd BufReadPost *
@@ -309,11 +307,13 @@ augroup vimrc
         \ "\<\(HACK\|FIXME\|NOTE\|TODO\|JIRA\|ISSUE\)\>"
         \ containedin=.*Comment.* contained
   hi def link MyTodo Todo
-augroup END
-
-augroup skeletons
-  autocmd!
+  " Use a template when opening a README.md file.
   autocmd BufNewFile README.md 0r ~/.vim/skeletons/readme.md
+  " WSL yank support
+  let s:clip = '/mnt/c/Windows/System32/clip.exe'
+  if executable(s:clip)
+      autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+  endif
 augroup END
 "}}}
 
