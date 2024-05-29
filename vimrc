@@ -87,6 +87,9 @@ if exists('+spelloptions') | set spelloptions=camel | endif
 inoremap <silent> <c-g>u <esc>guawea
 inoremap <silent> <c-g>U <esc>gUawea
 
+" Insert today's date at the cursor
+inoremap <c-g>d <c-r>=strftime('%Y-%m-%d')<c-m>
+
 " Indenting: `\fi` to fix the whole file's indenting
 nnoremap <silent> <leader>fi gg=G``
 
@@ -105,7 +108,7 @@ nnoremap <silent> <leader>tm :call evanthegrayt#toggle#Mouse() <CR>
 nnoremap <silent> <leader>tf :call evanthegrayt#toggle#FoldColumn()<CR>
 nnoremap <silent> <leader>dt :call evanthegrayt#rails#DescribeTable()<CR>
 
-" List all matches of word under cursor and prompt to jump to one.
+" List all matches of word under cursor and prompt to jump to one
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
 "}}}
 
