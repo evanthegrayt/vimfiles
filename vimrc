@@ -240,7 +240,7 @@ let g:noteworthy_libraries = {
       \   'personal': $HOME . '/Documents/notes',
       \   'ps': $HOME . '/workflow/notes/public_strategies',
       \   'wm': $HOME . '/workflow/notes/weedmaps',
-      \   'adf': $HOME . '/workflow/notes/adfitech'
+      \   'adf': $HOME . '/Documents/notes/adfitech'
       \ }
 let g:noteworthy_default_library = 'adf'
 let g:noteworthy_dynamic_libraries = {
