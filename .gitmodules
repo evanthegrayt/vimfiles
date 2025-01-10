@@ -235,3 +235,6 @@
 [submodule "pack/plugins/start/cpp-modern"]
 	path = pack/plugins/start/cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern.git
+[submodule "pack/plugins/start/closetag"]
+	path = pack/plugins/start/closetag
+	url = git@github.com:alvan/vim-closetag.git
