@@ -10,5 +10,4 @@ command! -range=% -bang HighlightRepeats <line1>,<line2>
       \ call evanthegrayt#highlight#Repeats(<bang>0)
 command! OpenInGui call evanthegrayt#bffers#OpenInGui()
 command! -range=% -bang RemoveConsecutiveSpaces call
-      \ evanthegrayt#trim#ConsecutiveSpaces(<line1>, <line2>, <bang>0)
-
+      \ evanthegrayt#trim#ConsecutiveSpaces(<line1>, <line2>, <bang>1)

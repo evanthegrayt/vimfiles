@@ -125,6 +125,15 @@ Custom command definitions, unrelated to a plugin.
 :OpenInGui                  Open all active buffers in the graphical version of
                             vim, and close the current vim instance.
 
+                                                      *:RemoveConsecutiveSpaces*
+:[range]RemoveConsecutiveSpaces[!]
+                            Remove instances of consecutive spaces for [range],
+                            unless it's at the beginning of the line. By
+                            default, [range] is the whole file. Each
+                            replacement will be confirmed, unless ! is
+                            supplied.
+
+
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
                             Excludes comments and blank lines.
