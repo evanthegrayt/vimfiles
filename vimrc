@@ -73,8 +73,8 @@ set backupdir=~/.vim/backup
 set viminfo+=n~/.vim/cache/viminfo
 set directory=~/.vim/tmp
 if executable('ugrep')
-    set grepprg=ugrep\ -RInk\ -j\ -u\ --tabs=1\ --ignore-files
-    set grepformat=%f:%l:%c:%m,%f+%l+%c+%m,%-G%f\\\|%l\\\|%c\\\|%m
+  set grepprg=ugrep\ -RInk\ -j\ -u\ --tabs=1\ --ignore-files
+  set grepformat=%f:%l:%c:%m,%f+%l+%c+%m,%-G%f\\\|%l\\\|%c\\\|%m
 elseif executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
@@ -315,7 +315,7 @@ augroup vimrc
   " WSL yank support
   let s:clip = '/mnt/c/Windows/System32/clip.exe'
   if executable(s:clip)
-      autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
   endif
 augroup END
 "}}}

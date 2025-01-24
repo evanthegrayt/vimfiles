@@ -1,4 +1,8 @@
-function! evanthegrayt#highlight#Repeats() range
+function! evanthegrayt#highlight#Repeats(clear) range
+  if a:clear
+    exe 'syn clear Repeat'
+    return
+  endif
   let lineCounts = {}
   let lineNum = a:firstline
   while lineNum <= a:lastline

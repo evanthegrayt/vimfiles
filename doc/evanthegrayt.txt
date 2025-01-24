@@ -97,6 +97,11 @@ Custom command definitions, unrelated to a plugin.
                             become its own plugin.
                             https://github.com/evanthegrayt/cdc
 
+                                                             *:HighlightRepeats*
+:HighlightRepeats[!]
+                            Add syntax highlighting to duplicated lines. Adding
+                            ! clears the highlighting.
+
                                                                          *:Jira*
 :Jira[!] [{issue}]
                             Open a Jira board or issue. Must define
@@ -116,8 +121,13 @@ Custom command definitions, unrelated to a plugin.
                             file. If ! is supplied, add a modeline {count}
                             lines from the bottom of the file.
 
+                                                                    *:OpenInGui*
+:OpenInGui                  Open all active buffers in the graphical version of
+                            vim, and close the current vim instance.
+
                                                                          *:Sloc*
 :Sloc                       Display the number of Source Lines of Code.
+                            Excludes comments and blank lines.
 
                                                                       *:Standup*
 :Standup[!] [{file}]        If the StandupMD ruby gem is installed, execute the
