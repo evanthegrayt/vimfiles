@@ -266,12 +266,7 @@ let g:evanthegrayt_jira_keywords = ['JIRA', 'ISSUE', 'TODO']
 nnoremap <silent> <leader>jo :Jira!<cr>
 
 " CDC: Easily change directory.
-let g:cdc_dirs = [
-      \   $HOME . '/.oh-my-zsh/custom/plugins',
-      \   $HOME . '/workflow',
-      \   $HOME . '/.vim/pack/evanthegrayt/start',
-      \   $HOME . '/.vim/pack/public-strategies/opt'
-      \ ]
+let g:cdc_dirs = split($CDC_DIRS, ':')
 "}}}
 
 " GUI: GUI-specific settings {{{
