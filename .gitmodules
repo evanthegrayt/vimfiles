@@ -238,3 +238,6 @@
 [submodule "pack/plugins/start/closetag"]
 	path = pack/plugins/start/closetag
 	url = git@github.com:alvan/vim-closetag.git
+[submodule "pack/plugins/start/nushell-syntax"]
+	path = pack/plugins/start/nushell-syntax
+	url = https://github.com/elkasztano/nushell-syntax-vim
