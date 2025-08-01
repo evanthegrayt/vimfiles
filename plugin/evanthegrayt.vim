@@ -11,3 +11,5 @@ command! -range=% -bang HighlightRepeats <line1>,<line2>
 command! OpenInGui call evanthegrayt#bffers#OpenInGui()
 command! -range=% -bang RemoveConsecutiveSpaces call
       \ evanthegrayt#trim#ConsecutiveSpaces(<line1>, <line2>, <bang>1)
+command! -nargs=1 -complete=custom,evanthegrayt#snippets#SnipComplete Snip
+      \ call evanthegrayt#snippets#Snip(<f-args>)

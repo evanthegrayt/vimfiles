@@ -1,0 +1,9 @@
+while getopts "" opts; do
+    case $opts in
+        h)
+            echo "USAGE: ${0##*/} [OPTIONS]"
+            exit
+            ;;
+    esac
+done
+shift $(( OPTIND - 1 ))

@@ -110,6 +110,8 @@ nnoremap <silent> <leader>dt :call evanthegrayt#rails#DescribeTable()<CR>
 
 " List all matches of word under cursor and prompt to jump to one
 nnoremap <leader>co [I:let nr = input("Match: ")<Bar>exe "normal ".nr."[\t"<CR>
+
+let g:netrw_liststyle = 3
 "}}}
 
 " PLUGIN SETTINGS: Settings for plugins or custom functions {{{1
@@ -305,8 +307,6 @@ augroup vimrc
         \ "\<\(HACK\|FIXME\|NOTE\|TODO\|JIRA\|ISSUE\)\>"
         \ containedin=.*Comment.* contained
   hi def link MyTodo Todo
-  " Use a template when opening a README.md file.
-  autocmd BufNewFile README.md 0r ~/.vim/skeletons/readme.md
   " WSL yank support
   let s:clip = '/mnt/c/Windows/System32/clip.exe'
   if executable(s:clip)
