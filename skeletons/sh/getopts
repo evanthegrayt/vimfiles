@@ -1,4 +1,4 @@
-while getopts "" opts; do
+while getopts "h" opts; do
     case $opts in
         h)
             echo "USAGE: ${0##*/} [OPTIONS]"
