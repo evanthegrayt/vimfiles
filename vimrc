@@ -242,9 +242,9 @@ let g:noteworthy_libraries = {
       \   'personal': $HOME . '/Documents/notes',
       \   'ps': $HOME . '/workflow/notes/public_strategies',
       \   'wm': $HOME . '/workflow/notes/weedmaps',
-      \   'adf': $HOME . '/Documents/notes/adfitech'
+      \   'bb': $HOME . '/Documents/notes/benefitbay'
       \ }
-let g:noteworthy_default_library = 'adf'
+let g:noteworthy_default_library = 'bb'
 let g:noteworthy_dynamic_libraries = {
       \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
       \   $HOME . '/workflow/fasttrac-backend': 'docs',
@@ -255,7 +255,8 @@ let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
 
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {
-      \   $HOME . '/workflow/localite-backend': '.vimrc'
+      \   $HOME . '/workflow/localite-backend': '.vimrc',
+      \   $HOME . '/workflow/core': '.vimrc',
       \ }
 
 " Branch Sessions: Vim sessions based on your git branches.
@@ -263,7 +264,7 @@ let g:branch_sessions_directory = $HOME . '/.vim/cache/sessions'
 let g:branch_sessions_mksession_bang = 1
 
 " Jira: Open Jira issues in a browser.
-let g:evanthegrayt_jira_board_url = 'https://publicstrategies.atlassian.net'
+let g:evanthegrayt_jira_board_url = 'https://benefitbay.atlassian.net'
 let g:evanthegrayt_jira_keywords = ['JIRA', 'ISSUE', 'TODO']
 nnoremap <silent> <leader>jo :Jira!<cr>
 
