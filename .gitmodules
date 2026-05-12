@@ -132,7 +132,7 @@
 	url = https://github.com/evanthegrayt/vim-lovehandle.git
 [submodule "pack/evanthegrayt/start/noteworthy"]
 	path = pack/evanthegrayt/start/noteworthy
-	url = git@github.com:evanthegrayt/vim-noteworthy.git
+	url = https://github.com/evanthegrayt/vim-noteworthy.git
 [submodule "pack/plugins/start/csapprox"]
 	path = pack/plugins/start/csapprox
 	url = https://github.com/vim-scripts/CSApprox.git
@@ -237,7 +237,7 @@
 	url = https://github.com/bfrg/vim-cpp-modern.git
 [submodule "pack/plugins/start/closetag"]
 	path = pack/plugins/start/closetag
-	url = git@github.com:alvan/vim-closetag.git
+	url = https://github.com/alvan/vim-closetag.git
 [submodule "pack/plugins/start/nushell-syntax"]
 	path = pack/plugins/start/nushell-syntax
 	url = https://github.com/elkasztano/nushell-syntax-vim
