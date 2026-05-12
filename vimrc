@@ -240,23 +240,14 @@ let g:update_plugins_directory = $HOME . "/.vim/pack/*/{start,opt}"
 let g:noteworthy_libraries = {
       \   'code': $HOME . '/workflow/notes/code',
       \   'personal': $HOME . '/Documents/notes',
-      \   'ps': $HOME . '/workflow/notes/public_strategies',
-      \   'wm': $HOME . '/workflow/notes/weedmaps',
-      \   'bb': $HOME . '/Documents/notes/benefitbay'
       \ }
-let g:noteworthy_default_library = 'bb'
-let g:noteworthy_dynamic_libraries = {
-      \   $HOME . '/workflow/srae-pas-dashboard': 'doc/notes',
-      \   $HOME . '/workflow/fasttrac-backend': 'docs',
-      \   $HOME . '/workflow/fe-backend': 'docs',
-      \ }
+let g:noteworthy_default_library = 'code'
 let g:noteworthy_dynamic_library_name = 'project'
 let g:noteworthy_cache_dir = $HOME . '/.vim/cache/noteworthy'
 
 " Lovehandle: Database URL manager.
 let g:lovehandle_projects = {
       \   $HOME . '/workflow/localite-backend': '.vimrc',
-      \   $HOME . '/workflow/core': '.vimrc',
       \ }
 
 " Branch Sessions: Vim sessions based on your git branches.
