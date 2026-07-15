@@ -72,9 +72,9 @@ set lazyredraw
 set backupdir=~/.vim/backup
 set viminfo+=n~/.vim/cache/viminfo
 set directory=~/.vim/tmp
-if executable('ugrep')
-  set grepprg=ugrep\ -RInk\ -j\ -u\ --tabs=1\ --ignore-files
-  set grepformat=%f:%l:%c:%m,%f+%l+%c+%m,%-G%f\\\|%l\\\|%c\\\|%m
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
+  set grepformat=%f:%l:%c:%m
 elseif executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
