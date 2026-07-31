@@ -24,6 +24,7 @@ if v:version < 800
   echoerr 'Versions less than 8.0 no longer supported. Please upgrade vim.'
 else
   packadd matchit
+  packadd comment
 endif
 "}}}
 
@@ -162,9 +163,11 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <silent> <leader>it :IndentLinesToggle<CR>
 
 " Gitgutter: show diff in gutter
-nnoremap <silent> <leader>gt :GitGutterBufferToggle<CR>
-nnoremap <silent> <leader>gu :GitGutterUndoHunk<CR>
 let g:gitgutter_preview_win_floating = 1
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOuterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
 " Tagbar: show classes/methods/functions in side window
 nnoremap <silent> <leader>TT :Tagbar<CR>

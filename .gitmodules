@@ -106,9 +106,6 @@
 [submodule "pack/tpope/start/abolish"]
 	path = pack/tpope/start/abolish
 	url = https://github.com/tpope/vim-abolish
-[submodule "pack/tpope/start/commentary"]
-	path = pack/tpope/start/commentary
-	url = https://github.com/tpope/vim-commentary
 [submodule "pack/tpope/start/vinegar"]
 	path = pack/tpope/start/vinegar
 	url = https://github.com/tpope/vim-vinegar

@@ -283,7 +283,6 @@ Plugin/Helptag          URL~
 |abolish|                 https://github.com/tpope/vim-abolish
 |bundler|                 https://github.com/tpope/vim-bundler
 |capslock|                https://github.com/tpope/vim-capslock
-|commentary|              https://github.com/tpope/vim-commentary
 |dadbod|                  https://github.com/tpope/vim-dadbod
 |dispatch|                https://github.com/tpope/vim-dispatch
 |dotenv|                  https://github.com/tpope/vim-dotenv
