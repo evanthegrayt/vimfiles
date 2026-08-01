@@ -81,7 +81,13 @@ so [file type plugins](./ftplugin), etc., are located in the appropriate
 directories.
 
 ### Why do I have no plugins?
-You probably didn't clone with the `--recursive` option, as stated above.
+You may have forgotten to clone with the `--recursive` option, or they may not
+have initialized properly. Either way, you should be able to fix it by running
+the following.
+
+```sh
+git submodule update --init --recursive
+```
 
 ### Why isn't my vimrc being loaded?
 You're probably running an older version of `vim`. This setup is now only
